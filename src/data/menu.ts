@@ -112,16 +112,6 @@ export const pagesDataRessources = [
                 href: "/ressources/guides/demarrage",
             },
             {
-                label: "Personnalisation avancée",
-                description: "Tutoriels pour adapter votre boutique à votre image",
-                href: "/ressources/guides/personnalisation",
-            },
-            {
-                label: "Gestion des paiements",
-                description: "Configurer Mobile Money et autres options",
-                href: "/ressources/guides/paiements",
-            },
-            {
                 label: "Marketing et ventes",
                 description: "Optimisez vos campagnes et fidélisez vos clients",
                 href: "/ressources/guides/marketing",
@@ -162,27 +152,6 @@ export const pagesDataRessources = [
                 label: "Support technique",
                 description: "Contactez notre équipe pour toute aide",
                 href: "/ressources/support",
-            },
-        ],
-    },
-    {
-        section: "Blog",
-        icon: "/assets/icons/blog.svg",
-        items: [
-            {
-                label: "Actualités Kiiako",
-                description: "Découvrez les nouveautés et mises à jour",
-                href: "/ressources/blog/actualites",
-            },
-            {
-                label: "Conseils e-commerce",
-                description: "Articles pour booster votre business en ligne",
-                href: "/ressources/blog/conseils",
-            },
-            {
-                label: "Success stories",
-                description: "Inspirez-vous des réussites de nos utilisateurs",
-                href: "/ressources/blog/success-stories",
             },
         ],
     },

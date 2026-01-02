@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { useMobileMenu } from '@/hooks/useMobileMenu';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import Link from "next/link";
@@ -36,10 +37,23 @@ const resourceIconMap: Record<string, React.ComponentType<{ className?: string }
 };
 
 export default function Header() {
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const { isOpen, toggle, close } = useMobileMenu();
   const { isScrolled } = useScrollPosition();
   const menuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Check if a path is active
+  const isActivePath = (path: string) => pathname === path;
+  const isActiveSection = (paths: string[]) => paths.some(path => pathname.startsWith(path));
+
+  // Check active sections
+  const isSolutionsActive = isActiveSection(features.map(f => f.link));
+  const isRessourcesActive = isActiveSection(
+    pagesDataRessources.flatMap(section => section.items.map(item => item.href))
+  );
+  const isServicesActive = isActiveSection(services.map(s => s.href));
+  const isTarifsActive = isActivePath('/tarifs');
 
   const cancelHideMenu = () => {
     if (menuTimeoutRef.current) {
@@ -97,7 +111,11 @@ export default function Header() {
                     }}
                     onMouseLeave={scheduleHideMenu}
                 >
-                  <a href="#" className="flex items-center gap-1 px-4 py-2 border border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 rounded-full text-tagline-1 font-normal text-secondary hover:text-secondary transition-all duration-200 dark:text-accent dark:hover:text-accent">
+                  <a href="#" className={`flex items-center gap-1 px-4 py-2 border rounded-full text-tagline-1 font-normal transition-all duration-200 ${
+                    isSolutionsActive
+                      ? 'border-primary-500 bg-primary-500/10 text-primary-500 dark:text-primary-400'
+                      : 'border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
+                  }`}>
                     <span>Solutions</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === 'solutions' ? 'rotate-180' : ''}`} />
                   </a>
@@ -121,11 +139,23 @@ export default function Header() {
                               <div key={feature.id} className="col-span-4">
                                 <Link
                                     href={feature.link}
-                                    className="rounded-xl p-3 flex items-start gap-2 group transition-all duration-300 relative"
+                                    className={`rounded-xl p-3 flex items-start gap-2 group transition-all duration-300 relative ${
+                                      isActivePath(feature.link) ? 'is-active' : ''
+                                    }`}
                                 >
-                                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100 rounded-[10px] z-0 transition-all duration-400 group-hover:bg-primary-500/10 border border-transparent group-hover:border-primary-200 dark:group-hover:border-primary-500"></div>
-                                  <div className="mt-1 size-9 rounded-lg border border-stroke-1 dark:border-background-7 bg-white dark:bg-background-6 flex items-center justify-center shrink-0 p-2 shadow-14 transition-all duration-300 group-hover:bg-primary-500 relative z-10">
-                                    <Icon className="w-4 h-4 stroke-secondary dark:stroke-accent group-hover:stroke-white transition-all duration-300" />
+                                  <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-[10px] z-0 transition-all duration-400 border ${
+                                    isActivePath(feature.link)
+                                      ? 'bg-primary-500/10 opacity-100 border-primary-200 dark:border-primary-500'
+                                      : 'bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100 group-hover:bg-primary-500/10 border-transparent group-hover:border-primary-200 dark:group-hover:border-primary-500'
+                                  }`}></div>
+                                  <div className={`mt-1 size-9 rounded-lg border border-stroke-1 dark:border-background-7 bg-white dark:bg-background-6 flex items-center justify-center shrink-0 p-2 shadow-14 transition-all duration-300 relative z-10 ${
+                                    isActivePath(feature.link) ? 'bg-primary-500' : 'group-hover:bg-primary-500'
+                                  }`}>
+                                    <Icon className={`w-4 h-4 transition-all duration-300 ${
+                                      isActivePath(feature.link)
+                                        ? 'stroke-white'
+                                        : 'stroke-secondary dark:stroke-accent group-hover:stroke-white'
+                                    }`} />
                                   </div>
                                   <div className="relative z-10 flex-1">
                                     <div className="flex items-center justify-between gap-2">
@@ -171,7 +201,11 @@ export default function Header() {
                     }}
                     onMouseLeave={scheduleHideMenu}
                 >
-                  <a href="#" className="flex items-center gap-1 px-4 py-2 border border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 rounded-full text-tagline-1 font-normal text-secondary hover:text-secondary transition-all duration-200 dark:text-accent dark:hover:text-accent">
+                  <a href="#" className={`flex items-center gap-1 px-4 py-2 border rounded-full text-tagline-1 font-normal transition-all duration-200 ${
+                    isRessourcesActive
+                      ? 'border-primary-500 bg-primary-500/10 text-primary-500 dark:text-primary-400'
+                      : 'border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
+                  }`}>
                     <span>Ressources</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === 'ressources' ? 'rotate-180' : ''}`} />
                   </a>
@@ -201,10 +235,20 @@ export default function Header() {
                                     <li key={itemIndex}>
                                       <Link
                                           href={item.href}
-                                          className="p-3 rounded-xl flex flex-col gap-1 transition-all duration-300 relative group"
+                                          className={`p-3 rounded-xl flex flex-col gap-1 transition-all duration-300 relative group ${
+                                            isActivePath(item.href) ? 'is-active' : ''
+                                          }`}
                                       >
-                                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100 rounded-[10px] z-0 transition-all duration-400"></div>
-                                        <p className="text-tagline-1 font-normal text-secondary dark:text-accent relative z-10">{item.label}</p>
+                                        <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-[10px] z-0 transition-all duration-400 ${
+                                          isActivePath(item.href)
+                                            ? 'bg-primary-500/10 opacity-100'
+                                            : 'bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100'
+                                        }`}></div>
+                                        <p className={`text-tagline-1 font-normal relative z-10 ${
+                                          isActivePath(item.href)
+                                            ? 'text-primary-500 dark:text-primary-400'
+                                            : 'text-secondary dark:text-accent'
+                                        }`}>{item.label}</p>
                                         <p className="text-tagline-2 font-normal text-secondary/60 dark:text-accent/60 relative z-10">
                                           {item.description}
                                         </p>
@@ -228,7 +272,11 @@ export default function Header() {
                     }}
                     onMouseLeave={scheduleHideMenu}
                 >
-                  <a href="#" className="flex items-center gap-1 px-4 py-2 border border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 rounded-full text-tagline-1 font-normal text-secondary hover:text-secondary transition-all duration-200 dark:text-accent dark:hover:text-accent">
+                  <a href="#" className={`flex items-center gap-1 px-4 py-2 border rounded-full text-tagline-1 font-normal transition-all duration-200 ${
+                    isServicesActive
+                      ? 'border-primary-500 bg-primary-500/10 text-primary-500 dark:text-primary-400'
+                      : 'border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
+                  }`}>
                     <span>Services</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === 'services' ? 'rotate-180' : ''}`} />
                   </a>
@@ -248,9 +296,15 @@ export default function Header() {
                           <li key={service.id}>
                             <Link
                                 href={service.href}
-                                className="p-3 rounded-2xl flex items-start gap-3 transition-all duration-300 relative group"
+                                className={`p-3 rounded-2xl flex items-start gap-3 transition-all duration-300 relative group ${
+                                  isActivePath(service.href) ? 'is-active' : ''
+                                }`}
                             >
-                              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100 rounded-[10px] z-0 transition-all duration-400"></div>
+                              <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-[10px] z-0 transition-all duration-400 ${
+                                isActivePath(service.href)
+                                  ? 'bg-primary-500/10 opacity-100'
+                                  : 'bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100'
+                              }`}></div>
                               <div className="size-11 p-3 rounded-[10px] bg-white dark:bg-background-6 relative z-10 shadow-14 border border-stroke-1 dark:border-background-7 flex items-center justify-center">
                                 {service.id === 1 ? (
                                     <Truck className="w-5 h-5 stroke-secondary dark:stroke-accent" />
@@ -259,7 +313,11 @@ export default function Header() {
                                 )}
                               </div>
                               <div className="relative z-10">
-                                <p className="text-tagline-1 font-normal text-secondary dark:text-accent">{service.label}</p>
+                                <p className={`text-tagline-1 font-normal ${
+                                  isActivePath(service.href)
+                                    ? 'text-primary-500 dark:text-primary-400'
+                                    : 'text-secondary dark:text-accent'
+                                }`}>{service.label}</p>
                               </div>
                             </Link>
                           </li>
@@ -270,7 +328,11 @@ export default function Header() {
 
                 {/* Tarifs Link */}
                 <li className="relative nav-item cursor-pointer py-2.5">
-                  <Link href="/tarifs" className="flex items-center gap-1 px-4 py-2 border border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 rounded-full text-tagline-1 font-normal text-secondary hover:text-secondary transition-all duration-200 dark:text-accent dark:hover:text-accent">
+                  <Link href="/tarifs" className={`flex items-center gap-1 px-4 py-2 border rounded-full text-tagline-1 font-normal transition-all duration-200 ${
+                    isTarifsActive
+                      ? 'border-primary-500 bg-primary-500/10 text-primary-500 dark:text-primary-400'
+                      : 'border-transparent hover:border-stroke-2 dark:hover:border-stroke-7 text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
+                  }`}>
                     <span>Tarifs</span>
                   </Link>
                 </li>
