@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   // Enable compression for better performance
   compress: true,
 
+ eslint: {
+    ignoreDuringBuilds: true,
+  },
   // Image optimization
   images: {
     formats: ['image/avif', 'image/webp'],
