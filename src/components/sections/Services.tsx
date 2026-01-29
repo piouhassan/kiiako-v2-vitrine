@@ -33,7 +33,7 @@ export default function Services() {
                       <img
                         src="/img/43425.jpg"
                         alt="services"
-                        className="w-full h-full object-cover dark:hidden"
+                        className="w-full h-full object-cover"
                       />
                     </figure>
                   </div>
@@ -129,7 +129,7 @@ export default function Services() {
           <div className="flex flex-col md:flex-row items-center gap-y-5 md:gap-x-3 justify-center">
             <a
               href="/signup"
-              className="btn btn-secondary dark:btn-accent btn-md hover:btn-white dark:hover:btn-white-dark w-[90%] md:w-auto"
+              className="btn btn-primary dark:btn-accent btn-md hover:btn-white dark:hover:btn-white-dark w-[90%] md:w-auto"
             >
               <span>Créer ma boutique</span>
             </a>

@@ -6,7 +6,7 @@ import { SlideIn } from '@/components/animations/SlideIn';
 export default function Work() {
   return (
     <section className="w-full xl:py-[100px] lg:py-[90px] md:py-20 py-16">
-      <div className="w-full xl:px-0 px-5">
+      <div className="main-container xl:px-0 px-5">
         <div className="text-center space-y-3 mb-10 md:mb-[70px]">
           <SlideIn direction="down" delay={0.1}>
             <h2>Des outils puissants pour votre réussite</h2>
@@ -104,7 +104,7 @@ export default function Work() {
           <div className="text-center">
             <a
               href="/features"
-              className="btn btn-secondary btn-xl dark:btn-transparent hover:btn-white dark:hover:btn-accent w-[90%] md:w-auto"
+              className="btn btn-primary btn-xl dark:btn-transparent hover:btn-white dark:hover:btn-accent w-[90%] md:w-auto"
             >
               <span>Découvrir toutes les fonctionnalités</span>
             </a>

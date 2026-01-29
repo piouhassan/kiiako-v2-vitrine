@@ -80,7 +80,7 @@
   --color-primary-400: #5fb4e4;
   --color-primary-500: #299cdb;
   --color-primary-600: #1f82bb;
-  --color-secondary: #1a1a1c;
+  --color-secondary: #343351;
   --color-accent: #fcfcfc;
   --color-background-1: #fcfcfd;
   --color-background-2: #f9fafb;
@@ -4176,6 +4176,11 @@ body {
 
   .-mt-20 {
     margin-top: calc(var(--spacing) * -20);
+  }
+
+
+  .-mt-16 {
+    margin-top: calc(var(--spacing) * -16);
   }
 
   .-mt-\[22px\] {
@@ -11690,6 +11695,10 @@ body {
 
   .pt-46 {
     padding-top: calc(var(--spacing) * 46);
+  }
+
+  .pt-50 {
+    padding-top: calc(var(--spacing) * 50);
   }
 
   .pt-\[3\.2px\] {
@@ -20905,6 +20914,11 @@ body {
     .md\:text-2xl {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+
+    .lg\:text-6xl {
+      font-size: var(--text-6xl);
+      line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
 
     .md\:text-6xl {

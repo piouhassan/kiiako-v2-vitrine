@@ -86,14 +86,6 @@ export default function CTA() {
           </FadeIn>
         </div>
       </div>
-      <div>
-        <figure className="lg:w-[584px] w-[200px] md:w-[300px] lg:h-[544px] h-[300px] absolute lg:-top-[60%] -top-[33%] md:-top-[35%] -left-[3%] lg:-left-[13%] xl:-left-[10%] xl:-top-[50%] -z-10 pointer-events-none select-none">
-          <img src="/images/ns-img-500.png" alt="gradient" className="size-full object-cover" />
-        </figure>
-        <figure className="lg:w-[409px] w-[200px] lg:h-[435px] h-[200px] absolute lg:-bottom-[23%] -bottom-[10%] lg:-right-[7%] -right-[5%] -z-10 pointer-events-none select-none">
-          <img src="/images/ns-img-505.png" alt="gradient" className="size-full object-cover" />
-        </figure>
-      </div>
     </section>
   );
 }

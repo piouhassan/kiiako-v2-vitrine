@@ -12,6 +12,7 @@ import {
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
 import { features, pagesDataRessources, services, links } from '@/data/menu';
+import {REGISTER_URL_FREE} from "@/lib/utls";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'unicon-store': Store,
@@ -297,7 +298,7 @@ export default function HeaderShopify() {
 
             <div className="xl:flex hidden items-center justify-center gap-3">
               <ThemeToggle />
-              <Link href="/signup" className={`btn btn-md transition-all duration-300 ${
+              <Link href={REGISTER_URL_FREE} className={`btn btn-md transition-all duration-300 ${
                 isScrolled
                   ? 'btn-primary dark:btn-accent hover:btn-primary'
                   : 'bg-white text-secondary hover:bg-gray-100'

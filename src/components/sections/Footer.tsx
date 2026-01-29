@@ -1,21 +1,6 @@
 export default function Footer() {
   return (
     <footer className="bg-secondary dark:bg-background-8 relative overflow-hidden">
-      <figure className="pointer-events-none select-none absolute size-[550px] top-[-17%] md:top-[-25%] xl:top-[-32%] max-[376px]:right-[-83%] right-[-64%] md:right-[-30%] lg:right-[-19%] xl:right-[-9%] bg-top-right rotate-[-30deg]">
-        <img
-          className="size-full object-cover object-top"
-          src="/images/ns-img-493.png"
-          alt="Decorative gradient background"
-        />
-      </figure>
-
-      <figure className="pointer-events-none select-none absolute size-[728px] md:size-[870px] bottom-[-33%] md:bottom-[-60%] xl:bottom-[-77%] left-[-83%] md:left-[-52%] lg:left-[-38%] xl:left-[-30%] 2xl:left-[-22%] min-[2559px]:!left-[-16%]">
-        <img
-          className="size-full object-bottom"
-          src="/images/ns-img-494.png"
-          alt="Decorative gradient background"
-        />
-      </figure>
       <div className="main-container px-5">
         <div className="grid grid-cols-12 xl:pt-[90px] gap-x-0 gap-y-16 pt-16 pb-12 justify-between">
           <div className="col-span-12 xl:col-span-4">
@@ -45,16 +30,6 @@ export default function Footer() {
                 <a href="#" className="footer-social-link">
                   <span className="sr-only">LinkedIn</span>
                   <img className="size-6" src="/images/icons/linkedin.svg" alt="LinkedIn" />
-                </a>
-                <div className="h-6 w-px bg-stroke-1/20"></div>
-                <a href="#" className="footer-social-link">
-                  <span className="sr-only">Dribbble</span>
-                  <img className="size-6" src="/images/icons/dribbble.svg" alt="Dribbble" />
-                </a>
-                <div className="h-6 w-px bg-stroke-1/20"></div>
-                <a href="#" className="footer-social-link">
-                  <span className="sr-only">Behance</span>
-                  <img className="size-6" src="/images/icons/behance.svg" alt="Behance" />
                 </a>
               </div>
             </div>
