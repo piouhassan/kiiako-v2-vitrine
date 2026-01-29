@@ -425,23 +425,7 @@ html {
   z-index: 110;
 }
 
-/* Hover state (Close again) */
-.theme-stack-container:hover .theme-card-left {
-  transform: translateX(-30px) translateY(-30px) scale(0.95);
-  opacity: 0.9;
-  z-index: 80;
-}
 
-.theme-stack-container:hover .theme-card-right {
-  transform: translateX(30px) translateY(30px) scale(0.95);
-  opacity: 0.9;
-  z-index: 80;
-}
-
-.theme-stack-container:hover .theme-card-main {
-  transform: scale(1);
-  z-index: 100;
-}
 
 /* Theme Card Content Styles */
 .theme-card-glass {

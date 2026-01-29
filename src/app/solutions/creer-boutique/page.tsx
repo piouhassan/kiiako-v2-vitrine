@@ -107,7 +107,7 @@ export default function CreerBoutiquePage() {
 
                       <div className="sp-rating">
                         <div className="sp-stars">★★★★★</div>
-                        <div className="sp-text">1000+ customers love it</div>
+                        <div className="sp-text">1000+ utilisateurs aiment ça</div>
                       </div>
                     </div>
 
