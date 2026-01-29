@@ -410,6 +410,19 @@ export default function CreerBoutiquePage() {
                           alt="E-commerce"
                           className="w-full h-full object-cover"
                       />
+
+                      <video
+                          className="absolute inset-0 w-full h-full object-cover"
+                          src="/hero/emballage_colis.mp4"
+                          preload="none"
+                          loop
+                          autoPlay
+                          poster="/hero/2150171831.jpg"
+                          muted
+                          playsInline
+                          data-uc-cover
+                          data-uc-video="autoplay: true;"
+                      />
                     </div>
                   </FadeIn>
                 </div>

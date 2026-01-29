@@ -3,10 +3,10 @@ export default function Footer() {
     <footer className="bg-secondary dark:bg-background-8 relative overflow-hidden">
       <div className="main-container px-5">
         <div className="grid grid-cols-12 xl:pt-[90px] gap-x-0 gap-y-16 pt-16 pb-12 justify-between">
-          <div className="col-span-12 xl:col-span-4">
-            <div className="max-w-[306px]">
+          <div className="col-span-12 xl:col-span-5">
+            <div className="">
               <figure>
-                <img src="/logo_kiiako_white@150x.png" alt="Kiiako" className="h-8" />
+                <img src="/logo_kiiako_white@150x.png" alt="Kiiako" className="h-20" />
               </figure>
               <p className="text-accent/60 font-normal text-tagline-1 mt-4 mb-7">
                 La plateforme e-commerce qui permet aux vendeurs de créer leur boutique en ligne, vendre et livrer partout en Afrique.
@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-span-12 xl:col-span-8 grid grid-cols-12 gap-x-0 gap-y-8">
+          <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-x-0 gap-y-8">
             <div className="col-span-12 md:col-span-4">
               <div className="space-y-8">
                 <p className="sm:text-heading-6 text-tagline-1 font-normal text-primary-50">Solutions</p>

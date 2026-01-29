@@ -13258,6 +13258,10 @@ body {
       background-color: #864ffef2;
     }
 
+    .bg-primary-500\/10 {
+      background-color: color-mix(in oklab, var(--color-primary-500) 10%, transparent);
+    }
+
     @supports (color: color-mix(in lab, red, red)) {
       .group-hover\:bg-primary-500\/95:is(:where(.group):hover *) {
         background-color: color-mix(in oklab, var(--color-primary-500) 95%, transparent);
