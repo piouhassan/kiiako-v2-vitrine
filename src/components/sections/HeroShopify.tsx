@@ -32,7 +32,7 @@ export default function HeroShopify() {
                         <span className="text-xs font-body text-foreground"> Conçu pour chaque type de boutique</span>
                     </div>
 
-                    <h4 className="text-7xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight ">
+                    <h4 className="text-7xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-light leading-tight ">
                         Créez votre boutique en ligne <br/> en quelques minutes
                     </h4>
 
@@ -42,7 +42,7 @@ export default function HeroShopify() {
 
                     <div className="pt-2">
                         <a href={REGISTER_URL_FREE}
-                           className="inline-block px-8 py-3 bg-primary-500 font-semibold text-lg text-white rounded-full hover:bg-gray-100 transition-colors shadow-xl">
+                           className="inline-block px-8 py-3 bg-primary-500 text-lg text-white rounded-full hover:bg-gray-100 transition-colors shadow-xl">
                             Démarrez gratuitement
                         </a>
                     </div>

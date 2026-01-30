@@ -17,7 +17,7 @@ export const features = [
     {
         id: 3,
         iconClass: "unicon-blog",
-        title: "Nom de domaine personnalisé",
+        title: "Domaine personnalisé",
         description: "Rendez votre boutique unique avec un domaine à votre nom",
         link: "/solutions/nom-de-domaine"
     },

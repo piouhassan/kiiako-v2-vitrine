@@ -104,6 +104,7 @@
   --color-stroke-9: var(--color-background-8);
   --color-ns-yellow: #f9eb57;
   --color-ns-green: #c6f56f;
+  --color-green: #11c77c;
   --color-ns-red: #ffb9a2;
   --color-ns-cyan: #83e7ee;
   --color-ns-green-light: #e8fbc6;
@@ -12329,7 +12330,9 @@ body {
   .text-ns-green {
     color: var(--color-ns-green);
   }
-
+  .text-green {
+    color: var(--color-green);
+  }
   .text-ns-yellow {
     color: var(--color-ns-yellow);
   }

@@ -160,7 +160,7 @@ export default function Header() {
                                     <div className="relative z-10 flex-1">
                                       <div className="flex items-center justify-between gap-2">
                                         <p className={`
-                                      text-tagline-1 font-semibold  dark:text-accent ${isActivePath(feature.link) ? "text-primary-500" : "text-secondary"}
+                                      text-tagline-1 font-normal  dark:text-accent ${isActivePath(feature.link) ? "text-primary-500" : "text-secondary"}
                                       `}>{feature.title}</p>
                                         <ArrowRight className={`w-4 h-4  group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-primary-500 
                                        ${isActivePath(feature.link) ? 'text-primary-500 opacity-100' : 'opacity-0'}
