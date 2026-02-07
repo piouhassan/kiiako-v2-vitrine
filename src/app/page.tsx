@@ -1,4 +1,5 @@
 import About from '@/components/sections/About';
+import ImageGallery from '@/components/sections/ImageGallery';
 import Work from '@/components/sections/Work';
 import Services from '@/components/sections/Services';
 import Process from '@/components/sections/Process';
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <HeroShopify />
         <About />
+        <ImageGallery />
         <Work />
         <Services />
         <Process />

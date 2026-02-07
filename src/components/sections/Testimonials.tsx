@@ -27,6 +27,12 @@ export default function Testimonials() {
       company: "Mode & Style Afrique",
       avatar: "/images/ns-avatar-4.png",
       testimonial: "Avec mon nom de domaine personnalisé et mes multiples boutiques sur Kiiako, j'ai pu professionnaliser mon image. Je gère maintenant plus de 500 commandes par mois et mes revenus ont explosé."
+    },
+    {
+      name: "Fatou Diallo",
+      company: "Mode & Style Afrique",
+      avatar: "/images/ns-avatar-4.png",
+      testimonial: "Avec mon nom de domaine personnalisé et mes multiples boutiques sur Kiiako, j'ai pu professionnaliser mon image. Je gère maintenant plus de 500 commandes par mois et mes revenus ont explosé."
     }
   ];
 
@@ -54,7 +60,7 @@ export default function Testimonials() {
   }, [paused]);
 
   return (
-     <section className="xl:py-[100px] lg:py-[90px] md:py-20 py-16 bg-background-3 dark:bg-background-7 bg-secondary">
+     <section className="xl:py-[100px] lg:py-[90px] md:py-20 py-16 bg-secondary dark:bg-background-7 ">
       <div className="mb-14 text-center">
         <div className="space-y-5">
           <FadeIn delay={0.1}>
@@ -76,7 +82,7 @@ export default function Testimonials() {
             {[...testimonials, ...testimonials].map((item, index) => (
               <div
                 key={index}
-                className="min-w-sm sm:min-w-[360px] md:min-w-[722px] p-8 md:p-14 rounded-[20px] backdrop-blur-[22px] space-y-6 sm:space-y-8 md:space-y-10 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-300 ease-linear flex-shrink-0"
+                className="min-w-sm sm:min-w-[360px] md:min-w-[360px] lg:min-w-[360px] p-8 md:p-14 rounded-[20px] backdrop-blur-[22px] space-y-6 sm:space-y-8 md:space-y-10 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-300 ease-linear flex-shrink-0"
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
               >

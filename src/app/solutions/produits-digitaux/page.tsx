@@ -59,101 +59,92 @@ export default function ProduitsDigitauxPage() {
           </div>
         </section>
 
-        {/* Fonctionnalités */}
-        <section className="bg-background-2 dark:bg-background-5 py-[100px]">
+        {/* Fonctionnalités principales */}
+        <section className="py-20 bg-background-3 dark:bg-background-7">
           <div className="main-container">
-            <div className="text-center space-y-3 mb-[70px]">
-              <FadeIn delay={0.2}>
-                <span className="badge bg-primary-500 text-white">Fonctionnalités puissantes</span>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <h2 className="xl:max-w-[878px] max-w-[600px] mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <FadeIn delay={0.1}>
+                <h2 className="text-3xl  md:text-4xl font-bold mb-4">
                   Vendez et livrez vos produits digitaux facilement
                 </h2>
               </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className="text-lg  dark:text-accent/70">
+                  Une plateforme complète avec tous les outils essentiels pour vendre vos créations numériques
+                </p>
+              </FadeIn>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <FadeIn delay={0.2}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <Cloud className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Upload de fichiers jusqu'à 2GB</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Uploadez vos fichiers volumineux en toute sécurité. Stockage illimité pour vos produits digitaux.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.25}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <FileText className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Formats multiples supportés</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    PDF, MP3, MP4, ZIP, EPUB et tous les formats courants sont supportés sans restriction.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.3}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <Download className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Livraison automatique par email</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Vos clients reçoivent instantanément leur lien de téléchargement par email après l'achat.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.35}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <Lock className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Liens de téléchargement sécurisés</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Protection anti-piratage avec liens sécurisés et limite de téléchargements par achat.
+                  </p>
+                </div>
+              </FadeIn>
+
               <FadeIn delay={0.4}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500">
-                    <Cloud className="w-8 h-8 text-white" />
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <Lock className="w-6 h-6 text-primary-500" />
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Upload de fichiers jusqu'à 2GB</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Uploadez vos fichiers volumineux en toute sécurité. Stockage illimité pour vos produits digitaux.
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">Protection anti-piratage</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Système de sécurité avancé pour protéger vos créations contre le téléchargement non autorisé.
+                  </p>
                 </div>
               </FadeIn>
 
-              <FadeIn delay={0.5}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500">
-                    <FileText className="w-8 h-8 text-white" />
+              <FadeIn delay={0.45}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <RefreshCw className="w-6 h-6 text-primary-500" />
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Formats multiples supportés</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      PDF, MP3, MP4, ZIP, EPUB et tous les formats courants sont supportés sans restriction.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.6}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500">
-                    <Download className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Livraison automatique par email</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Vos clients reçoivent instantanément leur lien de téléchargement par email après l'achat.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.7}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500">
-                    <Lock className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Liens de téléchargement sécurisés</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Protection anti-piratage avec liens sécurisés et limite de téléchargements par achat.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.8}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-500">
-                    <Lock className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Protection anti-piratage</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Système de sécurité avancé pour protéger vos créations contre le téléchargement non autorisé.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.9}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500">
-                    <RefreshCw className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Mises à jour automatiques</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Mettez à jour vos fichiers et tous vos clients reçoivent automatiquement la nouvelle version.
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">Mises à jour automatiques</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Mettez à jour vos fichiers et tous vos clients reçoivent automatiquement la nouvelle version.
+                  </p>
                 </div>
               </FadeIn>
             </div>

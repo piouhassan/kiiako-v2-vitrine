@@ -77,101 +77,92 @@ export default function AvisClientsPage() {
           </div>
         </section>
 
-        {/* Fonctionnalités */}
-        <section className="bg-background-2 dark:bg-background-5 py-[100px]">
+        {/* Fonctionnalités principales */}
+        <section className="py-20 bg-background-3 dark:bg-background-7">
           <div className="main-container">
-            <div className="text-center space-y-3 mb-[70px]">
-              <FadeIn delay={0.2}>
-                <span className="badge bg-primary-500 text-white">Fonctionnalités complètes</span>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <h2 className="xl:max-w-[878px] max-w-[600px] mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <FadeIn delay={0.1}>
+                <h2 className="text-3xl  md:text-4xl font-bold mb-4">
                   Système d'avis complet et automatisé
                 </h2>
               </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className="text-lg  dark:text-accent/70">
+                  Une plateforme complète avec tous les outils essentiels pour gérer les avis clients
+                </p>
+              </FadeIn>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <FadeIn delay={0.2}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <MessageSquare className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Collecte automatique d'avis</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Envoi automatique d'emails après chaque achat pour demander un avis à vos clients.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.25}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <Star className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Système de notation par étoiles</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Notation de 1 à 5 étoiles avec commentaires détaillés de vos clients.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.3}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <ImageIcon className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Avis avec photos et vidéos</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Vos clients peuvent ajouter des photos et vidéos pour illustrer leurs avis.
+                  </p>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.35}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <ShieldCheck className="w-6 h-6 text-primary-500" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Modération des avis</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Validez manuellement ou automatiquement les avis avant leur publication sur votre boutique.
+                  </p>
+                </div>
+              </FadeIn>
+
               <FadeIn delay={0.4}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500">
-                    <MessageSquare className="w-8 h-8 text-white" />
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <Star className="w-6 h-6 text-primary-500" />
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Collecte automatique d'avis</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Envoi automatique d'emails après chaque achat pour demander un avis à vos clients.
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">Widget d'affichage personnalisable</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Affichez les avis partout sur votre boutique avec un widget entièrement personnalisable.
+                  </p>
                 </div>
               </FadeIn>
 
-              <FadeIn delay={0.5}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-500 to-amber-500">
-                    <Star className="w-8 h-8 text-white" />
+              <FadeIn delay={0.45}>
+                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
+                    <BarChart className="w-6 h-6 text-primary-500" />
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Système de notation par étoiles</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Notation de 1 à 5 étoiles avec commentaires détaillés de vos clients.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.6}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500">
-                    <ImageIcon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Avis avec photos et vidéos</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Vos clients peuvent ajouter des photos et vidéos pour illustrer leurs avis.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.7}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500">
-                    <ShieldCheck className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Modération des avis</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Validez manuellement ou automatiquement les avis avant leur publication sur votre boutique.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.8}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500">
-                    <Star className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Widget d'affichage personnalisable</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Affichez les avis partout sur votre boutique avec un widget entièrement personnalisable.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.9}>
-                <div className="space-y-6 p-8 rounded-2xl bg-background-1 dark:bg-background-6 border border-stroke-1 dark:border-stroke-7 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500">
-                    <BarChart className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-heading-5">Statistiques de satisfaction</h3>
-                    <p className="text-secondary/80 dark:text-accent/80">
-                      Suivez le niveau de satisfaction de vos clients avec des statistiques détaillées.
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">Statistiques de satisfaction</h3>
+                  <p className="text-secondary/70 dark:text-accent/70">
+                    Suivez le niveau de satisfaction de vos clients avec des statistiques détaillées.
+                  </p>
                 </div>
               </FadeIn>
             </div>

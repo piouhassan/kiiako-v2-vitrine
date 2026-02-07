@@ -6,6 +6,7 @@ import GoogleOneTap from "@/components/auth/GoogleOneTap";
 import { constructMetadata, PAGE_SEO } from "@/lib/seo.config";
 import JsonLd from "@/components/elements/JsonLd";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/schema";
+import CookieConsent from "@/components/elements/CookieConsent";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -56,6 +57,7 @@ export default function RootLayout({
       <GoogleOneTap />
       <ThemeProvider>
         {children}
+          <CookieConsent />
       </ThemeProvider>
       </body>
       </html>
