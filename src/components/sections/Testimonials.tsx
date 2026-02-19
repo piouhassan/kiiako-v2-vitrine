@@ -3,38 +3,33 @@
 import { useEffect, useRef, useState } from 'react';
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
+import { useTranslation } from 'react-i18next';
 
 export default function Testimonials() {
+  const { t } = useTranslation();
   const trackRef = useRef<HTMLDivElement>(null);
   const offset = useRef(0);
   const [paused, setPaused] = useState(false);
 
-  const testimonials = [
-    {
-      name: "Marie Mumbanza",
-      company: "BeautyShop Kinshasa",
-      avatar: "/images/ns-avatar-2.png",
-      testimonial: "Kiiako a transformé mon activité. En 6 mois, j'ai triplé mon chiffre d'affaires. La livraison intégrée et les paiements Mobile Money rendent tout tellement simple. Mes clients adorent la fluidité de ma boutique en ligne."
-    },
-    {
-      name: "Jean-Pierre Okonda",
-      company: "Tech Accessories Pro",
-      avatar: "/images/ns-avatar-3.png",
-      testimonial: "Je vends maintenant dans toute la RDC grâce au système de livraison de Kiiako. Le support client est exceptionnel et le tableau de bord me permet de tout gérer facilement. Je recommande vivement cette plateforme."
-    },
-    {
-      name: "Fatou Diallo",
-      company: "Mode & Style Afrique",
-      avatar: "/images/ns-avatar-4.png",
-      testimonial: "Avec mon nom de domaine personnalisé et mes multiples boutiques sur Kiiako, j'ai pu professionnaliser mon image. Je gère maintenant plus de 500 commandes par mois et mes revenus ont explosé."
-    },
-    {
-      name: "Fatou Diallo",
-      company: "Mode & Style Afrique",
-      avatar: "/images/ns-avatar-4.png",
-      testimonial: "Avec mon nom de domaine personnalisé et mes multiples boutiques sur Kiiako, j'ai pu professionnaliser mon image. Je gère maintenant plus de 500 commandes par mois et mes revenus ont explosé."
-    }
+  const testimonials = t('home.testimonials.items', { returnObjects: true }) as Array<{
+    name: string;
+    company: string;
+    avatar?: string;
+    text: string;
+  }>;
+
+  // Manually adding avatars since they are not in the translation file
+  const avatars = [
+    "/images/ns-avatar-2.png",
+    "/images/ns-avatar-3.png",
+    "/images/ns-avatar-4.png",
+    "/images/ns-avatar-4.png" // The 4th item in original file was a duplicate of 3rd
   ];
+
+  const testimonialItems = testimonials.map((item, index) => ({
+    ...item,
+    avatar: avatars[index % avatars.length]
+  }));
 
   useEffect(() => {
     const scrollSpeed = -0.5; // Vitesse de défilement vers la gauche
@@ -64,10 +59,10 @@ export default function Testimonials() {
       <div className="mb-14 text-center">
         <div className="space-y-5">
           <FadeIn delay={0.1}>
-            <span className="badge badge-blur-light dark:!text-accent">Témoignages</span>
+            <span className="badge badge-blur-light dark:!text-accent">{t('home.testimonials.badge')}</span>
           </FadeIn>
           <SlideIn direction="down" delay={0.2}>
-            <h2 className="text-white">Ce que disent nos vendeurs</h2>
+            <h2 className="text-white">{t('home.testimonials.title')}</h2>
           </SlideIn>
         </div>
       </div>
@@ -79,7 +74,7 @@ export default function Testimonials() {
             className="flex items-center gap-6"
             style={{ willChange: 'transform' }}
           >
-            {[...testimonials, ...testimonials].map((item, index) => (
+            {[...testimonialItems, ...testimonialItems].map((item, index) => (
               <div
                 key={index}
                 className="min-w-sm sm:min-w-[360px] md:min-w-[360px] lg:min-w-[360px] p-8 md:p-14 rounded-[20px] backdrop-blur-[22px] space-y-6 sm:space-y-8 md:space-y-10 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-300 ease-linear flex-shrink-0"
@@ -119,7 +114,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <p className="max-w-[610px] md:text-heading-6 sm:text-tagline-1 text-tagline-2 text-wrap text-accent/60">
-                    {item.testimonial}
+                    {item.text}
                   </p>
                 </div>
               </div>

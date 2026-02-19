@@ -65,7 +65,7 @@ export default function PersonnalisationPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <FadeIn delay={0.4}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Layout className="w-6 h-6 text-primary-500" />
                     </div>
@@ -79,7 +79,7 @@ export default function PersonnalisationPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.5}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Palette className="w-6 h-6 text-primary-500" />
                     </div>
@@ -93,7 +93,7 @@ export default function PersonnalisationPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.6}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Image className="w-6 h-6 text-primary-500" />
                     </div>
@@ -107,7 +107,7 @@ export default function PersonnalisationPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.7}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Eye className="w-6 h-6 text-primary-500" />
                     </div>
@@ -121,7 +121,7 @@ export default function PersonnalisationPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.8}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Layout className="w-6 h-6 text-primary-500" />
                     </div>
@@ -135,7 +135,7 @@ export default function PersonnalisationPage() {
                 </FadeIn>
 
                 <FadeIn delay={0.9}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <div className="flex gap-1">
                         <Sun className="w-5 h-5 text-primary-500" />

@@ -5,6 +5,7 @@ import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
 import { Check, Globe, Shield, TrendingUp, Zap, Lock, ArrowRight, X, Clock, Circle, ChevronLeft, ChevronRight, RotateCcw, Home, Star } from 'lucide-react';
+import {REGISTER_URL_FREE} from "@/lib/utls";
 
 export default function NomDeDomainePage() {
   const [currentText, setCurrentText] = useState('');
@@ -693,47 +694,44 @@ export default function NomDeDomainePage() {
             </div>
           </section>
 
-          {/* CTA Final - Minimal */}
-          <section className="py-24 lg:py-32">
-            <div className="main-container">
-              <div className="max-w-3xl mx-auto text-center">
-                <FadeIn delay={0.1}>
-                  <h2 className="text-heading-3 lg:text-heading-2 mb-6">
+          {/* CTA Section */}
+          <section className="cb-cta-section">
+            <div className="cb-container">
+              <div className="cb-max-w-4xl cb-text-center space-y-8">
+                <FadeIn delay={0.2}>
+                  <h2 className="text-heading-2">
                     Commencez dès maintenant
                   </h2>
                 </FadeIn>
-                <FadeIn delay={0.2}>
-                  <p className="text-lg mb-10" style={{color: 'var(--color-secondary)', opacity: 0.6}}>
+                <FadeIn delay={0.3}>
+                  <p className="cb-lead">
                     Votre domaine personnalisé est configuré automatiquement à la création de votre boutique
                   </p>
                 </FadeIn>
-                <FadeIn delay={0.3}>
-                  <div className="flex justify-center mb-10">
-                    <a
-                        href="#"
-                        className="inline-flex items-center justify-center rounded-full cursor-pointer gap-2.5 bg-secondary text-center transition-all duration-300 ease-in-out font-medium text-accent text-tagline-1 px-8 py-4"
-                        style={{border: 'none'}}
-                    >
-                      Créer ma boutique
-                      <ArrowRight className="w-5 h-5" />
+                <FadeIn delay={0.4}>
+                  <div className="cb-text-center">
+                    <a href={REGISTER_URL_FREE} className="cb-btn">
+                      <span className="inline-block first-letter:uppercase">
+                        Créer ma boutique gratuite
+                      </span>
                     </a>
                   </div>
                 </FadeIn>
-                <FadeIn delay={0.4}>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm" style={{color: 'var(--color-secondary)', opacity: 0.5}}>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4" />
+                <FadeIn delay={0.5}>
+                  <ul className="cb-footer-list">
+                    <li className="flex items-center gap-2">
+                      <Check className="w-5 h-5 text-primary-500" />
                       <span>Gratuit</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4" />
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-5 h-5 text-primary-500" />
                       <span>SSL inclus</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4" />
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-5 h-5 text-primary-500" />
                       <span>Configuration automatique</span>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </FadeIn>
               </div>
             </div>

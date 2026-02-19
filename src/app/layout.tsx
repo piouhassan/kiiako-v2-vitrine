@@ -7,6 +7,8 @@ import { constructMetadata, PAGE_SEO } from "@/lib/seo.config";
 import JsonLd from "@/components/elements/JsonLd";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/schema";
 import CookieConsent from "@/components/elements/CookieConsent";
+import FullscreenLoader from "@/components/ui/FullscreenLoader";
+import ClientI18nProvider from "@/components/providers/ClientI18nProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -54,11 +56,14 @@ export default function RootLayout({
           className={`${poppins.variable} font-sans antialiased`}
           style={{ fontFamily: "var(--font-poppins)" }}
       >
-      <GoogleOneTap />
-      <ThemeProvider>
-        {children}
-          <CookieConsent />
-      </ThemeProvider>
+      <FullscreenLoader />
+      <ClientI18nProvider>
+          <GoogleOneTap />
+          <ThemeProvider>
+            {children}
+              <CookieConsent />
+          </ThemeProvider>
+      </ClientI18nProvider>
       </body>
       </html>
   );

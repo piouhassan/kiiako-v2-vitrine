@@ -1063,7 +1063,7 @@ body {
   content: var(--tw-content);
   width: calc(var(--spacing) * 5);
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
   content: var(--tw-content);
   position: relative;
@@ -1091,7 +1091,7 @@ body {
 
 .details-body ul li:where(.dark, .dark *):before {
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
 }
 
@@ -1121,7 +1121,7 @@ body {
   content: var(--tw-content);
   width: calc(var(--spacing) * 5);
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
   position: relative;
 }
@@ -1132,7 +1132,7 @@ body {
 
 .details-body ol li:first-child:where(.dark, .dark *):before {
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
 }
 
@@ -1156,7 +1156,7 @@ body {
   content: var(--tw-content);
   width: calc(var(--spacing) * 5);
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
   position: relative;
 }
@@ -1167,7 +1167,7 @@ body {
 
 .details-body ol li:nth-child(2):where(.dark, .dark *):before {
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
 }
 
@@ -1191,7 +1191,7 @@ body {
   content: var(--tw-content);
   width: calc(var(--spacing) * 5);
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
   position: relative;
 }
@@ -1202,7 +1202,7 @@ body {
 
 .details-body ol li:last-child:where(.dark, .dark *):before {
   content: var(--tw-content);
-  --tw-content: url("/images/icons/checkmark-white.svg");
+  --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: var(--tw-content);
 }
 
@@ -10739,86 +10739,7 @@ body {
     background-image: repeating-linear-gradient(to right, #0003 0 4px, #0000 4px 8px);
   }
 
-  .bg-\[url\(\'\/images\/ns-img-25\.png\'\)\] {
-    background-image: url("/images/ns-img-25.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-26\.jpg\'\)\] {
-    background-image: url("/images/ns-img-26.jpg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-55\.svg\'\)\] {
-    background-image: url("/images/ns-img-55.svg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-85\.png\'\)\] {
-    background-image: url("/images/ns-img-85.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-128\.svg\'\)\] {
-    background-image: url("/images/ns-img-128.svg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-160\.png\'\)\] {
-    background-image: url("/images/ns-img-160.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-169\.png\'\)\] {
-    background-image: url("/images/ns-img-169.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-170\.png\'\)\] {
-    background-image: url("/images/ns-img-170.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-218\.svg\'\)\] {
-    background-image: url("/images/ns-img-218.svg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-221\.png\'\)\] {
-    background-image: url("/images/ns-img-221.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-223\.png\'\)\] {
-    background-image: url("/images/ns-img-223.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-242\.png\'\)\] {
-    background-image: url("/images/ns-img-242.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-247\.svg\'\)\] {
-    background-image: url("/images/ns-img-247.svg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-261\.svg\'\)\] {
-    background-image: url("/images/ns-img-261.svg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-291\.png\'\)\] {
-    background-image: url("/images/ns-img-291.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-295\.jpg\'\)\] {
-    background-image: url("/images/ns-img-295.jpg");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-329\.png\'\)\] {
-    background-image: url("/images/ns-img-329.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-496\.png\'\)\] {
-    background-image: url("/images/ns-img-496.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-501\.png\'\)\] {
-    background-image: url("/images/ns-img-501.png");
-  }
-
-  .bg-\[url\(\'\/images\/ns-img-527\.png\'\)\] {
-    background-image: url("/images/ns-img-527.png");
-  }
-
+  
   .from-\(image\:--color-gradient-5\) {
     --tw-gradient-from: var(--color-gradient-5);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -14068,7 +13989,7 @@ body {
 
   .before\:content-\[url\(\'\/images\/icons\/checkmark-white\.svg\'\)\]:before {
     content: var(--tw-content);
-    --tw-content: url("/images/icons/checkmark-white.svg");
+    --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     content: var(--tw-content);
   }
 
@@ -16366,10 +16287,7 @@ body {
       max-width: 400px;
     }
 
-    .min-\[425px\]\:bg-\[url\(\'\/images\/ns-img-242\.png\'\)\] {
-      background-image: url("/images/ns-img-242.png");
-    }
-
+    
     .min-\[425px\]\:py-\[60px\] {
       padding-block: 60px;
     }
@@ -17787,9 +17705,6 @@ body {
       background-color: var(--color-background-2);
     }
 
-    .sm\:bg-\[url\(\'\/images\/ns-img-375\.jpg\'\)\] {
-      background-image: url("/images/ns-img-375.jpg");
-    }
 
     .sm\:object-cover {
       object-fit: cover;
@@ -20471,10 +20386,7 @@ body {
       }
     }
 
-    .md\:bg-\[url\(\'\/images\/ns-img-219\.png\'\)\] {
-      background-image: url("/images/ns-img-219.png");
-    }
-
+    
     .md\:bg-cover {
       background-size: cover;
     }
@@ -27024,26 +26936,7 @@ body {
     background-image: linear-gradient(var(--tw-gradient-stops, 180deg, #070b10e6 0%, #070b10 100%));
   }
 
-  .dark\:bg-\[url\(\'\/images\/ns-img-329\.png\'\)\]:where(.dark, .dark *) {
-    background-image: url("/images/ns-img-329.png");
-  }
-
-  .dark\:bg-\[url\(\'\/images\/ns-img-dark-10\.png\'\)\]:where(.dark, .dark *) {
-    background-image: url("/images/ns-img-dark-10.png");
-  }
-
-  .dark\:bg-\[url\(\'\/images\/ns-img-dark-34\.svg\'\)\]:where(.dark, .dark *) {
-    background-image: url("/images/ns-img-dark-34.svg");
-  }
-
-  .dark\:bg-\[url\(\'\/images\/ns-img-dark-97\.svg\'\)\]:where(.dark, .dark *) {
-    background-image: url("/images/ns-img-dark-97.svg");
-  }
-
-  .dark\:bg-\[url\(\'\/images\/ns-img-dark-148\.svg\'\)\]:where(.dark, .dark *) {
-    background-image: url("/images/ns-img-dark-148.svg");
-  }
-
+  
   .dark\:\!from-background-5:where(.dark, .dark *) {
     --tw-gradient-from: var(--color-background-5) !important;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)) !important;
@@ -27617,7 +27510,7 @@ body {
 
   .dark\:before\:content-\[url\(\'\/images\/icons\/checkmark-white\.svg\'\)\]:where(.dark, .dark *):before {
     content: var(--tw-content);
-    --tw-content: url("/images/icons/checkmark-white.svg");
+    --tw-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4.5L6 12L2.5 8.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     content: var(--tw-content);
   }
 

@@ -5,8 +5,11 @@ import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
 import { Check, Star, MessageSquare, Image as ImageIcon, ShieldCheck, TrendingUp, BarChart } from 'lucide-react';
+import {REGISTER_URL_FREE} from "@/lib/utls";
+import { useTranslation } from 'react-i18next';
 
 export default function AvisClientsPage() {
+  const { t } = useTranslation();
   return (
     <div className="bg-background-1 dark:bg-background-6">
       <Header />
@@ -95,7 +98,7 @@ export default function AvisClientsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <FadeIn delay={0.2}>
-                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                   <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                     <MessageSquare className="w-6 h-6 text-primary-500" />
                   </div>
@@ -107,7 +110,7 @@ export default function AvisClientsPage() {
               </FadeIn>
 
               <FadeIn delay={0.25}>
-                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                   <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                     <Star className="w-6 h-6 text-primary-500" />
                   </div>
@@ -119,7 +122,7 @@ export default function AvisClientsPage() {
               </FadeIn>
 
               <FadeIn delay={0.3}>
-                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                   <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                     <ImageIcon className="w-6 h-6 text-primary-500" />
                   </div>
@@ -131,7 +134,7 @@ export default function AvisClientsPage() {
               </FadeIn>
 
               <FadeIn delay={0.35}>
-                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                   <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                     <ShieldCheck className="w-6 h-6 text-primary-500" />
                   </div>
@@ -143,7 +146,7 @@ export default function AvisClientsPage() {
               </FadeIn>
 
               <FadeIn delay={0.4}>
-                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                   <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                     <Star className="w-6 h-6 text-primary-500" />
                   </div>
@@ -155,7 +158,7 @@ export default function AvisClientsPage() {
               </FadeIn>
 
               <FadeIn delay={0.45}>
-                <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                   <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                     <BarChart className="w-6 h-6 text-primary-500" />
                   </div>
@@ -244,25 +247,22 @@ export default function AvisClientsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-background-2 dark:bg-background-5 py-[100px] lg:py-[150px]">
-          <div className="main-container">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
+        <section className="cb-cta-section">
+          <div className="cb-container">
+            <div className="cb-max-w-4xl cb-text-center space-y-8">
               <FadeIn delay={0.2}>
                 <h2 className="text-heading-2">
                   Commencez à collecter des avis dès aujourd'hui
                 </h2>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <p className="text-lg max-w-2xl mx-auto">
+                <p className="cb-lead">
                   Augmentez vos ventes en montrant la satisfaction de vos clients avec un système d'avis automatisé.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-full cursor-pointer gap-2.5 bg-secondary hover:scale-101 text-center transition-all duration-500 ease-in-out font-medium text-nowrap lowercase hover:bg-primary-500 text-accent hover:text-accent text-tagline-1 md:px-8 px-6 md:py-4 py-3"
-                  >
+                <div className="cb-text-center">
+                  <a href={REGISTER_URL_FREE} className="cb-btn">
                     <span className="inline-block first-letter:uppercase">
                       Créer ma boutique gratuite
                     </span>
@@ -270,7 +270,7 @@ export default function AvisClientsPage() {
                 </div>
               </FadeIn>
               <FadeIn delay={0.5}>
-                <ul className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
+                <ul className="cb-footer-list">
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-primary-500" />
                     <span>Collecte automatique</span>

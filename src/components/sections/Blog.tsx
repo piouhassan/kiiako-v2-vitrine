@@ -2,23 +2,25 @@
 
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
+import { useTranslation } from 'react-i18next';
 
 export default function Blog() {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-16 md:pt-20 lg:pt-[90px] xl:pt-[100px] pb-16 md:pb-20 lg:pb-[90px] xl:pb-[100px]">
       <div className="main-container">
         <div className="text-center space-y-5 mb-10 md:mb-[70px]">
           <FadeIn delay={0.1}>
-            <span className="badge bg-primary-500 text-white">Journal</span>
+            <span className="badge bg-primary-500 text-white">{t('home.blog.badge')}</span>
           </FadeIn>
           <div className="space-y-3">
             <SlideIn direction="down" delay={0.2}>
-              <h2>Thoughts & ideas</h2>
+              <h2>{t('home.blog.title')}</h2>
             </SlideIn>
             <SlideIn direction="down" delay={0.3}>
               <p className="max-w-[492px] mx-auto">
-                A collection of thoughts, experiments, and insights around design, technology, and
-                creativity.
+                {t('home.blog.subtitle')}
               </p>
             </SlideIn>
           </div>
@@ -87,7 +89,7 @@ export default function Blog() {
                       href="/blog/details"
                       className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent btn-md w-[90%] md:w-auto"
                     >
-                      <span>Read more</span>
+                      <span>{t('home.blog.readMore')}</span>
                     </a>
                   </div>
                 </div>
@@ -123,7 +125,7 @@ export default function Blog() {
                         href="/blog/details"
                         className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent btn-md w-[90%] md:w-auto"
                       >
-                        <span>Read more</span>
+                        <span>{t('home.blog.readMore')}</span>
                       </a>
                     </div>
                   </div>
@@ -158,7 +160,7 @@ export default function Blog() {
                         href="/blog/details"
                         className="btn btn-white hover:btn-secondary dark:btn-transparent dark:hover:btn-accent btn-md w-[90%] md:w-auto"
                       >
-                        <span>Read more</span>
+                        <span>{t('home.blog.readMore')}</span>
                       </a>
                     </div>
                   </div>
@@ -173,7 +175,7 @@ export default function Blog() {
                 href="/blog"
                 className="btn btn-secondary btn-md inline-block dark:btn-transparent dark:border-stroke-7 hover:btn-primary dark:hover:btn-white w-[90%] md:w-auto"
               >
-                <span>Visit our blog</span>
+                <span>{t('home.blog.visitBlog')}</span>
               </a>
             </div>
           </FadeIn>

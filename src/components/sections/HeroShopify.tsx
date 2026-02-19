@@ -2,8 +2,11 @@
 
 import {Sparkles} from "lucide-react";
 import {REGISTER_URL_FREE} from "@/lib/utls";
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function HeroShopify() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative w-full overflow-hidden" style={{ minHeight: '85vh' }}>
 
@@ -29,21 +32,21 @@ export default function HeroShopify() {
                 <div className="max-w-7xl mx-auto  space-y-8 pt-10">
                     <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary/5 border border-primary/10 text-white ">
                         <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="text-xs font-body text-foreground"> Conçu pour chaque type de boutique</span>
+                        <span className="text-xs font-body text-foreground"> {t('home.hero.videoBadge')}</span>
                     </div>
 
                     <h4 className="text-7xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-light leading-tight ">
-                        Créez votre boutique en ligne <br/> en quelques minutes
+                        <Trans i18nKey="home.hero.title" components={{ 1: <br/> }} />
                     </h4>
 
                     <p className="text-lg md:text-xl lg:text-2xl text-white mt-20">
-                        Rêvez plus grand, développez votre activité plus vite et allez plus loin avec Kiiako
+                        {t('home.hero.subtitle')}
                     </p>
 
                     <div className="pt-2">
                         <a href={REGISTER_URL_FREE}
                            className="inline-block px-8 py-3 bg-primary-500 text-lg text-white rounded-full hover:bg-gray-100 transition-colors shadow-xl">
-                            Démarrez gratuitement
+                            {t('home.hero.cta')}
                         </a>
                     </div>
 
@@ -75,7 +78,7 @@ export default function HeroShopify() {
                                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                             </svg>
                         </div>
-                        <span className="text-sm font-semibold text-content-white-accent">4.9 étoiles sur 5</span>
+                        <span className="text-sm font-semibold text-content-white-accent">{t('home.hero.rating')}</span>
                     </div>
                 </div>
             </div>

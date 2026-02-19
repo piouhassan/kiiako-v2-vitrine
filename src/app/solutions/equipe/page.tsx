@@ -4,6 +4,7 @@ import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
 import { Check, Users, Shield, UserPlus, FileText, Lock, Eye } from 'lucide-react';
+import {REGISTER_URL_FREE} from "@/lib/utls";
 
 export default function EquipePage() {
   return (
@@ -243,25 +244,22 @@ export default function EquipePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-background-2 dark:bg-background-5 py-[100px] lg:py-[150px]">
-          <div className="main-container">
-            <div className="max-w-4xl mx-auto text-center space-y-8 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl p-12 lg:p-16">
+        <section className="cb-cta-section">
+          <div className="cb-container">
+            <div className="cb-max-w-4xl cb-text-center space-y-8">
               <FadeIn delay={0.2}>
                 <h2 className="text-heading-2">
                   Développez votre boutique en équipe
                 </h2>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <p className="text-lg  max-w-2xl mx-auto">
+                <p className="cb-lead">
                   Invitez vos collaborateurs et gérez votre boutique plus efficacement avec des rôles et permissions adaptés.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-full cursor-pointer gap-2.5 bg-primary-500 hover:scale-101 text-center transition-all duration-500 ease-in-out font-medium text-nowrap lowercase hover:bg-secondary text-white hover:text-white text-tagline-1 md:px-8 px-6 md:py-4 py-3"
-                  >
+                <div className="cb-text-center">
+                  <a href={REGISTER_URL_FREE} className="cb-btn">
                     <span className="inline-block first-letter:uppercase">
                       Commencer gratuitement
                     </span>
@@ -269,17 +267,17 @@ export default function EquipePage() {
                 </div>
               </FadeIn>
               <FadeIn delay={0.5}>
-                <ul className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
+                <ul className="cb-footer-list">
                   <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
+                    <Check className="w-5 h-5 text-primary-500" />
                     <span>Invitations illimitées</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
+                    <Check className="w-5 h-5 text-primary-500" />
                     <span>Rôles personnalisables</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-5 h-5" />
+                    <Check className="w-5 h-5 text-primary-500" />
                     <span>Historique complet</span>
                   </li>
                 </ul>

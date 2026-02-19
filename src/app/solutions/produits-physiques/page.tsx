@@ -4,6 +4,7 @@ import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
 import { Check, Package, Image as ImageIcon, Layers, TrendingUp, AlertCircle, Barcode, FileSpreadsheet } from 'lucide-react';
+import {REGISTER_URL_FREE} from "@/lib/utls";
 
 export default function ProduitsPhysiquesPage() {
   return (
@@ -285,25 +286,22 @@ export default function ProduitsPhysiquesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-background-2 dark:bg-background-5 py-[100px] lg:py-[150px]">
-          <div className="main-container">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
+        <section className="cb-cta-section">
+          <div className="cb-container">
+            <div className="cb-max-w-4xl cb-text-center space-y-8">
               <FadeIn delay={0.2}>
                 <h2 className="text-heading-2">
                   Commencez à vendre vos produits dès maintenant
                 </h2>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <p className="text-lg max-w-2xl mx-auto">
+                <p className="cb-lead">
                   Créez votre boutique gratuitement et ajoutez vos premiers produits en quelques minutes.
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-full cursor-pointer gap-2.5 bg-secondary hover:scale-101 text-center transition-all duration-500 ease-in-out font-medium text-nowrap lowercase hover:bg-primary-500 text-accent hover:text-accent text-tagline-1 md:px-8 px-6 md:py-4 py-3"
-                  >
+                <div className="cb-text-center">
+                  <a href={REGISTER_URL_FREE} className="cb-btn">
                     <span className="inline-block first-letter:uppercase">
                       Créer ma boutique gratuite
                     </span>
@@ -311,7 +309,7 @@ export default function ProduitsPhysiquesPage() {
                 </div>
               </FadeIn>
               <FadeIn delay={0.5}>
-                <ul className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
+                <ul className="cb-footer-list">
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-primary-500" />
                     <span>Produits illimités</span>

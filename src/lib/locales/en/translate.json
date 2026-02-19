@@ -1,0 +1,528 @@
+{
+  "title": "Kiiako",
+  "header": {
+    "nav": {
+      "solutions": "Solutions",
+      "resources": "Resources",
+      "services": "Services",
+      "pricing": "Pricing",
+      "start": "Start now"
+    },
+    "menu": {
+      "usefulLinks": "Useful links"
+    }
+  },
+  "home": {
+    "hero": {
+      "videoBadge": "Designed for every type of store",
+      "title": "Create your online store <1/>in a few minutes",
+      "subtitle": "Dream bigger, grow your business faster, and go further with Kiiako",
+      "cta": "Start for free",
+      "rating": "4.9 stars out of 5"
+    },
+    "about": {
+      "title": "A <b>Pro</b> store, just like you",
+      "description": "Each seller automatically benefits from a custom domain name and can create an unlimited number of shops, free or paid. You have full control over your products, orders, and image.",
+      "cta": "Start for free",
+      "features": {
+        "domain": "Custom domain name for every seller",
+        "unlimited": "Create an unlimited number of free or paid shops",
+        "control": "Total control over your products, orders, and brand image",
+        "fluid": "Seamless and professional experience for your customers"
+      }
+    },
+    "work": {
+      "title": "Powerful tools for your success",
+      "subtitle": "Kiiako offers a complete suite of professional tools to manage your online business. From creation to delivery, everything is centralized in an intuitive interface.",
+        "items": {
+          "customization": {
+            "title": "Store customization",
+            "description": "Create a unique store that reflects your brand identity",
+            "cta": "Explore feature"
+          },
+          "orders": {
+            "title": "Order management",
+            "description": "Track and process all your orders in real-time",
+            "cta": "Explore feature"
+          },
+          "analytics": {
+            "title": "Analytics & Stats",
+            "description": "Analyze your performance and optimize your sales",
+            "cta": "Explore feature"
+          }
+        },
+        "cta": "Discover all features"
+      },
+    "services": {
+      "title": "Everything you need to succeed",
+      "subtitle": "Kiiako offers you a complete solution for selling online. From creating your store to product delivery, including secure payments, everything is designed to simplify your daily life.",
+      "items": {
+        "free": {
+          "title": "Create your store for free",
+          "description": "Launch your online business in minutes with no upfront costs"
+        },
+        "payments": {
+          "title": "Receive payments easily",
+          "description": "Full Mobile Money integration for secure transactions"
+        },
+        "delivery": {
+          "title": "Integrated delivery",
+          "description": "Complete delivery solution to ship products from your store to your customers"
+        },
+        "domain": {
+          "title": "Custom domain name",
+          "description": "Each seller automatically gets a unique domain"
+        },
+        "management": {
+          "title": "Complete and simplified management",
+          "description": "Fully control your products, orders, shops, and brand image from a single dashboard"
+        }
+      },
+      "cta": {
+        "create": "Create my store",
+        "contact": "Contact us"
+      }
+    },
+    "process": {
+      "badge": "How it works",
+      "title": "Launch your business in 5 simple steps",
+      "description": "From account creation to product delivery, Kiiako supports you at every step to turn your passion into a profitable business.",
+      "steps": {
+        "1": {
+          "label": "STEP 1",
+          "title": "Free registration",
+          "description": "Create your Kiiako account in seconds. No registration fees, no credit card required."
+        },
+        "2": {
+          "label": "STEP 2",
+          "title": "Create your store",
+          "description": "Customize your store with your domain name, add your products, set your prices, and you're ready to sell."
+        },
+        "3": {
+          "label": "STEP 3",
+          "title": "Receive your orders",
+          "description": "Your customers discover your products and place orders directly from your professional online store."
+        },
+        "4": {
+          "label": "STEP 4",
+          "title": "Collect payments",
+          "description": "Receive payments instantly via Mobile Money. Secure transactions and simplified income management."
+        },
+        "5": {
+          "label": "STEP 5",
+          "title": "Assured delivery",
+          "description": "Our integrated delivery system ships your products directly to your customers. You track everything from your dashboard."
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Testimonials",
+      "title": "What our sellers say",
+      "items": [
+        {
+          "name": "Marie Mumbanza",
+          "company": "BeautyShop Kinshasa",
+          "text": "Kiiako transformed my business. In 6 months, I tripled my turnover. Integrated delivery and Mobile Money payments make everything so simple. My customers love the fluidity of my online store."
+        },
+        {
+          "name": "Jean-Pierre Okonda",
+          "company": "Tech Accessories Pro",
+          "text": "I now sell throughout the DRC thanks to Kiiako's delivery system. Customer support is exceptional, and the dashboard allows me to manage everything easily. I highly recommend this platform."
+        },
+        {
+          "name": "Fatou Diallo",
+          "company": "Mode & Style Afrique",
+          "text": "With my custom domain name and multiple shops on Kiiako, I was able to professionalize my image. I now manage over 500 orders a month and my income has exploded."
+        }
+      ]
+    },
+    "blog": {
+      "badge": "Journal",
+      "title": "Thoughts & ideas",
+      "subtitle": "A collection of thoughts, experiments, and insights around design, technology, and creativity.",
+      "readMore": "Read more",
+      "visitBlog": "Visit our blog"
+    },
+    "cta": {
+      "badge": "Start now",
+      "title": "Ready to launch your store?",
+      "description": "Join thousands of sellers who trust Kiiako to grow their online business. Create your store for free and start selling today.",
+      "placeholder": "Enter your email address",
+      "button": "Create my store",
+      "features": {
+        "free": "100% free to start",
+        "support": "Support available 24/7"
+      }
+    },
+    "imageGallery": {
+      "title": "Discover our creations",
+      "subtitle": "Explore a dynamic overview of our recent creations and projects"
+    },
+    "footer": {
+      "tagline": "The e-commerce platform that allows sellers to create their online store, sell, and deliver anywhere in Africa.",
+      "solutions": {
+        "title": "Solutions",
+        "createStore": "Create a store",
+        "domain": "Domain name",
+        "mobileMoney": "Mobile Money",
+        "digitalProducts": "Digital products",
+        "physicalProducts": "Physical products"
+      },
+      "resources": {
+        "title": "Resources",
+        "blog": "Blog",
+        "features": "Features",
+        "pricing": "Pricing",
+        "reviews": "Customer reviews"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "careers": "Careers",
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      },
+      "copyright": "Copyright © {{year}} Kiiako – The e-commerce platform for sellers in Africa"
+    }
+  },
+  "creerBoutique": {
+    "hero": {
+      "title": "Your online store in <1>a few minutes</1>",
+      "description": "Complete e-commerce platform without technical skills. Modern templates, full customization, and domain name included.",
+      "usersLoveIt": "1000+ users love it"
+    },
+    "features": {
+      "title": "Everything you need to succeed",
+      "subtitle": "A complete platform with all essential tools to launch and manage your store",
+      "items": {
+        "start": {
+          "title": "Start in 30 seconds",
+          "description": "Create your account and launch your store immediately, without any upfront costs."
+        },
+        "domain": {
+          "title": "Automatic domain name",
+          "description": "Instantly get your professional address (yourstore.kiiako.shop)."
+        },
+        "builder": {
+          "title": "Drag-and-drop visual builder",
+          "description": "Customize every aspect of your store without writing a singe line of code."
+        },
+        "templates": {
+          "title": "Professional templates",
+          "description": "Choose from a collection of modern designs optimized for conversion."
+        },
+        "unlimited": {
+          "title": "Unlimited stores",
+          "description": "Create and manage as many stores as needed for your different projects."
+        },
+        "centralized": {
+          "title": "Centralized management",
+          "description": "Administer all your stores from a single intuitive dashboard."
+        }
+      }
+    },
+    "themes": {
+      "title": "Choose your theme among many others",
+      "subtitle": "Modern and professional designs adapted to all business sectors."
+    },
+    "steps": {
+      "badge": "Simple process",
+      "title": "Launch your store in 5 steps",
+      "subtitle": "A guided and intuitive process to create your professional store",
+      "items": {
+        "step1": {
+          "title": "Create your account",
+          "description": "Free registration in a few seconds. No credit card required."
+        },
+        "step2": {
+          "title": "Choose your domain",
+          "description": "Automatically get your custom domain name (yourstore.kiiako.shop)."
+        },
+        "step3": {
+          "title": "Customize with the builder",
+          "description": "Use our visual editor to create a unique design that suits you."
+        },
+        "step4": {
+          "title": "Add your products",
+          "description": "Create your catalog with photos, descriptions, prices, and variations."
+        },
+        "step5": {
+          "title": "Launch and sell",
+          "description": "Share your link and start receiving orders today."
+        }
+      }
+    },
+    "why": {
+      "badge": "Why choose Kiiako",
+      "title": "A complete solution designed for your success",
+      "description": "Kiiako brings together all the necessary tools to create, manage, and grow your online store. Designed specifically to meet the needs of the African market.",
+      "list": [
+        "100% free to start, no hidden fees",
+        "Complete setup in minutes",
+        "Intuitive interface designed for Africa",
+        "Integrated Mobile Money payment",
+        "Customer support available",
+        "Free regular updates"
+      ]
+    },
+    "cta": {
+      "title": "Ready to launch your online store?",
+      "description": "Join thousands of sellers who chose Kiiako to grow their online business. Start for free today.",
+      "button": "Create my free store",
+      "benefits": {
+        "free": "100% free to start",
+        "noCard": "No credit card required",
+        "support": "Support available 24/7"
+      }
+    }
+  },
+  "mobileMoney": {
+    "badge": "Unified Infrastructure",
+    "hero": {
+      "title": "Accept payments from all over Africa",
+      "description": "Single integration to collect Orange Money, MTN, Moov and Wave in multiple countries. Receive your funds directly on your mobile."
+    },
+    "features": {
+      "title": "Why choose Kiiako Mobile Money?",
+      "items": {
+        "mobileFirst": {
+          "title": "Mobile First Experience",
+          "description": "Optimized to pay in 3 clicks on smartphone."
+        },
+        "instantConfirmation": {
+          "title": "Instant Confirmation",
+          "description": "No more waiting. Your orders are validated instantly."
+        },
+        "security": {
+          "title": "Bank-level Security",
+          "description": "Encrypted transactions protected by operator PIN code."
+        },
+        "dashboard": {
+          "title": "Unified Dashboard",
+          "description": "Track your sales in Benin and Senegal on the same screen."
+        },
+        "highSuccessRate": {
+          "title": "High Success Rate",
+          "description": "Direct connections to operators to avoid failures."
+        },
+        "support": {
+          "title": "Local Support 24/7",
+          "description": "A team that understands African payment realities."
+        }
+      }
+    },
+    "payIn": {
+      "badge": "Global Pay-In",
+      "title": "Sell everywhere, get paid locally.",
+      "description": "Don't limit yourself to your country. With Kiiako, a customer in Senegal can pay you with Orange Money, and a customer in Benin with MTN. You have nothing to configure: our platform unifies all payment methods in the sub-region for your store.",
+      "benin": {
+        "title": "Customer in Benin",
+        "description": "Pays with MTN MoMo"
+      },
+      "senegal": {
+        "title": "Customer in Senegal",
+        "description": "Pays with Wave"
+      },
+      "visual": {
+        "title": "Your Store on Kiiako",
+        "subtitle": "Dashboard",
+        "totalLabel": "Total collected"
+      }
+    },
+    "payOut": {
+      "badge": "Automated Transfer",
+      "title": "Transfer your earnings to your mobile in a few clicks.",
+      "description": "No more waiting. Withdraw your funds from the Kiiako platform to your Orange Money, Wave or MTN number in just a few clicks, with advanced security.",
+      "visual": {
+        "kiiakoBalance": "Kiiako Balance",
+        "mobileMoney": "Your Mobile Money",
+        "transferLabel": "Automatic transfer"
+      },
+      "features": {
+        "items": {
+          "instantTransfer": "Instant transfer to your Wallet",
+          "compatible": "Compatible with all operators (OM, MoMo, Wave...)",
+          "security": "Advanced security with double authentication",
+          "available": "Available 24/7"
+        }
+      }
+    },
+    "cta": {
+      "title": "Open your store to the world",
+      "description": "Start selling in Benin, Togo, Ivory Coast and Senegal starting today.",
+      "button": "Create a free account"
+    }
+  },
+  "securitePaiements": {
+    "badge": "Certified Payment System",
+    "hero": {
+      "title": "Your payment security, our absolute priority",
+      "description": "Protect your customers with a fully secure banking and Mobile Money payment system. Every transaction is encrypted, verified and validated by our partner Paydunya, guaranteeing complete trust at every step."
+    },
+    "features": {
+      "title": "End-to-end secure payments",
+      "description": "Kiiako protects every transaction with clear controls, precise tracking and reliable Paydunya integration.",
+      "items": {
+        "paydunya": {
+          "title": "Paydunya Integration",
+          "description": "Connect your payments to a recognized partner to guarantee your customers' trust."
+        },
+        "ssl": {
+          "title": "SSL/TLS Encryption",
+          "description": "Sensitive data is protected throughout the entire payment journey."
+        },
+        "validation": {
+          "title": "Automatic Validation",
+          "description": "Each payment is automatically verified before being confirmed."
+        },
+        "antifraud": {
+          "title": "Anti-fraud Protection",
+          "description": "Proactive detection to limit risky transactions."
+        },
+        "history": {
+          "title": "Complete History",
+          "description": "Track your transactions and easily find every payment."
+        },
+        "reports": {
+          "title": "Clear Reports",
+          "description": "Analyze your payments with simple and actionable reports."
+        }
+      }
+    },
+    "commitments": {
+      "title": "Security designed for customer trust",
+      "description": "We implement simple safeguards to understand and reassure your customers at every step.",
+      "items": {
+        "simple": "Protection adapted to your business",
+        "customizable": "Customizable security controls",
+        "realtime": "Real-time payment validation",
+        "monitoring": "Monitoring from any device",
+        "traceability": "Complete traceability",
+        "traceability_description": "Each payment leaves a clear trace for fast and transparent tracking.",
+        "alerts": "Alerts and controls",
+        "alerts_description": "Automatic verifications to limit anomalies and secure operations.",
+        "experience": "Smooth experience",
+        "experience_description": "A simple payment journey while maintaining high security level."
+      }
+    },
+    "faq": {
+      "title": "Frequent security questions",
+      "description": "Essential answers to reassure your customers and your team.",
+      "items": {
+        "protection": {
+          "title": "How is the payment protected?",
+          "description": "The journey is encrypted and each transaction goes through automatic controls."
+        },
+        "anomaly": {
+          "title": "What happens in case of anomaly?",
+          "description": "Suspicious transactions are flagged for verification before confirmation."
+        },
+        "history": {
+          "title": "Can I follow the history?",
+          "description": "Yes, the payment history is accessible for quick control."
+        },
+        "confirmation": {
+          "title": "Does the customer receive a confirmation?",
+          "description": "A confirmation is sent as soon as the payment is validated."
+        }
+      }
+    },
+    "process": {
+      "badge": "Secure Process",
+      "title": "How does a secure payment work?",
+      "items": {
+        "client": {
+          "title": "Customer chooses Mobile Money",
+          "description": "The customer selects their preferred Mobile Money operator (Orange Money, MTN, Moov, etc.) to make the payment."
+        },
+        "redirection": {
+          "title": "Secure redirection to Paydunya",
+          "description": "The transaction is redirected to the secure Paydunya platform with SSL/TLS encryption."
+        },
+        "ussd": {
+          "title": "Payment via USSD on mobile",
+          "description": "The customer receives a USSD code on their phone to confirm the payment securely."
+        },
+        "confirmation": {
+          "title": "Instant Confirmation",
+          "description": "The payment is confirmed instantly and securely by Paydunya."
+        },
+        "validation": {
+          "title": "Order automatically validated",
+          "description": "The order is automatically validated and you receive a notification. The customer also receives their confirmation."
+        }
+      }
+    },
+    "cta": {
+      "title": "Protect your customers starting today",
+      "description": "Offer your customers a 100% secure payment experience with Kiiako and Paydunya.",
+      "button": "Start for free",
+      "benefits": {
+        "ssl": "SSL/TLS encryption included",
+        "antifraud": "Anti-fraud protection",
+        "certified": "Paydunya certified"
+      }
+    }
+  },
+  "produitsDigitaux": {
+    "badge": "Digital Products",
+    "hero": {
+      "title": "Sell your digital creations",
+      "description": "Sell ebooks, courses, music, software and more. Instant automatic delivery."
+    },
+    "features": {
+      "title": "Sell and deliver your digital products easily",
+      "description": "A complete platform with all the essential tools to sell your digital creations",
+      "items": {
+        "upload": {
+          "title": "Upload files up to 2GB",
+          "description": "Upload your large files securely. Unlimited storage for your digital products."
+        },
+        "formats": {
+          "title": "Multiple formats supported",
+          "description": "PDF, MP3, MP4, ZIP, EPUB and all common formats are supported without restriction."
+        },
+        "delivery": {
+          "title": "Automatic email delivery",
+          "description": "Your customers instantly receive their download link by email after purchase."
+        },
+        "security": {
+          "title": "Secure download links",
+          "description": "Anti-piracy protection with secure links and download limit per purchase."
+        },
+        "antipiracy": {
+          "title": "Anti-piracy protection",
+          "description": "Advanced security system to protect your creations from unauthorized download."
+        },
+        "updates": {
+          "title": "Automatic updates",
+          "description": "Update your files and all your customers automatically receive the new version."
+        }
+      }
+    },
+    "types": {
+      "title": "Sell any type of digital content",
+      "items": {
+        "ebooks": "Ebooks & PDF",
+        "courses": "Online courses",
+        "music": "Music & Audio",
+        "videos": "Videos & Movies",
+        "software": "Software",
+        "photos": "Photos & Designs",
+        "templates": "Templates",
+        "more": "And more"
+      }
+    },
+    "cta": {
+      "title": "Start selling your digital products",
+      "description": "Create your online store and sell your digital creations with instant automatic delivery.",
+      "button": "Start for free",
+      "benefits": {
+        "free": "100% free to start",
+        "noCard": "No credit card required",
+        "support": "Support available 24/7"
+      }
+    }
+  }
+}

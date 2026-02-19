@@ -3,19 +3,20 @@
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
-import { SlideIn } from '@/components/animations/SlideIn';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import { Check, Store, Globe, Palette, ShoppingBag, Users, Zap, ArrowRight, Sparkles, Package, Clock, TrendingUp } from 'lucide-react';
+import { Check, Store, Globe, Palette, ShoppingBag, Users, Zap, TrendingUp, Package } from 'lucide-react';
 import {REGISTER_URL_FREE} from "@/lib/utls";
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function CreerBoutiquePage() {
+  const { t } = useTranslation();
+
   return (
       <div className="bg-background-1 dark:bg-background-6">
         <Header />
         <main>
           {/* Hero Section */}
           <section className="pt-46 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-            <div className="min-h-screen w-full relative ">
+            <div className="min-h-120 w-full relative ">
               {/* Floating Images - Version Décorative Éparpillée */}
               <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
                 {/* --- IMAGES ÉPARPILLÉES GAUCHE --- */}
@@ -33,11 +34,6 @@ export default function CreerBoutiquePage() {
                   <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=220&auto=format&fit=crop"
                        className="w-36 h-36 transform transition-transform hover:scale-110 duration-500" alt="Deco" />
                 </FadeIn>
-
-                {/*<FadeIn delay={1.4} className="scatter-img pos-9 animate-float-delayed-3">*/}
-                {/*  <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=150&auto=format&fit=crop"*/}
-                {/*       className="w-24 h-24 object-cover rounded-xl shadow-lg border-2 border-white transform transition-transform hover:scale-110 duration-500" alt="Deco" />*/}
-                {/*</FadeIn>*/}
 
                 {/* --- IMAGES ÉPARPILLÉES DROITE --- */}
                 <FadeIn delay={0.7} className="scatter-img pos-2 animate-float-delayed-3">
@@ -65,20 +61,18 @@ export default function CreerBoutiquePage() {
 
 
               <div className="main-container relative z-10">
-                <div className="max-w-4xl mx-auto text-center space-y-6">
+                <div className="max-w-7xl mx-auto text-center space-y-6">
 
 
                   <FadeIn delay={0.1}>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight w-[700px] mx-auto">
-                      Votre boutique en ligne en{' '}
-                      <span className="text-primary-500">quelques minutes</span>
+                    <h1 className=" pt-16 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight w-[900px] mx-auto">
+                      <Trans i18nKey="creerBoutique.hero.title" components={{ 1: <span className="text-primary-500" /> }} />
                     </h1>
                   </FadeIn>
 
                   <FadeIn delay={0.2}>
                     <p className="text-lg md:text-xl text-secondary/70 dark:text-accent/70 max-w-2xl mx-auto">
-                      Plateforme e-commerce complète sans compétences techniques.
-                      Templates modernes, personnalisation totale et nom de domaine inclus.
+                      {t('creerBoutique.hero.description')}
                     </p>
                   </FadeIn>
 
@@ -107,7 +101,7 @@ export default function CreerBoutiquePage() {
 
                       <div className="sp-rating">
                         <div className="sp-stars">★★★★★</div>
-                        <div className="sp-text">1000+ utilisateurs aiment ça</div>
+                        <div className="sp-text">{t('creerBoutique.hero.usersLoveIt')}</div>
                       </div>
                     </div>
 
@@ -124,85 +118,85 @@ export default function CreerBoutiquePage() {
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <FadeIn delay={0.1}>
                   <h2 className="text-3xl  md:text-4xl font-bold mb-4">
-                    Tout ce dont vous avez besoin pour réussir
+                    {t('creerBoutique.features.title')}
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.2}>
                   <p className="text-lg  dark:text-accent/70">
-                    Une plateforme complète avec tous les outils essentiels pour lancer et gérer votre boutique
+                    {t('creerBoutique.features.subtitle')}
                   </p>
                 </FadeIn>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <FadeIn delay={0.2}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Zap className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Démarrage en 30 secondes</h3>
+                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.start.title')}</h3>
                     <p className="text-secondary/70 dark:text-accent/70">
-                      Créez votre compte et lancez votre boutique immédiatement, sans aucun frais initial.
+                      {t('creerBoutique.features.items.start.description')}
                     </p>
                   </div>
                 </FadeIn>
 
                 <FadeIn delay={0.25}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Globe className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Nom de domaine automatique</h3>
+                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.domain.title')}</h3>
                     <p className="text-secondary/70 dark:text-accent/70">
-                      Obtenez instantanément votre adresse professionnelle (votreboutique.kiiako.shop).
+                      {t('creerBoutique.features.items.domain.description')}
                     </p>
                   </div>
                 </FadeIn>
 
                 <FadeIn delay={0.3}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Palette className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Builder visuel drag-and-drop</h3>
+                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.builder.title')}</h3>
                     <p className="text-secondary/70 dark:text-accent/70">
-                      Personnalisez chaque aspect de votre boutique sans écrire une seule ligne de code.
+                      {t('creerBoutique.features.items.builder.description')}
                     </p>
                   </div>
                 </FadeIn>
 
                 <FadeIn delay={0.35}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Store className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Templates professionnels</h3>
+                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.templates.title')}</h3>
                     <p className="text-secondary/70 dark:text-accent/70">
-                      Choisissez parmi une collection de designs modernes optimisés pour la conversion.
+                      {t('creerBoutique.features.items.templates.description')}
                     </p>
                   </div>
                 </FadeIn>
 
                 <FadeIn delay={0.4}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <ShoppingBag className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Boutiques illimitées</h3>
+                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.unlimited.title')}</h3>
                     <p className="text-secondary/70 dark:text-accent/70">
-                      Créez et gérez autant de boutiques que nécessaire pour vos différents projets.
+                      {t('creerBoutique.features.items.unlimited.description')}
                     </p>
                   </div>
                 </FadeIn>
 
                 <FadeIn delay={0.45}>
-                  <div className="p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7 transition-all hover:border-primary-500/50">
+                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
                     <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
                       <Users className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Gestion centralisée</h3>
+                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.centralized.title')}</h3>
                     <p className="text-secondary/70 dark:text-accent/70">
-                      Administrez toutes vos boutiques depuis un seul tableau de bord intuitif.
+                      {t('creerBoutique.features.items.centralized.description')}
                     </p>
                   </div>
                 </FadeIn>
@@ -220,12 +214,12 @@ export default function CreerBoutiquePage() {
               <div className="cb-text-center cb-max-w-3xl mb-16">
                 <FadeIn delay={0.1}>
                   <h2 className="cb-h2">
-                    Choisissez votre thème parmi tant d'autres
+                    {t('creerBoutique.themes.title')}
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.2}>
                   <p className="cb-lead">
-                    Des designs modernes et professionnels adaptés à tous les secteurs d'activité.
+                    {t('creerBoutique.themes.subtitle')}
                   </p>
                 </FadeIn>
               </div>
@@ -288,17 +282,17 @@ export default function CreerBoutiquePage() {
               <div className="cb-text-center cb-max-w-3xl mb-16">
                 <FadeIn delay={0.1}>
                   <span className="cb-badge">
-                    Processus simple
+                    {t('creerBoutique.steps.badge')}
                   </span>
                 </FadeIn>
                 <FadeIn delay={0.2}>
                   <h2 className="cb-h2">
-                    Lancez votre boutique en 5 étapes
+                    {t('creerBoutique.steps.title')}
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.3}>
                   <p className="cb-lead">
-                    Un processus guidé et intuitif pour créer votre boutique professionnelle
+                    {t('creerBoutique.steps.subtitle')}
                   </p>
                 </FadeIn>
               </div>
@@ -309,32 +303,32 @@ export default function CreerBoutiquePage() {
                     {
                       number: "1",
                       icon: Users,
-                      title: "Créez votre compte",
-                      description: "Inscription gratuite en quelques secondes. Aucune carte bancaire requise."
+                      title: t('creerBoutique.steps.items.step1.title'),
+                      description: t('creerBoutique.steps.items.step1.description')
                     },
                     {
                       number: "2",
                       icon: Globe,
-                      title: "Choisissez votre domaine",
-                      description: "Obtenez automatiquement votre nom de domaine personnalisé (votreboutique.kiiako.shop)."
+                      title: t('creerBoutique.steps.items.step2.title'),
+                      description: t('creerBoutique.steps.items.step2.description')
                     },
                     {
                       number: "3",
                       icon: Palette,
-                      title: "Personnalisez avec le builder",
-                      description: "Utilisez notre éditeur visuel pour créer un design unique qui vous ressemble."
+                      title: t('creerBoutique.steps.items.step3.title'),
+                      description: t('creerBoutique.steps.items.step3.description')
                     },
                     {
                       number: "4",
                       icon: Package,
-                      title: "Ajoutez vos produits",
-                      description: "Créez votre catalogue avec photos, descriptions, prix et variations."
+                      title: t('creerBoutique.steps.items.step4.title'),
+                      description: t('creerBoutique.steps.items.step4.description')
                     },
                     {
                       number: "5",
                       icon: TrendingUp,
-                      title: "Lancez et vendez",
-                      description: "Partagez votre lien et commencez à recevoir des commandes dès aujourd'hui."
+                      title: t('creerBoutique.steps.items.step5.title'),
+                      description: t('creerBoutique.steps.items.step5.description')
                     }
                   ].map((step, index) => (
                       <FadeIn key={index} delay={0.1 + index * 0.05}>
@@ -343,7 +337,7 @@ export default function CreerBoutiquePage() {
                             <step.icon className="w-7 h-7 text-white" />
                           </div>
                           <div className="flex-1 pt-1">
-                            <span className="cb-step-number">Étape {step.number}</span>
+                            <span className="cb-step-number">{t('creerBoutique.steps.items.step1.title').startsWith('Etape') ? `Étape ${step.number}` : `Step ${step.number}`}</span>
                             <h3 className="text-xl font-bold mb-2">{step.title}</h3>
                             <p className="text-secondary/70 dark:text-accent/70">{step.description}</p>
                           </div>
@@ -355,43 +349,36 @@ export default function CreerBoutiquePage() {
             </div>
           </section>
 
-          {/* Pourquoi Kiiako */}
-          <section className="cb-section bg-background-3 dark:bg-background-7">
-            <div className="cb-container">
-              <div className="cb-split-grid">
-                {/* Contenu */}
-                <div className="space-y-6">
+          {/* Pourquoi Kiiako - Split Screen Redesign */}
+          <section className="relative w-full bg-background-3 dark:bg-background-7 overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              
+              <div className="w-full md:w-1/2 p-8 md:px-12 md:py-20 flex flex-col justify-center">
+                <div className="max-w-xl mx-auto space-y-8">
                   <FadeIn delay={0.1}>
                     <span className="cb-badge">
-                      Pourquoi choisir Kiiako
+                      {t('creerBoutique.why.badge')}
                     </span>
                   </FadeIn>
 
                   <FadeIn delay={0.2}>
-                    <h2 className="cb-h2">
-                      Une solution complète pensée pour votre succès
+                    <h2 className="cb-h2 text-left">
+                      {t('creerBoutique.why.title')}
                     </h2>
                   </FadeIn>
 
                   <FadeIn delay={0.3}>
-                    <p className="cb-lead">
-                      Kiiako réunit tous les outils nécessaires pour créer, gérer et développer votre boutique en ligne.
-                      Conçu spécialement pour répondre aux besoins du marché africain.
+                    <p className="cb-lead text-left">
+                      {t('creerBoutique.why.description')}
                     </p>
                   </FadeIn>
 
-                  <div className="cb-check-list">
-                    {[
-                      "100% gratuit pour démarrer, sans frais cachés",
-                      "Configuration complète en quelques minutes",
-                      "Interface intuitive conçue pour l'Afrique",
-                      "Paiement Mobile Money intégré",
-                      "Support client disponible",
-                      "Mises à jour régulières gratuites"
-                    ].map((item, index) => (
+                  {/* Note: t('key', { returnObjects: true }) to get array has TS issues sometimes, simpler to map keys if fixed length or just hardcode for MVP */}
+                  <div className="cb-check-list pt-4">
+                    {(t('creerBoutique.why.list', { returnObjects: true }) as string[]).map((item, index) => (
                         <FadeIn key={index} delay={0.4 + index * 0.05}>
-                          <div className="cb-check-item">
-                            <div className="cb-check-icon-box">
+                          <div className="cb-check-item justify-start">
+                            <div className="cb-check-icon-box shrink-0">
                               <Check className="w-4 h-4 text-primary-500" />
                             </div>
                             <span className="text-secondary/80 dark:text-accent/80">{item}</span>
@@ -400,33 +387,30 @@ export default function CreerBoutiquePage() {
                     ))}
                   </div>
                 </div>
-
-                {/* Image */}
-                <div className="relative">
-                  <FadeIn delay={0.3}>
-                    <div className="relative rounded-2xl overflow-hidden border border-stroke-1 dark:border-stroke-7 aspect-[4/3]">
-                      <img
-                          src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=600&fit=crop"
-                          alt="E-commerce"
-                          className="w-full h-full object-cover"
-                      />
-
-                      <video
-                          className="absolute inset-0 w-full h-full object-cover"
-                          src="/hero/emballage_colis.mp4"
-                          preload="none"
-                          loop
-                          autoPlay
-                          poster="/hero/2150171831.jpg"
-                          muted
-                          playsInline
-                          data-uc-cover
-                          data-uc-video="autoplay: true;"
-                      />
-                    </div>
-                  </FadeIn>
-                </div>
               </div>
+
+              {/* Right Column: Video (50%) - Full Height */}
+              <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-auto">
+                 {/* Video */}
+                 <FadeIn delay={0.3} className="h-full w-full">
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        src="/hero/emballage_colis.mp4"
+                        preload="none"
+                        loop
+                        autoPlay
+                        poster="/hero/2150171831.jpg"
+                        muted
+                        playsInline
+                        data-uc-cover
+                        data-uc-video="autoplay: true;"
+                    />
+                 </FadeIn>
+
+                 {/* Gradient Overlay for Seamless Blend (Left Edge) */}
+                 <div className="absolute inset-y-0 left-0 w-32 md:w-48 bg-gradient-to-r from-background-3 dark:from-background-7 to-transparent z-10 pointer-events-none"></div>
+              </div>
+
             </div>
           </section>
 
@@ -436,19 +420,19 @@ export default function CreerBoutiquePage() {
               <div className="cb-max-w-4xl cb-text-center space-y-8">
                 <FadeIn delay={0.2}>
                   <h2 className="text-heading-2">
-                    Prêt à lancer votre boutique en ligne ?
+                    {t('creerBoutique.cta.title')}
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.3}>
                   <p className="cb-lead">
-                    Rejoignez des milliers de vendeurs qui ont choisi Kiiako pour développer leur activité en ligne. Commencez gratuitement dès aujourd'hui.
+                    {t('creerBoutique.cta.description')}
                   </p>
                 </FadeIn>
                 <FadeIn delay={0.4}>
                   <div className="cb-text-center">
                     <a href={REGISTER_URL_FREE} className="cb-btn">
                       <span className="inline-block first-letter:uppercase">
-                        Créer ma boutique gratuite
+                        {t('creerBoutique.cta.button')}
                       </span>
                     </a>
                   </div>
@@ -457,15 +441,15 @@ export default function CreerBoutiquePage() {
                   <ul className="cb-footer-list">
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-primary-500" />
-                      <span>100% gratuit pour démarrer</span>
+                      <span>{t('creerBoutique.cta.benefits.free')}</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-primary-500" />
-                      <span>Aucune carte bancaire requise</span>
+                      <span>{t('creerBoutique.cta.benefits.noCard')}</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-primary-500" />
-                      <span>Support disponible 24/7</span>
+                      <span>{t('creerBoutique.cta.benefits.support')}</span>
                     </li>
                   </ul>
                 </FadeIn>

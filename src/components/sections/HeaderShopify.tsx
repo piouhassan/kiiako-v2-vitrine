@@ -10,6 +10,8 @@ import {
   HelpCircle, Newspaper, Truck, Building2, ChevronDown, ArrowRight
 } from 'lucide-react';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 import { features, pagesDataRessources, services, links } from '@/data/menu';
 import {REGISTER_URL_FREE} from "@/lib/utls";
@@ -37,6 +39,7 @@ const resourceIconMap: Record<string, React.ComponentType<{ className?: string }
 };
 
 export default function HeaderShopify() {
+  const { t } = useTranslation();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const { isOpen, toggle, close } = useMobileMenu();
   const { isScrolled } = useScrollPosition();
@@ -103,7 +106,7 @@ export default function HeaderShopify() {
                           ? 'text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
                           : 'text-white hover:text-white'
                   }`}>
-                    <span>Solutions</span>
+                    <span>{t('header.nav.solutions')}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === 'solutions' ? 'rotate-180' : ''}`} />
                   </a>
                   <div
@@ -147,7 +150,7 @@ export default function HeaderShopify() {
                         })}
                       </div>
                       <div className="w-[200px] shrink-0 space-y-3">
-                        <h3 className="text-tagline-1 font-semibold text-secondary dark:text-accent px-3">Liens utiles</h3>
+                        <h3 className="text-tagline-1 font-semibold text-secondary dark:text-accent px-3">{t('header.menu.usefulLinks')}</h3>
                         <ul className="space-y-1">
                           {links.map((link) => (
                               <li key={link.id}>
@@ -181,7 +184,7 @@ export default function HeaderShopify() {
                           ? 'text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
                           : 'text-white hover:text-white'
                   }`}>
-                    <span>Ressources</span>
+                    <span>{t('header.nav.resources')}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === 'ressources' ? 'rotate-180' : ''}`} />
                   </a>
                   <div
@@ -242,7 +245,7 @@ export default function HeaderShopify() {
                           ? 'text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
                           : 'text-white hover:text-white'
                   }`}>
-                    <span>Services</span>
+                    <span>{t('header.nav.services')}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMenu === 'services' ? 'rotate-180' : ''}`} />
                   </a>
                   <div
@@ -288,7 +291,7 @@ export default function HeaderShopify() {
                           ? 'text-secondary hover:text-secondary dark:text-accent dark:hover:text-accent'
                           : 'text-white hover:text-white'
                   }`}>
-                    <span>Tarifs</span>
+                    <span>{t('header.nav.pricing')}</span>
                   </Link>
                 </li>
               </ul>
@@ -297,13 +300,14 @@ export default function HeaderShopify() {
 
 
             <div className="xl:flex hidden items-center justify-center gap-3">
+              <LanguageSwitcher />
               <ThemeToggle />
               <Link href={REGISTER_URL_FREE} className={`btn btn-md transition-all duration-300 ${
                 isScrolled
                   ? 'btn-primary dark:btn-accent hover:btn-primary'
                   : 'bg-white text-secondary hover:bg-gray-100'
               }`}>
-                <span>Commencer maintenant</span>
+                <span>{t('header.nav.start')}</span>
               </Link>
             </div>
             <div className="xl:hidden flex items-center gap-2">
@@ -340,16 +344,16 @@ export default function HeaderShopify() {
             <p className="text-secondary dark:text-accent font-normal text-tagline-1 block mb-2">Menu</p>
             <ul className="space-y-2">
               <li className="space-y-2">
-                <Link href="/solutions/creer-boutique" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">Solutions</Link>
+                <Link href="/solutions/creer-boutique" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">{t('header.nav.solutions')}</Link>
               </li>
               <li className="space-y-2">
-                <a href="/ressources" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">Ressources</a>
+                <a href="/ressources" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">{t('header.nav.resources')}</a>
               </li>
               <li className="space-y-2">
-                <a href="/services" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">Services</a>
+                <a href="/services" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">{t('header.nav.services')}</a>
               </li>
               <li className="space-y-2">
-                <a href="/tarifs" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">Tarifs</a>
+                <a href="/tarifs" className="text-tagline-1 font-normal text-secondary dark:text-accent transition-all duration-200 py-2.5 text-left block">{t('header.nav.pricing')}</a>
               </li>
             </ul>
           </div>

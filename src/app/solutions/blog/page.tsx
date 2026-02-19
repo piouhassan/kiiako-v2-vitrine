@@ -3,6 +3,8 @@
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
+import { Check } from 'lucide-react';
+import {REGISTER_URL_FREE} from "@/lib/utls";
 
 export default function BlogPage() {
   return (
@@ -664,8 +666,8 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* CTA v1 section */}
-        <section className="py-[50px] md:py-20 lg:py-28 dark:bg-background-7 bg-white" aria-label="Use Case Overview">
+        {/* CTA Section */}
+        <section className="cb-cta-section">
           <div className="main-container">
             <div className="flex items-center flex-col lg:flex-row justify-between">
               <div className="xl:max-w-[650px] lg:max-w-[476px] max-[400px]:max-w-[300px] w-full space-y-5 text-center lg:text-left">

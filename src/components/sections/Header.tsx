@@ -11,6 +11,7 @@ import {
   HelpCircle, Newspaper, Truck, Building2, ChevronDown, ArrowRight
 } from 'lucide-react';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 import { features, pagesDataRessources, services, links } from '@/data/menu';
 
@@ -348,6 +349,7 @@ export default function Header() {
 
 
               <div className="xl:flex hidden items-center justify-center gap-3">
+                <LanguageSwitcher />
                 <ThemeToggle />
                 <Link href="/signup" className="btn btn-md btn-primary dark:btn-accent hover:btn-primary">
                   <span>Commencer maintenant</span>

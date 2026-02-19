@@ -3,8 +3,11 @@
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
 import {REGISTER_URL_FREE} from "@/lib/utls";
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full bg-secondary  dark:bg-background-7" >
       <div className="w-full mx-auto">
@@ -16,12 +19,10 @@ export default function About() {
                   <div className="space-y-5">
                     <div className="space-y-3 md:space-y-4">
                       <h2 className="text-white text-2xl md:text-3xl lg:text-4xl">
-                        Une boutique <b>Pro</b>, à votre image
+                        <Trans i18nKey="home.about.title" components={{ b: <b/> }} />
                       </h2>
                       <p className="text-white text-sm md:text-base">
-                        Chaque vendeur bénéficie automatiquement d&apos;un nom de domaine personnalisé et peut créer
-                        un nombre illimité de boutiques, gratuites ou payantes. Vous contrôlez entièrement vos produits,
-                        vos commandes et votre image.
+                        {t('home.about.description')}
                       </p>
                     </div>
                   </div>
@@ -32,7 +33,7 @@ export default function About() {
                       href={REGISTER_URL_FREE}
                       className="btn btn-base dark:border btn-dark dark:btn-transparent hover:btn-white w-full sm:w-auto"
                     >
-                      <span>Commencer gratuitement</span>
+                      <span>{t('home.about.cta')}</span>
                     </a>
                   </div>
                 </FadeIn>
@@ -54,7 +55,7 @@ export default function About() {
                       </svg>
                     </span>
                     <p className="text-white">
-                      Nom de domaine personnalisé pour chaque vendeur
+                      {t('home.about.features.domain')}
                     </p>
                   </li>
                   <li className="flex items-center gap-3">
@@ -68,7 +69,7 @@ export default function About() {
                         />
                       </svg>
                     </span>
-                    <p className="text-white">Créez un nombre illimité de boutiques gratuites ou payantes</p>
+                    <p className="text-white">{t('home.about.features.unlimited')}</p>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="size-6 flex items-center justify-center bg-accent/15 backdrop-blur-[15px] rounded-full shrink-0">
@@ -82,7 +83,7 @@ export default function About() {
                       </svg>
                     </span>
                     <p className="text-white">
-                      Contrôle total sur vos produits, commandes et image de marque
+                      {t('home.about.features.control')}
                     </p>
                   </li>
                   <li className="flex items-center gap-3">
@@ -96,7 +97,7 @@ export default function About() {
                         />
                       </svg>
                     </span>
-                    <p className="text-white">Expérience fluide et professionnelle pour vos clients</p>
+                    <p className="text-white">{t('home.about.features.fluid')}</p>
                   </li>
                 </ul>
               </div>

@@ -2,20 +2,21 @@
 
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
+import { useTranslation } from 'react-i18next';
 
 export default function Services() {
+  const { t } = useTranslation();
+
   return (
     <section className="xl:py-[100px] lg:py-[90px] md:py-20 py-16 bg-background-3 dark:bg-background-7">
       <div className="main-container">
         <div className="text-center space-y-3 mb-10 md:mb-[70px]">
           <SlideIn direction="down" delay={0.1}>
-            <h2>Tout ce dont vous avez besoin pour réussir</h2>
+            <h2>{t('home.services.title')}</h2>
           </SlideIn>
           <SlideIn direction="down" delay={0.2}>
             <p className="max-w-[776px] mx-auto">
-              Kiiako vous offre une solution complète pour vendre en ligne. De la création de votre boutique
-              à la livraison de vos produits, en passant par les paiements sécurisés, tout est pensé pour
-              simplifier votre quotidien.
+              {t('home.services.subtitle')}
             </p>
           </SlideIn>
         </div>
@@ -25,8 +26,8 @@ export default function Services() {
               <FadeIn delay={0.3}>
                 <div className="bg-white dark:bg-background-8 rounded-[20px] md:p-8 p-6 space-y-6">
                   <div className="space-y-1">
-                    <h3 className="text-heading-6 md:text-heading-5">Créez votre boutique gratuitement</h3>
-                    <p>Lancez votre activité en ligne en quelques minutes sans aucun frais initial</p>
+                    <h3 className="text-heading-6 md:text-heading-5">{t('home.services.items.free.title')}</h3>
+                    <p>{t('home.services.items.free.description')}</p>
                   </div>
                   <div>
                     <figure className="sm:max-w-[345px] max-w-full w-full rounded-2xl overflow-hidden">
@@ -44,8 +45,8 @@ export default function Services() {
               <FadeIn delay={0.4}>
                 <div className="bg-white dark:bg-background-8 rounded-[20px] md:p-8 p-6 space-y-6">
                   <div className="space-y-1">
-                    <h3 className="text-heading-6 md:text-heading-5">Recevez vos paiements facilement</h3>
-                    <p>Intégration complète du Mobile Money pour des transactions  sécurisées</p>
+                    <h3 className="text-heading-6 md:text-heading-5">{t('home.services.items.payments.title')}</h3>
+                    <p>{t('home.services.items.payments.description')}</p>
                   </div>
                   <div>
                     <figure className="sm:max-w-[345x] max-w-full w-full">
@@ -63,8 +64,8 @@ export default function Services() {
               <FadeIn delay={0.5}>
                 <div className="bg-white dark:bg-background-8 rounded-[20px] md:p-8 p-6 space-y-6">
                   <div className="space-y-1">
-                    <h3 className="text-heading-6 md:text-heading-5">Livraison intégrée</h3>
-                    <p>Solution de livraison complète pour acheminer vos produits de votre boutique à vos clients</p>
+                    <h3 className="text-heading-6 md:text-heading-5">{t('home.services.items.delivery.title')}</h3>
+                    <p>{t('home.services.items.delivery.description')}</p>
                   </div>
                   <div>
                     <figure className="sm:max-w-[345px] w-full">
@@ -83,9 +84,9 @@ export default function Services() {
                 <div className="bg-white dark:bg-background-8 rounded-[20px] md:p-8 p-6 space-y-6">
                   <div className="space-y-1">
                     <h3 className="text-heading-6 md:text-heading-5">
-                      Nom de domaine personnalisé
+                      {t('home.services.items.domain.title')}
                     </h3>
-                    <p>Chaque vendeur bénéficie automatiquement d&apos;un domaine  unique</p>
+                    <p>{t('home.services.items.domain.description')}</p>
                   </div>
                   <div>
                     <figure className="sm:max-w-[345px] max-w-full w-full overflow-hidden rounded-2xl">
@@ -103,8 +104,8 @@ export default function Services() {
               <FadeIn delay={0.7}>
                 <div className="bg-white dark:bg-background-8 rounded-[20px] md:p-8 p-6 space-y-6">
                   <div className="space-y-1">
-                    <h3 className="text-heading-6 md:text-heading-5">Gestion complète et simplifiée</h3>
-                    <p>Contrôlez entièrement vos produits, commandes, boutiques et image de marque depuis un seul tableau de bord</p>
+                    <h3 className="text-heading-6 md:text-heading-5">{t('home.services.items.management.title')}</h3>
+                    <p>{t('home.services.items.management.description')}</p>
                   </div>
                   <div>
                     <figure className="max-w-[784px] max-h-[260px] overflow-hidden rounded-2xl w-full">
@@ -131,13 +132,13 @@ export default function Services() {
               href="/signup"
               className="btn btn-primary dark:btn-accent btn-md hover:btn-white dark:hover:btn-white-dark w-[90%] md:w-auto"
             >
-              <span>Créer ma boutique</span>
+              <span>{t('home.services.cta.create')}</span>
             </a>
             <a
               href="/contact"
               className="btn hover:btn-secondary dark:btn-transparent btn-white btn-md dark:hover:btn-accent w-[90%] md:w-auto"
             >
-              <span>Nous contacter</span>
+              <span>{t('home.services.cta.contact')}</span>
             </a>
           </div>
         </FadeIn>

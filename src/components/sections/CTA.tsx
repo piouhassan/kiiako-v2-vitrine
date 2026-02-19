@@ -2,23 +2,25 @@
 
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
+import { useTranslation } from 'react-i18next';
 
 export default function CTA() {
+  const { t } = useTranslation();
+
   return (
     <section className="xl:py-[100px] lg:py-[90px] md:py-20 py-16 bg-white dark:bg-black relative overflow-hidden z-10">
       <div className="main-container">
         <div className="text-center space-y-5 mb-8">
           <FadeIn delay={0.1}>
-            <span className="badge bg-primary-500 text-white">Commencez maintenant</span>
+            <span className="badge bg-primary-500 text-white">{t('home.cta.badge')}</span>
           </FadeIn>
           <div className="space-y-3">
             <SlideIn direction="down" delay={0.2}>
-              <h2>Prêt à lancer votre boutique ?</h2>
+              <h2>{t('home.cta.title')}</h2>
             </SlideIn>
             <SlideIn direction="down" delay={0.3}>
               <p className="max-w-[568px] mx-auto">
-                Rejoignez des milliers de vendeurs qui font confiance à Kiiako pour développer leur
-                activité en ligne. Créez votre boutique gratuitement et commencez à vendre dès aujourd&apos;hui.
+                {t('home.cta.description')}
               </p>
             </SlideIn>
           </div>
@@ -31,13 +33,13 @@ export default function CTA() {
                 type="email"
                 name="email"
                 id="userEmail"
-                placeholder="Entrez votre adresse email"
+                placeholder={t('home.cta.placeholder')}
                 required
                 className="px-[18px] h-12 outline-none py-3 shadow-1 placeholder:text-secondary/50 rounded-full border border-stroke-1 sm:min-w-[340px] sm:max-w-[340px] w-full bg-accent dark:bg-background-6 dark:border-stroke-7 dark:placeholder:text-accent/60 block focus:ring-[0.7px] focus-within:ring-primary-500 font-normal placeholder:font-normal"
               />
             </fieldset>
             <button type="submit" className="btn btn-md btn-primary h-12">
-              <span>Créer ma boutique</span>
+              <span>{t('home.cta.button')}</span>
             </button>
             </form>
           </FadeIn>
@@ -60,7 +62,7 @@ export default function CTA() {
                   />
                 </svg>
               </span>
-              <p className="text-tagline-2">100% gratuit pour démarrer</p>
+              <p className="text-tagline-2">{t('home.cta.features.free')}</p>
             </li>
 
             <li className="flex items-center justify-center gap-2">
@@ -80,7 +82,7 @@ export default function CTA() {
                   />
                 </svg>
               </span>
-              <p className="text-tagline-2">Support disponible 24/7</p>
+              <p className="text-tagline-2">{t('home.cta.features.support')}</p>
             </li>
             </ul>
           </FadeIn>
