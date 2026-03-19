@@ -1,5 +1,14 @@
 {
   "title": "Kiiako",
+  "common": {
+    "units": {
+      "minutes_short": "min"
+    },
+    "dates": {
+      "yesterday": "Hier",
+      "monday": "Lundi"
+    }
+  },
   "header": {
     "nav": {
       "solutions": "Solutions",
@@ -9,7 +18,97 @@
       "start": "Commencer maintenant"
     },
     "menu": {
-      "usefulLinks": "Liens utiles"
+      "usefulLinks": "Liens utiles",
+      "features": {
+        "1": {
+          "title": "Créer votre boutique",
+          "description": "Lancez votre activité en ligne avec Kiiako"
+        },
+        "2": {
+          "title": "Personnaliser l’apparence",
+          "description": "Choisissez un thème qui reflète votre marque"
+        },
+        "3": {
+          "title": "Domaine personnalisé",
+          "description": "Rendez votre boutique unique avec un domaine à votre nom"
+        },
+        "5": {
+          "title": "Sécurisation des paiements",
+          "description": "Assurez la sécurité des données et transactions"
+        },
+        "6": {
+          "title": "Produits physiques",
+          "description": "Créez un catalogue et gégez vos stocks facilement"
+        },
+        "7": {
+          "title": "Produits digitaux",
+          "description": "Vendez vos fichiers et livrez-les automatiquement"
+        },
+        "8": {
+          "title": "Paiement Mobile Money",
+          "description": "Encaissez via des moyens de paiement adaptés à l’Afrique"
+        },
+        "10": {
+          "title": "Avis clients",
+          "description": "Mettez en valeur la confiance de vos acheteurs"
+        },
+        "11": {
+          "title": "Gestion des collaborateurs",
+          "description": "Invitez des membres de votre équipe avec des rôles"
+        }
+      },
+      "links": {
+        "4": "Blog",
+        "6": "Team",
+        "7": "Get in touch"
+      },
+      "ressources": {
+        "success": {
+          "title": "Réussir",
+          "items": {
+            "stories": {
+              "label": "Histoires de Réussite",
+              "description": "Découvrez comment nos marchands cartonnent."
+            },
+            "academy": {
+              "label": "Kiiako Academy",
+              "description": "Apprenez à créer et gérer une boutique qui rapporte"
+            },
+            "guides": {
+              "label": "Guides & Stratégies",
+              "description": "Nos meilleures ressources pour maîtriser le marché africain"
+            }
+          }
+        },
+        "help": {
+          "title": "Assistance",
+          "items": {
+            "helpCenter": {
+              "label": "Centre d'aide",
+              "description": "Une documentation riche pour configurer votre boutique sans technique"
+            },
+            "videos": {
+              "label": "Démos & Vidéos",
+              "description": "Des tutoriels rapides pour lancer votre activité sans stress"
+            }
+          }
+        }
+      },
+      "services": {
+        "1": "Devenir livreur",
+        "2": "Entreprise de livraison",
+        "3": "Comment ça marche ?",
+        "1_desc": "Inscrivez-vous, choisissez vos zones, livrez et gagnez.",
+        "2_desc": "Enregistrez votre compagnie et gérez votre flotte.",
+        "3_desc": "Zones, missions, tarifs, paiements."
+      },
+      "whatsapp": {
+        "badge": "Essayez le Bot",
+        "status": "En ligne",
+        "message1": "Gérez vos missions et boutique ici 👇",
+        "title_commands": "Commandes rapides :",
+        "view_all": "Voir tout"
+      }
     }
   },
   "home": {
@@ -178,22 +277,25 @@
       "company": {
         "title": "Entreprise",
         "about": "À propos",
-        "careers": "Carrières",
+        "legal": "Mention légale",
         "contact": "Contact",
-        "privacy": "Confidentialité",
-        "terms": "Conditions d'utilisation"
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions générales d'utilisation"
       },
       "copyright": "Copyright © {{year}} Kiiako – La plateforme e-commerce pour vendeurs en Afrique"
     }
   },
   "creerBoutique": {
     "hero": {
+      "badge": "Lancement Rapide",
       "title": "Votre boutique en ligne en <1>quelques minutes</1>",
       "description": "Plateforme e-commerce complète sans compétences techniques. Templates modernes, personnalisation totale et nom de domaine inclus.",
-      "usersLoveIt": "1000+ utilisateurs aiment ça"
+      "usersLoveIt": "1000+ utilisateurs aiment ça",
+      "button": "Lancer ma boutique"
     },
     "features": {
-      "title": "Tout ce dont vous avez besoin pour réussir",
+      "badge": "Fonctionnalités",
+      "title": "Tout ce dont vous avez besoin pour <1>réussir</1>",
       "subtitle": "Une plateforme complète avec tous les outils essentiels pour lancer et gérer votre boutique",
       "items": {
         "start": {
@@ -223,6 +325,7 @@
       }
     },
     "themes": {
+      "badge": "Templates",
       "title": "Choisissez votre thème parmi tant d'autres",
       "subtitle": "Des designs modernes et professionnels adaptés à tous les secteurs d'activité."
     },
@@ -230,6 +333,7 @@
       "badge": "Processus simple",
       "title": "Lancez votre boutique en 5 étapes",
       "subtitle": "Un processus guidé et intuitif pour créer votre boutique professionnelle",
+      "stepLabel": "Étape",
       "items": {
         "step1": {
           "title": "Créez votre compte",
@@ -264,12 +368,17 @@
         "Paiement Mobile Money intégré",
         "Support client disponible",
         "Mises à jour régulières gratuites"
-      ]
+      ],
+      "visual": {
+        "status": "En direct",
+        "processing": "Traitement colis",
+        "scheduled": "Expédition prévue dans 15 min"
+      }
     },
     "cta": {
       "title": "Prêt à lancer votre boutique en ligne ?",
       "description": "Rejoignez des milliers de vendeurs qui ont choisi Kiiako pour développer leur activité en ligne. Commencez gratuitement dès aujourd'hui.",
-      "button": "Créer ma boutique gratuite",
+      "button": "Créer ma boutique gratuitement",
       "benefits": {
         "free": "100% gratuit pour démarrer",
         "noCard": "Aucune carte bancaire requise",
@@ -366,7 +475,7 @@
       "items": {
         "paydunya": {
           "title": "Intégration Paydunya",
-          "description": "Connectez vos paiements à un partenaire reconnu pour garantir la confiance de vos clients."
+          "description": "Connectez vos paiements à un partenaire pour garantir la confiance de vos clients."
         },
         "ssl": {
           "title": "Chiffrement SSL/TLS",
@@ -391,6 +500,7 @@
       }
     },
     "commitments": {
+      "badge": "Engagement Sécurité",
       "title": "Une sécurité pensée pour la confiance client",
       "description": "Nous mettons en place des garde-fous simples à comprendre pour rassurer vos clients à chaque étape.",
       "items": {
@@ -398,12 +508,28 @@
         "customizable": "Contrôles de sécurité personnalisables",
         "realtime": "Validation des paiements en temps réel",
         "monitoring": "Surveillance depuis n'importe quel appareil",
-        "traceability": "Traçabilité complète",
-        "traceability_description": "Chaque paiement laisse une trace claire pour un suivi rapide et transparent.",
-        "alerts": "Alertes et contrôles",
-        "alerts_description": "Des vérifications automatiques pour limiter les anomalies et sécuriser les opérations.",
-        "experience": "Expérience fluide",
-        "experience_description": "Un parcours de paiement simple, tout en gardant un haut niveau de sécurité."
+        "traceability": {
+          "title": "Traçabilité complète",
+          "description": "Chaque paiement laisse une trace claire pour un suivi rapide et transparent."
+        },
+        "alerts": {
+          "title": "Alertes et contrôles",
+          "description": "Des vérifications automatiques pour limiter les anomalies et sécuriser les opérations."
+        },
+        "experience": {
+          "title": "Expérience fluide",
+          "description": "Un parcours de paiement simple, tout en gardant un haut niveau de sécurité."
+        }
+      }
+    },
+    "custom": {
+      "title": "Sécurité sur mesure",
+      "description": "Une protection adaptée aux besoins spécifiques de chaque boutique, avec des contrôles précis et un suivi en temps réel.",
+      "items": {
+        "adapted": "Protection adaptée",
+        "customizable": "Contrôles personnalisables",
+        "realtime": "Validation en temps réel",
+        "monitoring": "Surveillance continue"
       }
     },
     "faq": {
@@ -466,63 +592,2123 @@
     }
   },
   "produitsDigitaux": {
-    "badge": "Produits digitaux",
     "hero": {
-      "title": "Vendez vos créations numériques",
-      "description": "Vendez ebooks, cours, musique, logiciels et plus. Livraison automatique instantanée."
+      "badge": "Vente Automatisée",
+      "title": "Vendez votre <1>savoir</1> sans limite.",
+      "subtitle": "Kiiako automatise l'hébergement, le paiement sécurisé et la livraison instantanée de vos formations, e-books et médias.",
+      "button": "Lancer ma boutique"
     },
     "features": {
-      "title": "Vendez et livrez vos produits digitaux facilement",
-      "description": "Une plateforme complète avec tous les outils essentiels pour vendre vos créations numériques",
+      "title": "Tout pour livrer vos produits <1>facilement</1>",
+      "subtitle": "Une plateforme pensée pour les créateurs qui veulent se concentrer sur l'essentiel.",
+      "items": [
+        { "title": "Upload jusqu'à 2GB", "desc": "Uploadez vos fichiers volumineux en toute sécurité. Stockage optimisé pour la vente." },
+        { "title": "Formats illimités", "desc": "PDF, MP3, MP4, ZIP : tous les formats sont supportés sans exception." },
+        { "title": "Livraison Instantanée", "desc": "Vos clients reçoivent instantanément leur lien de téléchargement après l'achat." },
+        { "title": "Liens Sécurisés", "desc": "Protection par durée limitée et contrôle strict du nombre de téléchargements." },
+        { "title": "Paiement Local", "desc": "Acceptez les paiements Mobile Money et cartes bancaires en toute simplicité." },
+        { "title": "Bibliothèque Client", "desc": "Un espace dédié où vos acheteurs retrouvent tous leurs achats à vie." }
+      ]
+    },
+    "categories": {
+      "title": "Vendez n'importe quel type de <1>contenu</1>",
+      "items": [
+        "E-books & PDF",
+        "Cours en ligne",
+        "Musique & Audio",
+        "Vidéos & Films",
+        "Logiciels & Scripts",
+        "Photos & Designs",
+        "Templates",
+        "SaaS & Apps"
+      ]
+    },
+    "creativity": {
+      "badge": "Expression Créative",
+      "title": "Libérez votre potentiel créatif",
+      "description": "Que vous soyez infographe, musicien, développeur ou formateur, Kiiako vous offre les outils pour transformer votre talent en revenus récurrents.",
+      "items": [
+        { "title": "AI Art", "desc": "Prompts & Générations" },
+        { "title": "Photo", "desc": "Stocks & Portraits" }
+      ]
+    },
+    "monetization": {
+      "badge": "Revenus Passifs",
+      "title": "Gagnez de l'argent pendant que vous dormez",
+      "description": "L'automatisation totale signifie que vos ventes se font 24h/24, même quand vous n'êtes pas devant votre écran.",
+      "features": [
+        "Paiements Mobile Money instantanés",
+        "Vendez 24h/24 sans intervention",
+        "Livraison automatisée par email",
+        "Zéro logistique, zéro stock"
+      ]
+    },
+    "security": {
+      "badge": "Confiance & Sécurité",
+      "title": "Vos œuvres sont en sécurité",
+      "description": "Nous utilisons des technologies de pointe pour protéger vos fichiers contre le piratage et les partages non autorisés.",
+      "features": [
+        { "title": "Liens temporaires", "desc": "Expirent automatiquement après téléchargement" },
+        { "title": "Hébergement chiffré", "desc": "Vos fichiers sont stockés en toute sécurité" }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à monétiser votre savoir-faire ?",
+      "subtitle": "Créez votre boutique digitale aujourd'hui et commencez à vendre dans le monde entier.",
+      "button": "Créer ma boutique gratuitement",
+      "perks": [
+        "Livraison instantanée",
+        "Paiements Mobile Money",
+        "Support 24/7"
+      ]
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Tarification",
+      "subtitle": "Commencez à créer votre boutique à partir de nos forfaits disponibles."
+    },
+    "billing": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "discount": "-20%"
+    },
+    "features": {
+      "title": "Ce qui est inclus",
       "items": {
-        "upload": {
-          "title": "Upload de fichiers jusqu'à 2GB",
-          "description": "Uploadez vos fichiers volumineux en toute sécurité. Stockage illimité pour vos produits digitaux."
+        "nom_de_domaine": "Nom de domaine personnalisé",
+        "theme_personnalisable": "Thème personnalisable",
+        "multi_langue": "Support multi-langue",
+        "parrainage": "Système de parrainage",
+        "assistance": "Assistance technique",
+        "modules_supplementaires": "Modules supplémentaires",
+        "stockage": "Stockage",
+        "collaborateur": "Collaborateur",
+        "livreurs": "Accès au réseau de livreurs"
+      }
+    },
+    "plans": {
+      "free": "Gratuit",
+      "free_desc": "Pour lancer sans frais votre boutique, et maîtriser l'interface avec les fonctionnalités incontournables.",
+      "currency": "FCFA",
+      "choose": "Choisir {{name}}",
+      "unlimited": "Illimité",
+      "start": "Commencer",
+      "loading": "Récupération des tarifs en cours..."
+    },
+    "common": {
+      "title": "Inclus dans tous les plans",
+      "subtitle": "Les bases solides pour faire grandir votre business en toute sérénité avec Kiiako.",
+      "items": {
+        "ssl": { "title": "Certificat SSL", "desc": "Votre boutique sécurisée en HTTPS pour rassurer vos clients." },
+        "support": { "title": "Support 24/7", "desc": "Une équipe pour vous accompagner à chaque étape du projet." },
+        "backup": { "title": "Sauvegardes", "desc": "Vos données sont sauvegardées quotidiennement sur nos serveurs." },
+        "cloud": { "title": "Cloud Sécurisé", "desc": "Hébergement haute performance et sécurisé pour votre boutique." }
+      }
+    },
+    "enterprise": {
+      "badge": "Besoin de plus ?",
+      "title": "Des besoins spécifiques pour votre entreprise ?",
+      "desc": "Si vous dépassez les limites du plan Premium ou si vous avez besoin d'une solution sur-mesure (SLA, support dédié, intégrations spécifiques), notre équipe d'experts est là pour vous accompagner.",
+      "button": "Contacter le commercial"
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur les forfaits et les paiements Kiiako.",
+      "items": {
+        "payments": {
+          "question": "Quels sont les moyens de paiement acceptés ?",
+          "answer": "Vos clients peuvent payer par Mobile Money (Orange, MTN, Moov, Wave) et par carte bancaire (Visa, Mastercard). Tout est déjà intégré nativement."
         },
-        "formats": {
-          "title": "Formats multiples supportés",
-          "description": "PDF, MP3, MP4, ZIP, EPUB et tous les formats courants sont supportés sans restriction."
+        "domain": {
+          "question": "Puis-je utiliser mon propre nom de domaine ?",
+          "answer": "Oui, chaque vendeur bénéficie automatiquement d'un nom de domaine personnalisé gratuitement dès la création de sa boutique."
         },
-        "delivery": {
-          "title": "Livraison automatique par email",
-          "description": "Vos clients reçoivent instantanément leur lien de téléchargement par email après l'achat."
+        "withdrawals": {
+          "question": "Comment se passent les retraits d'argent ?",
+          "answer": "Vous pouvez retirer vos gains vers votre compte Mobile Money à tout moment depuis votre tableau de bord. Les transferts sont traités sous 24h."
         },
-        "security": {
-          "title": "Liens de téléchargement sécurisés",
-          "description": "Protection anti-piratage avec liens sécurisés et limite de téléchargements par achat."
+        "commitment": {
+          "question": "Y a-t-il un engagement de durée ?",
+          "answer": "Non, nos forfaits sont sans engagement. Vous pouvez annuler ou changer de forfait à tout moment depuis vos réglages."
         },
-        "antipiracy": {
-          "title": "Protection anti-piratage",
-          "description": "Système de sécurité avancé pour protéger vos créations contre le téléchargement non autorisé."
+        "commission": {
+          "question": "Kiiako prend-il une commission sur les ventes ?",
+          "answer": "Non, Kiiako ne prend aucune commission sur vos ventes. Seuls les frais techniques de traitement de notre partenaire de paiement s'appliquent."
+        }
+      }
+    }
+  },
+  "avisClients": {
+    "hero": {
+      "badge": "Avis Clients",
+      "title": "Montrez la confiance de vos clients",
+      "subtitle": "Collectez et affichez les avis de vos clients pour booster vos ventes.",
+      "cta": "Activer les avis",
+      "visual": {
+        "marie": {
+          "name": "Marie D.",
+          "text": "Livraison rapide, je recommande !"
         },
-        "updates": {
-          "title": "Mises à jour automatiques",
-          "description": "Mettez à jour vos fichiers et tous vos clients reçoivent automatiquement la nouvelle version."
+        "paul": {
+          "name": "Paul K.",
+          "text": "Qualité incroyable, le service client est top."
         }
       }
     },
-    "types": {
-      "title": "Vendez tout type de contenu digital",
+    "features": {
+      "title": "Système d'avis complet et automatisé",
+      "subtitle": "Une plateforme complète avec tous les outils essentiels pour gérer les avis clients",
       "items": {
-        "ebooks": "Ebooks & PDF",
-        "courses": "Cours en ligne",
-        "music": "Musique & Audio",
-        "videos": "Vidéos & Films",
-        "software": "Logiciels",
-        "photos": "Photos & Designs",
-        "templates": "Templates",
-        "more": "Et plus encore"
+        "collect": {
+          "title": "Collecte automatique d'avis",
+          "description": "Envoi auto d'emails après chaque achat pour collecter les avis clients."
+        },
+        "rating": {
+          "title": "Système de notation par étoiles",
+          "description": "Notation de 1 à 5 étoiles avec commentaires détaillés de vos clients."
+        },
+        "media": {
+          "title": "Avis avec photos et vidéos",
+          "description": "Vos clients peuvent ajouter des photos et vidéos pour illustrer leurs avis."
+        },
+        "moderation": {
+          "title": "Modération des avis clients",
+          "description": "Validez manuellement les avis avant leur publication sur votre boutique."
+        },
+        "widget": {
+          "title": "Widget d'affichage",
+          "description": "Affichez les avis sur votre boutique avec un widget entièrement personnalisable."
+        },
+        "stats": {
+          "title": "Stats de satisfaction",
+          "description": "Suivez le niveau de satisfaction de vos clients avec des statistiques détaillées."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Bénéfices",
+      "title": "Pourquoi les avis clients sont essentiels ?",
+      "items": {
+        "trust": {
+          "title": "Augmente la confiance",
+          "description": "Les avis authentiques rassurent vos visiteurs et augmentent leur confiance."
+        },
+        "conversion": {
+          "title": "Améliore les conversions",
+          "description": "Les boutiques avec avis clients convertissent jusqu'à 270% que celles sans avis."
+        },
+        "hesitation": {
+          "title": "Réduit les hésitations",
+          "description": "Les avis positifs aident vos prospects à prendre leur décision d'achat plus vite."
+        },
+        "seo": {
+          "title": "Meilleur référencement",
+          "description": "Les avis améliorent votre SEO et vos étoiles apparaissent dans les résultats Google."
+        }
       }
     },
     "cta": {
-      "title": "Commencez à vendre vos produits digitaux",
-      "description": "Créez votre boutique en ligne et vendez vos créations numériques avec livraison automatique instantanée.",
-      "button": "Commencer gratuitement",
-      "benefits": {
-        "free": "100% gratuit pour démarrer",
-        "noCard": "Aucune carte bancaire requise",
-        "support": "Support disponible 24/7"
+      "title": "Commencez à collecter des avis dès aujourd'hui",
+      "description": "Augmentez vos ventes en montrant la satisfaction de vos clients avec un système d'avis automatisé.",
+      "button": "Créer ma boutique gratuitement",
+      "features": {
+        "collect": "Collecte automatique",
+        "widget": "Widget personnalisable",
+        "moderation": "Modération incluse"
       }
+    },
+    "steps": {
+      "badge": "Processus",
+      "title": "Comment ça marche ?",
+      "items": {
+        "config": {
+          "title": "Activation",
+          "description": "Activez le module d'avis sur votre tableau de bord en un clic."
+        },
+        "collect": {
+          "title": "Collecte Auto",
+          "description": "Kiiako envoie un email automatique à vos clients après leur achat."
+        },
+        "moderation": {
+          "title": "Modération",
+          "description": "Validez les avis reçus pour garantir l'image de votre marque."
+        },
+        "publication": {
+          "title": "Publication",
+          "description": "Les avis s'affichent instantanément sur vos pages produits."
+        }
+      }
+    },
+    "showcase": {
+      "badge": "Intégration",
+      "title": "Le widget parfait pour votre boutique",
+      "subtitle": "Adaptez l'affichage à votre design avec des formats flexibles et modernes.",
+      "items": {
+        "grid": "Grille Moderne",
+        "list": "Liste Classique",
+        "carousel": "Carousel Interactif"
+      }
+    },
+    "trust": {
+      "title": "La preuve sociale qui fait vendre",
+      "subtitle": "Transformez la satisfaction de vos clients en votre meilleur argument de vente.",
+      "stats": {
+        "conversion": {
+          "value": "+270%",
+          "label": "de conversion"
+        },
+        "trust": {
+          "value": "93%",
+          "label": "lisent les avis"
+        }
+      }
+    },
+    "seo": {
+      "badge": "Référencement",
+      "title": "Boostez votre visibilité sur Google",
+      "subtitle": "Vos produits méritent de briller avec leurs étoiles dès les résultats de recherche.",
+      "items": {
+        "snippets": {
+          "title": "Rich Snippets",
+          "description": "Vos étoiles de notation apparaissent directement dans les résultats Google."
+        },
+        "ranking": {
+          "title": "Meilleur Rang",
+          "description": "L'augmentation du taux de clic (CTR) améliore naturellement votre positionnement."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Ce que nos utilisateurs disent"
+    }
+  },
+  "equipe": {
+    "hero": {
+      "badge": "SÉCURITÉ & CONTRÔLE",
+      "title": "Vibrez à l'unisson avec votre équipe",
+      "subtitle": "Centralisez la gestion de votre boutique. Allouez des permissions précises et sécurisez vos opérations en un clin d'œil.",
+      "button": "Créer mon équipe"
+    },
+    "roles": {
+      "badge": "Rôles disponibles",
+      "title": "Une hiérarchie claire et robuste",
+      "items": {
+        "owner": {
+          "title": "Propriétaire",
+          "description": "Accès absolu et gestion de la facturation."
+        },
+        "admin": {
+          "title": "Administrateur",
+          "description": "Contrôle total des modules opérationnels."
+        },
+        "manager": {
+          "title": "Gestionnaire",
+          "description": "Focus peure les produits et le flux de commandes."
+        },
+        "staff": {
+          "title": "Collaborateur",
+          "description": "Accès en lecture seule pour le support client."
+        }
+      }
+    },
+    "features": {
+      "badge": "EFFICACITÉ",
+      "title": "Tout ce dont vous avez besoin",
+      "items": {
+        "unlimited": {
+          "title": "Invitations sécurisées",
+          "description": "Ajoutez des membres selon les limites de votre forfait."
+        },
+        "roles": {
+          "title": "Structure flexible",
+          "description": "Adaptez les accès à vos processus internes."
+        },
+        "custom": {
+          "title": "Granularité",
+          "description": "Des réglages fins pour une sécurité optimale."
+        },
+        "history": {
+          "title": "Audit complet",
+          "description": "Historique détaillé de chaque modification."
+        },
+        "deletion": {
+          "title": "Instantanéité",
+          "description": "Révoquez les accès dès que nécessaire."
+        },
+        "predefined": {
+          "title": "Quick-Start",
+          "description": "Modèles prêts à l'emploi pour gagner du temps."
+        }
+      }
+    },
+    "visual": {
+      "collaborators": {
+        "title": "Collaborateurs",
+        "active": "membres actifs"
+      },
+      "secure": "Sécurisé",
+      "roles": {
+        "owner": "Propriétaire",
+        "admin": "Admin",
+        "support": "Support"
+      },
+      "interfaces": {
+        "support": "Interface Support",
+        "dashboard": "Dashboard Ventes"
+      }
+    },
+    "workflow": {
+      "badge": "COLLABORATION",
+      "title": "Un flux de travail sans friction",
+      "subtitle": "Fini les mots de passe partagés et les confusions. Chaque membre possède son propre accès et une interface sur-mesure adaptée à ses responsabilités.",
+      "list": {
+        "access": "Accès individuel sécurisé",
+        "interface": "Interface épurée selon le rôle",
+        "focus": "Zéro distraction, 100% de concentration"
+      }
+    },
+    "onboarding": {
+      "badge": "SIMPLICITÉ",
+      "title": "Intégrez vos collaborateurs en 1 clic",
+      "subtitle": "Pas de procédure complexe. Saisissez une adresse e-mail, sélectionnez un rôle, et l'invitation est envoyée instantanément.",
+      "steps": {
+        "invite": "1. Invitez par e-mail",
+        "role": "2. Assignez un rôle",
+        "work": "3. Collaborez"
+      }
+    },
+    "faq": {
+      "badge": "QUESTIONS",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur la gestion d'équipe.",
+      "items": {
+        "limits": {
+          "question": "Combien de membres puis-je inviter ?",
+          "answer": "Le nombre de collaborateurs que vous pouvez inviter dépend du forfait Kiiako que vous avez choisi. Vérifiez les détails de votre abonnement."
+        },
+        "roles": {
+          "question": "Puis-je créer des rôles sur mesure ?",
+          "answer": "Oui, vous pouvez créer autant de rôles personnalisés que vous le souhaitez pour les adapter parfaitement à votre organisation."
+        },
+        "billing": {
+          "question": "Qui a accès à la facturation ?",
+          "answer": "Seul le rôle Propriétaire peut consulter ou modifier les informations de facturation et les abonnements."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à déléguer sereinement ?",
+      "description": "Instaurez une culture de collaboration professionnelle dès aujourd'hui.",
+      "button": "Inviter mon équipe",
+      "features": {
+        "unlimited": "Membres selon forfait",
+        "roles": "Rôles sécurisés",
+        "history": "Journal d'audit"
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "title_part1": "Nos récentes ",
+      "title_part2": "actualités & insights",
+      "subtitle": "Nos récentes actualités et insights mettent en lumière les derniers développements, réalisations et réflexions qui façonnent Kiiako. Des innovations produits aux tendances du e-commerce."
+    },
+    "read_more": "Lire la suite",
+    "sidebar": {
+      "search_placeholder": "Rechercher des articles",
+      "categories": "Catégories",
+      "recent_articles": "Articles récents",
+      "tags": "Mots-clés",
+      "past_records": "Archives"
+    },
+    "cta": {
+      "badge": "LANCEZ-VOUS",
+      "title": "Créez votre boutique en ligne dès aujourd'hui",
+      "description": "Commencez votre essai gratuit et donnez vie à vos idées facilement.",
+      "button": "Démarrer gratuitement",
+      "features": {
+        "no_credit_card": "Aucune carte bancaire requise",
+        "free_trial": "Essai gratuit de 14 jours"
+      }
+    },
+    "article": {
+      "back": "Retour aux articles",
+      "writtenBy": "Écrit par",
+      "team": "Équipe Kiiako",
+      "readingTime": "min de lecture",
+      "share": "Partager",
+      "copied": "Copié !",
+      "keywords": "Mots-clés",
+      "related": "Sur le même sujet",
+      "subtitle": "Continuez votre lecture avec nos derniers articles.",
+      "more": "Plus d'articles",
+      "cta": {
+        "title": "Prêt à accélérer la croissance de vos ventes ?",
+        "subtitle": "Explorez nos solutions pour mieux converser avec vos clients et transformer vos prospects en ambassadeurs grâce à l'IA.",
+        "button": "Contactez-nous"
+      }
+    }
+  },
+  "teamSolution": {
+    "hero": {
+      "badge": "Notre équipe",
+      "title": "Une équipe innovante, dynamique et talentueuse",
+      "subtitle": "Notre équipe est la force motrice de notre succès. Chaque membre apporte un mélange unique d'expertise et de passion pour façonner l'avenir de Kiiako."
+    },
+    "cta": {
+      "badge": "Démarrer",
+      "title": "Kiiako – votre plateforme ultime de messagerie transactionnelle et d'emails",
+      "description": "Boostez l'engagement. Améliorez la délivrabilité. Automatisez vos emails.",
+      "placeholder": "Entrez votre email",
+      "button": "Démarrer maintenant",
+      "features": {
+        "no_card": "Pas de carte bancaire requise",
+        "trial": "Essai gratuit de 14 jours"
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "badge": "Contactez-nous",
+      "title": "Contactez notre équipe de support pour obtenir de l'aide.",
+      "subtitle": "Que vous ayez une question, besoin d'une assistance technique ou simplement d'un conseil, notre équipe de support est là pour vous aider. Nous sommes disponibles 24h/24 pour vous offrir un support rapide et amical."
+    },
+    "cards": {
+      "address": {
+        "title": "Notre Adresse",
+        "value": "2464 Royal Ln. Mesa, New Jersey 45463"
+      },
+      "email": {
+        "title": "Envoyez-nous un email",
+        "value": "hello@kiiako.com"
+      },
+      "phone": {
+        "title": "Appelez-nous",
+        "value": "+391 (0)35 2568 4593"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Votre nom",
+        "number": "Votre numéro",
+        "email": "Adresse email",
+        "subject": "Sujet",
+        "message": "Écrire un message",
+        "terms": "J'accepte les <1>termes et conditions</1>"
+      },
+      "placeholders": {
+        "name": "Entrez votre nom",
+        "number": "Entrez votre numéro",
+        "email": "Entrez votre email",
+        "subject": "Sujet",
+        "message": "Entrez votre message"
+      },
+      "button": "Envoyer",
+      "messages": {
+        "success": "Votre message a bien été envoyé !",
+        "error": "Une erreur est survenue lors de l'envoi du message.",
+        "connectionError": "Erreur de connexion au serveur."
+      }
+    },
+    "map": {
+      "placeholder": "Emplacement de notre bureau",
+      "open": "Ouvrir",
+      "share": "Partager",
+      "copied": "Copié ✓"
+    }
+  },
+  "nomDeDomaine": {
+    "hero": {
+      "badge": "Nom de domaine automatique",
+      "title": "Votre identité professionnelle en ligne",
+      "subtitle": "Chaque vendeur obtient automatiquement un nom de domaine personnalisé. Aucune configuration requise.",
+      "browser_title": "Votre boutique en ligne est prête"
+    },
+    "features": {
+      "title": "Tout est automatique et sécurisé",
+      "subtitle": "Votre nom de domaine professionnel configuré instantanément, sans aucune compétence technique requise",
+      "items": {
+        "automatic": {
+          "title": "Domaine automatique",
+          "description": "Obtenez votre nom de domaine personnalisé dès l'inscription, sans configuration manuelle."
+        },
+        "professional": {
+          "title": "Format professionnel",
+          "description": "Adresse personnalisée (https://demo.kiiako.shop) professionnelle."
+        },
+        "ssl": {
+          "title": "SSL inclus",
+          "description": "Certificat SSL gratuit inclus pour garantir la sécurité de vos clients et leur confiance."
+        },
+        "config": {
+          "title": "Configuration auto",
+          "description": "Configuration technique automatique, DNS et paramètres gérés par nos équipes."
+        },
+        "zero": {
+          "title": "Zéro technique",
+          "description": "Aucune connaissance technique requise, tout est géré automatiquement pour vous."
+        },
+        "seo": {
+          "title": "SEO optimisé",
+          "description": "Nom de domaine optimisé pour le référencement naturel et meilleure visibilité en ligne."
+        }
+      }
+    },
+    "process": {
+      "badge": "Processus",
+      "title": "Comment ça fonctionne",
+      "items": {
+        "account": {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous gratuitement et choisissez le nom de votre boutique"
+        },
+        "generation": {
+          "title": "Génération automatique",
+          "description": "Votre domaine personnalisé est créé instantanément au format votreboutique.kiiako.shop"
+        },
+        "ssl": {
+          "title": "Configuration SSL",
+          "description": "Certificat SSL automatiquement installé pour sécuriser votre boutique"
+        },
+        "ready": {
+          "title": "C'est prêt",
+          "description": "Votre boutique est en ligne avec votre domaine professionnel, prête à recevoir des clients"
+        }
+      }
+    },
+    "galaxy": {
+      "badge": "Exemples",
+      "title": "Des domaines professionnels",
+      "subtitle": "Votre boutique est en ligne avec votre domaine professionnel, prête à recevoir des clients"
+    },
+    "comparison": {
+      "badge": "Comparaison",
+      "title": "La différence est claire",
+      "without": {
+        "title": "Sans domaine personnalisé",
+        "items": [
+          "URL longue et complexe difficile à retenir",
+          "Apparence non professionnelle",
+          "Moins de confiance des clients",
+          "Référencement limité"
+        ]
+      },
+      "with": {
+        "title": "Avec votre domaine Kiiako",
+        "items": [
+          "URL courte et mémorable",
+          "Image professionnelle et crédible",
+          "Confiance accrue des clients",
+          "Optimisé pour le SEO",
+          "SSL gratuit inclus"
+        ]
+      },
+      "marketplaces": {
+        "title": "Sur les Marketplaces",
+        "items": [
+          "Marque invisible derrière la plateforme",
+          "URL plateforme peu professionnelle",
+          "Commissions élevées sur vos ventes",
+          "Aucun contrôle sur votre base client"
+        ]
+      }
+    },
+    "external": {
+      "badge": "Domaine externe",
+      "title": "Vous avez déjà votre propre domaine ?",
+      "subtitle": "Pas de problème. Liez facilement votre domaine existant à votre boutique Kiiako.",
+      "cards": {
+        "self": {
+          "title": "Configurez-le vous-même",
+          "description": "Si vous avez l'habitude, vous pouvez lier votre domaine (ex: monsite.com) à votre boutique depuis votre tableau de bord en configurant les DNS."
+        },
+        "assisted": {
+          "title": "Nous le faisons pour vous",
+          "description": "Vous préférez ne pas toucher à la technique ? Notre équipe d'experts s'occupe de lier votre domaine à votre boutique pour seulement 5000 F CFA.",
+          "badge": "Assistance Payante"
+        }
+      }
+    },
+    "advantages": {
+      "badge": "Avantages",
+      "title": "Pourquoi un domaine personnalisé",
+      "items": {
+        "credibility": {
+          "title": "Crédibilité instantanée",
+          "description": "Un domaine personnalisé donne immédiatement une apparence professionnelle à votre boutique"
+        },
+        "memorable": {
+          "title": "Facile à retenir",
+          "description": "Un nom court et personnalisé que vos clients peuvent mémoriser et partager facilement"
+        },
+        "trust": {
+          "title": "Confiance renforcée",
+          "description": "Les clients font davantage confiance aux boutiques avec leur propre domaine sécurisé"
+        },
+        "seo": {
+          "title": "Meilleur référencement",
+          "description": "Un domaine personnalisé améliore votre visibilité sur Google et les moteurs de recherche"
+        }
+      }
+    },
+    "cta": {
+      "title": "Commencez dès maintenant",
+      "subtitle": "Votre domaine personnalisé est configuré automatiquement à la création de votre boutique",
+      "button": "Créer ma boutique gratuitement",
+      "benefits": [
+        "Gratuit",
+        "SSL inclus",
+        "Configuration automatique"
+      ]
+    }
+  },
+  "personnalisation": {
+    "hero": {
+      "badge": "Personnalisation",
+      "title": "Une boutique unique qui vous ressemble",
+      "subtitle": "Builder visuel puissant pour créer l'expérience parfaite pour vos clients. Contrôle total sur le design, les couleurs et la mise en page."
+    },
+    "features": {
+      "badge": "Fonctionnalités puissantes",
+      "title": "Créez l'expérience parfaite pour vos <1>clients</1>",
+      "subtitle": "Un builder complet pensé pour les marchands qui veulent se concentrer sur leur image de marque.",
+      "items": {
+        "builder": {
+          "title": "Builder de pages visuel",
+          "description": "Créez vos pages par simple glisser-déposer. Aucune compétence nécessaire pour créer une boutique professionnelle."
+        },
+        "palette": {
+          "title": "Personnalisation couleurs",
+          "description": "Choisissez vos couleurs de marque, vos polices préférées et créez une identité visuelle unique qui reflète votre entreprise."
+        },
+        "media": {
+          "title": "Upload de logo et images",
+          "description": "Importez votre logo, vos images de produits et créez une galerie visuelle qui capte l'attention de vos clients."
+        },
+        "preview": {
+          "title": "Prévisualisation realtime",
+          "description": "Visualisez instantanément vos modifications. Ce que vous voyez est exactement ce que vos clients verront."
+        },
+        "sections": {
+          "title": "Sections personnalisables",
+          "description": "Personnalisez chaque section de votre boutique : header, footer, pages produits, catégories et bien plus encore."
+        },
+        "darkmode": {
+          "title": "Mode sombre/clair",
+          "description": "Offrez à vos clients le choix entre le mode sombre et clair pour une expérience de navigation optimale."
+        }
+      }
+    },
+    "sections": {
+      "ready": {
+        "badge": "Sections Prêtes à l'Emploi",
+        "title": "Composez votre boutique en un clin d'œil",
+        "description": "Profitez d'une vaste bibliothèque de sections pré-conçues (Héros, Témoignages, FAQ, Grilles de produits) qu'il ne vous reste plus qu'à personnaliser selon vos envies.",
+        "list": [
+          "Plus de 90 blocs de sections personnalisables",
+          "Glisser-déposer intuitif"
+        ]
+      },
+      "intuitive": {
+        "badge": "Prise en main facile",
+        "title": "Personnalisez chaque détail en quelques clics",
+        "description": "Modifiez les textes, les images et les couleurs de vos sections directement depuis l'interface. Grâce à nos champs de saisie intuitifs, mettre à jour votre contenu n'a jamais été aussi simple.",
+        "list": [
+          "Champs de saisie intuitifs pour vos textes",
+          "Modification en temps réel"
+        ]
+      }
+    },
+    "advantages": {
+      "badge": "Avantages",
+      "title": "Pourquoi personnaliser votre boutique ?",
+      "items": {
+        "standout": {
+          "title": "Démarquez-vous de la concurrence",
+          "description": "Créez une boutique unique qui se distingue et attire l'attention de vos clients potentiels."
+        },
+        "branding": {
+          "title": "Renforcez votre identité de marque",
+          "description": "Alignez votre boutique en ligne avec votre image de marque pour une cohérence parfaite."
+        },
+        "experience": {
+          "title": "Offrez une expérience unique",
+          "description": "Créez une expérience d'achat mémorable qui fidélise vos clients et booste vos ventes."
+        }
+      }
+    },
+    "templates": {
+      "badge": "Templates professionnels",
+      "title": "Démarrez avec un template prêt à l'emploi",
+      "subtitle": "Choisissez parmi notre collection de templates professionnels conçus par des designers experts. Chaque template est entièrement personnalisable selon vos besoins.",
+      "list": [
+        "Templates modernes et responsive",
+        "Optimisés pour la conversion",
+        "Installation en un clic"
+      ]
+    },
+    "cta": {
+      "title": "Prêt à lancer votre boutique en ligne ?",
+      "subtitle": "Rejoignez des milliers de vendeurs qui ont choisi Kiiako pour développer leur activité en ligne. Commencez gratuitement dès aujourd'hui.",
+      "button": "Créer ma boutique gratuitement",
+      "benefits": [
+        "100% gratuit pour démarrer",
+        "Aucune carte bancaire requise",
+        "Support disponible 24/7"
+      ]
+    }
+  },
+  "entrepriseLivraison": {
+    "hero": {
+      "badge": "Pour les compagnies",
+      "title": "Votre compagnie de livraison, <1>connectée à Kiiako</1>",
+      "subtitle": "Enregistrez votre société de livraison, gérez votre flotte de livreurs, couvrez plusieurs zones et recevez des missions en temps réel depuis les boutiques Kiiako.",
+      "cta": {
+        "register": "Enregistrer ma compagnie",
+        "independent": "Je suis livreur indépendant",
+        "secondary": "Nous contacter"
+      }
+    },
+    "stats": {
+      "commission": {
+        "label": "Commission",
+        "value": "20%",
+        "sub": "prélevée par Kiiako"
+      },
+      "livreurs": {
+        "label": "Livreurs",
+        "value": "Illimités",
+        "sub": "sous votre compagnie"
+      },
+      "zones": {
+        "label": "Zones",
+        "value": "Multi-villes",
+        "sub": "couverture flexible"
+      },
+      "retrait": {
+        "label": "Retrait",
+        "value": "Mobile Money",
+        "sub": "MTN · Moov · Wave"
+      }
+    },
+    "steps": {
+      "title": "Comment ça fonctionne ?",
+      "subtitle": "6 étapes pour enregistrer votre compagnie et commencer à recevoir des missions.",
+      "list": {
+        "dossier": {
+          "title": "Remplissez le dossier entreprise",
+          "desc": "Soumettez les informations de votre compagnie : nom, adresse, NIF, document officiel et logo."
+        },
+        "validation": {
+          "title": "Validation par Kiiako",
+          "desc": "Notre équipe vérifie votre dossier. Vous êtes notifié par WhatsApp une fois votre compte approuvé."
+        },
+        "zones": {
+          "title": "Définissez vos zones",
+          "desc": "Choisissez les villes et quartiers couverts par votre compagnie. Vos livreurs peuvent aussi définir leurs zones propres."
+        },
+        "invitation": {
+          "title": "Invitez vos livreurs",
+          "desc": "Ajoutez vos livreurs par email. Ils reçoivent une invitation et créent leur compte sous votre compagnie."
+        },
+        "missions": {
+          "title": "Acceptez des missions",
+          "desc": "Les marchands dans vos zones vous assignent des commandes. Distribuez-les à vos livreurs disponibles."
+        },
+        "wallet": {
+          "title": "Gérez votre portefeuille",
+          "desc": "Les gains de toutes vos missions sont centralisés dans un wallet entreprise. Retirez par Mobile Money."
+        }
+      }
+    },
+    "advantages": {
+      "title": "Pourquoi choisir le statut Compagnie ?",
+      "subtitle": "Plus de missions, plus de zones, une gestion centralisée.",
+      "items": {
+        "flotte": {
+          "title": "Gestion de flotte",
+          "desc": "Invitez vos livreurs, gérez leur statut et visualisez leurs disponibilités depuis un tableau de bord."
+        },
+        "zones": {
+          "title": "Couverture multi-zones",
+          "desc": "Votre compagnie peut couvrir plusieurs villes simultanément. Chaque livreur gère ses propres quartiers."
+        },
+        "wallet": {
+          "title": "Wallet entreprise centralisé",
+          "desc": "Un seul portefeuille pour tous vos livreurs. Commission réduite à 20% versus 15% pour les indépendants."
+        },
+        "badge": {
+          "title": "Badge vérifié",
+          "desc": "Votre compagnie affiche un badge officiel auprès des marchands. NIF et documents validés par Kiiako."
+        },
+        "reputation": {
+          "title": "Réputation collective",
+          "desc": "Chaque livraison contribue à la note globale de votre compagnie. Un bon score attire plus de missions."
+        },
+        "stats": {
+          "title": "Statistiques & suivi",
+          "desc": "Suivez les missions, revenus, et performances de votre flotte depuis l'interface dédiée aux compagnies."
+        }
+      }
+    },
+    "requirements": {
+      "title": "Documents requis",
+      "subtitle": "Préparez ces éléments avant de commencer votre inscription.",
+      "list": [
+        "Nom légal de la compagnie",
+        "Adresse physique de l'entreprise",
+        "Numéro d'Identification Fiscale (NIF)",
+        "Document officiel : RCCM, statuts ou équivalent",
+        "Logo de l'entreprise",
+        "Email et téléphone du gestionnaire",
+        "Compte Mobile Money pour les retraits (MTN, Moov, Wave)"
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Quelle est la différence entre livreur indépendant et compagnie ?",
+          "a": "Un livreur indépendant agit seul. Une compagnie peut gérer une flotte de livreurs, couvrir plusieurs zones, et dispose d'un wallet collectif. La commission compagnie est de 20% vs 15% pour les indépendants."
+        },
+        {
+          "q": "Comment inviter mes livreurs ?",
+          "a": "Depuis votre tableau de bord compagnie, vous pouvez inviter des livreurs par email. Ils reçoivent un lien pour créer leur compte sous votre compagnie."
+        },
+        {
+          "q": "Peut-on couvrir plusieurs villes ?",
+          "a": "Oui. Votre compagnie peut sélectionner des zones dans plusieurs villes. Chaque livreur peut aussi définir ses propres quartiers."
+        },
+        {
+          "q": "Comment sont distribués les gains entre la compagnie et les livreurs ?",
+          "a": "Les gains bruts arrivent dans le wallet compagnie. C'est à la compagnie de rémunérer ses livreurs selon ses propres règles internes."
+        },
+        {
+          "q": "Le dossier de validation est-il différent de celui d'un livreur ?",
+          "a": "Oui. Pour une compagnie, Kiiako vérifie les documents légaux (NIF, RCCM) et le logo. Le processus peut prendre 24 à 72h."
+        }
+      ]
+    },
+    "cta": {
+      "badge": "Compagnies",
+      "title": "Enregistrez votre compagnie",
+      "subtitle": "Dossier soumis en 10 minutes. Validation sous 24-72h. Flotte opérationnelle rapidement.",
+      "button": "Enregistrer ma compagnie"
+    },
+    "comparison": {
+      "title": "Indépendant vs Compagnie",
+      "headers": {
+        "criteria": "Critère",
+        "independent": "Indépendant",
+        "company": "Compagnie"
+      },
+      "items": {
+        "commission": { "crit": "Commission", "ind": "15%", "comp": "20%" },
+        "fleet": { "crit": "Livreurs", "ind": "1 (vous)", "comp": "Flotte illimitée" },
+        "zones": { "crit": "Zones", "ind": "Par quartier", "comp": "Multi-villes" },
+        "wallet": { "crit": "Wallet", "ind": "Personnel", "comp": "Centralisé entreprise" },
+        "badge": { "crit": "Badge vérifié", "ind": "✓", "comp": "✓" },
+        "invite": { "crit": "Invitation livreurs", "ind": "✗", "comp": "✓" },
+        "legal": { "crit": "Profil légal (NIF)", "ind": "Non requis", "comp": "Requis" }
+      }
+    }
+  },
+  "livreurInscription": {
+    "hero": {
+      "badge": "Pour les livreurs",
+      "title": "Livrez avec Kiiako, <1>gagnez à votre rythme</1>",
+      "subtitle": "Rejoignez le réseau de livreurs indépendants Kiiako. Choisissez vos zones, vos horaires, et retirez vos gains par Mobile Money.",
+      "cta": {
+        "primary": "S'inscrire comme livreur",
+        "secondary": "En savoir plus"
+      }
+    },
+    "stats": {
+      "base": { "label": "Prix de base", "value": "500 FCFA", "sub": "par livraison" },
+      "km": { "label": "Prix au km", "value": "+90 FCFA", "sub": "par kilomètre" },
+      "commission": { "label": "Commission", "value": "15%", "sub": "prélevée par Kiiako" },
+      "withdrawal": { "label": "Retrait", "value": "0 délai", "sub": "Mobile Money instantané" }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "subtitle": "6 étapes simples pour commencer à livrer et gagner de l'argent avec Kiiako.",
+      "steps": [
+        { "num": "01", "title": "Créez votre compte", "desc": "Inscrivez-vous en quelques minutes avec votre numéro de téléphone et votre email. Choisissez le profil \"Livreur indépendant\"." },
+        { "num": "02", "title": "Soumettez vos documents", "desc": "Téléchargez votre pièce d'identité (CNI, passeport) et une photo de profil. Notre équipe valide votre dossier sous 24h." },
+        { "num": "03", "title": "Choisissez vos zones", "desc": "Sélectionnez les quartiers et villes où vous souhaitez livrer. Vous pouvez modifier vos zones à tout moment." },
+        { "num": "04", "title": "Activez votre disponibilité", "desc": "Basculez votre statut sur 'Disponible' quand vous êtes prêt à livrer. Désactivez-le quand vous n'êtes plus disponible." },
+        { "num": "05", "title": "Acceptez des missions", "desc": "Recevez des notifications pour les commandes dans vos zones. Acceptez, livrez et faites signer la confirmation." },
+        { "num": "06", "title": "Retirez vos gains", "desc": "Vos gains sont crédités sur votre portefeuille après chaque livraison confirmée. Retirez par MTN, Moov ou Wave." }
+      ]
+    },
+    "advantages": {
+      "title": "Ce que vous obtenez",
+      "items": [
+        { "title": "Portefeuille Mobile Money", "desc": "Tous vos gains sont centralisés. Retirez quand vous voulez via MTN, Moov ou Wave." },
+        { "title": "Zones flexibles", "desc": "Choisissez exactement les quartiers où vous livrez. Changez-les à tout moment." },
+        { "title": "Horaires libres", "desc": "Aucun engagement d'heures. Activez ou désactivez votre disponibilité en un toggle." },
+        { "title": "Profil et réputation", "desc": "Chaque livraison génère un avis. Un bon profil vous amène plus de missions." },
+        { "title": "Compte vérifié", "desc": "Votre badge vérifié inspire confiance aux marchands qui vous choisissent." },
+        { "title": "Notifications en temps réel", "desc": "Soyez alerté instantanément par WhatsApp à chaque nouvelle mission dans votre zone." }
+      ]
+    },
+    "mission": {
+      "title": "Une mission, étape par étape",
+      "items": [
+        { "step": "Mission assignée", "desc": "Vous recevez une notification avec les détails de la livraison." },
+        { "step": "Vous démarrez", "desc": "Récupérez le colis chez le marchand et partez livrer." },
+        { "step": "Livraison effectuée", "desc": "Remettez le colis au client. La mission passe en statut Livré." },
+        { "step": "Mission confirmée", "desc": "Le marchand confirme. Vos gains sont crédités instantanément." }
+      ]
+    },
+    "requirements": {
+      "title": "Ce qu'il faut pour s'inscrire",
+      "subtitle": "Pas de paperasse compliquée. Juste l'essentiel.",
+      "items": [
+        "Un smartphone avec accès internet",
+        "Une pièce d'identité valide (CNI ou Passeport)",
+        "Un numéro Mobile Money actif (MTN, Moov ou Wave)",
+        "Une photo de profil récente",
+        "Un contact d'urgence (nom + téléphone)",
+        "Votre ville et quartier de résidence"
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        { "q": "Comment sont calculés mes gains ?", "a": "Chaque livraison est rémunérée selon un prix de base + un montant au kilomètre. Kiiako prélève une commission de 15% sur chaque mission." },
+        { "q": "Quand est-ce que je reçois mon argent ?", "a": "Vos gains sont crédités immédiatement sur votre portefeuille Kiiako après confirmation de la livraison. Vous pouvez retirer à tout moment." },
+        { "q": "Puis-je livrer pour plusieurs boutiques ?", "a": "Oui. Dès que vous êtes disponible dans une zone, toutes les boutiques de cette zone peuvent vous assigner des missions." },
+        { "q": "Quelle pièce d'identité est acceptée ?", "a": "CNI (Carte Nationale d'Identité), Passeport, ou permis de conduire selon les pays." },
+        { "q": "Puis-je rejoindre une compagnie de livraison ?", "a": "Oui. Si une compagnie vous envoie une invitation par email, vous pouvez rejoindre sa flotte tout en conservant votre compte." }
+      ]
+    },
+    "cta": {
+      "badge": "Rejoignez le réseau",
+      "title": "Devenez le partenaire livraison de <1>référence.</1>",
+      "desc": "Kiiako connecte les meilleurs livreurs aux boutiques les plus actives de la région. Commencez à livrer dès demain.",
+      "button": "Créer mon compte livreur",
+      "secondary": "Comment ça marche ?",
+      "perks": [
+        { "title": "Gains Immédiats", "desc": "Retraits Wave & Orange" },
+        { "title": "Zones Libres", "desc": "Livrez où vous voulez" },
+        { "title": "Flexibilité Totale", "desc": "Zéro contrainte horaire" },
+        { "title": "Badge Vérifié", "desc": "Gagnez en crédibilité" }
+      ]
+    }
+  },
+  "ressourcesAide": {
+    "hero": {
+      "title": "Comment pouvons-nous <br /> <1>vous aider ?</1>",
+      "placeholder": "Rechercher une réponse, un guide..."
+    },
+    "categories": [
+      {
+        "title": "Mon Compte & Sécurité",
+        "count": "12 articles",
+        "description": "Créer un compte, modifier ses infos, changer son mot de passe."
+      },
+      {
+        "title": "Personnaliser sa Boutique",
+        "count": "18 articles",
+        "description": "Premiers pas, choix du thème, builder visuel, couleurs & polices."
+      },
+      {
+        "title": "Nom de Domaine",
+        "count": "8 articles",
+        "description": " https://votreboutique.kiiako.shop, SSL automatique, DNS."
+      },
+      {
+        "title": "Produits & Inventaire",
+        "count": "24 articles",
+        "description": "Ajouter des produits physiques ou digitaux, gérer le stock, importer."
+      },
+      {
+        "title": "Paiements & Retraits",
+        "count": "20 articles",
+        "description": "Recevez par Mobile Money · Commissions · 0 Délais de retrait."
+      },
+      {
+        "title": "Commandes",
+        "count": "10 articles",
+        "description": "Traitement des commandes, statuts et gestion des retours clients."
+      },
+      {
+        "title": "Livraisons",
+        "count": "8 articles",
+        "description": "Configurer les zones, frais de port et suivre vos expéditions."
+      },
+      {
+        "title": "Équipe & Accès",
+        "count": "10 articles",
+        "description": "Inviter un collaborateur, gérer les rôles et droits d'accès."
+      },
+      {
+        "title": "Avis Clients & Marketing",
+        "count": "14 articles",
+        "description": "Collecter des avis, widget, campagnes email, Snippets Google."
+      }
+    ],
+    "popularQuestions": {
+      "title": "Questions populaires",
+      "items": [
+        "Comment activer MTN Mobile Money au Bénin ?",
+        "Puis-je utiliser mon propre nom de domaine ?",
+        "Comment ajouter un produit digital (PDF, formation) ?",
+        "Quels délais pour recevoir un retrait Mobile Money ?",
+        "Comment inviter un membre de mon équipe ?",
+        "Les clients peuvent-ils payer par carte bancaire ?"
+      ]
+    },
+    "contact": {
+      "title": "Vous ne trouvez pas votre réponse ?",
+      "description": "Nos équipes sont disponibles pour vous répondre et vous aider dans la gestion de votre boutique.",
+      "contactBtn": "Nous contacter",
+      "chatBtn": "Chat en direct"
+    }
+  },
+  "ressourcesGuides": {
+    "hero": {
+      "badge": "Guides & Stratégies",
+      "title": "Maîtrisez votre réussite <br /> <1>avec nos guides experts</1>",
+      "subtitle": "Des ressources concrètes pour créer, configurer et optimiser votre boutique sur le marché africain."
+    },
+    "sidebar": {
+      "why": {
+        "title": "Pourquoi nos guides ?",
+        "desc": "Chaque ressource est pensée pour répondre aux défis spécifiques de l'e-commerce en Afrique : paiements, logistique et confiance client.",
+        "points": [
+          "100% Gratuit",
+          "Orienté résultats",
+          "Mises à jour régulières"
+        ]
+      },
+      "customSupport": {
+        "title": "Besoin d'un accompagnement sur mesure ?",
+        "desc": "Nos experts sont là pour vous aider à propulser votre business au niveau supérieur.",
+        "link": "Découvrir ce guide"
+      }
+    },
+    "content": {
+      "step1": {
+        "title": "1. Créer votre boutique",
+        "desc": "Sur Kiiako, le lancement de votre activité est simplifié. Deux options s'offrent à vous selon votre niveau d'ambition.",
+        "free": {
+          "title": "Boutique Gratuite",
+          "desc": "Idéale pour tester votre solution et mettre vos premiers produits en ligne sans aucun frais.",
+          "features": [
+            "• Illimité dans le temps",
+            "• Mobile Money intégré",
+            "• Dashboard intuitif"
+          ]
+        },
+        "pro": {
+          "title": "Boutique Pro",
+          "desc": "Pour les marques ambitieuses qui veulent personnaliser chaque aspect et accéder aux outils avancés.",
+          "features": [
+            "• Domaine personnalisé",
+            "• SEO & Marketing avancés",
+            "• Support prioritaire 24/7"
+          ]
+        }
+      },
+      "step2": {
+        "title": "2. Ajoutez vos produits",
+        "desc": "L'ajout de produits est pensé pour être rapide, tout en offrant les détails nécessaires pour convaincre vos clients.",
+        "tip": {
+          "title": "Astuce d'Expert : L'Assistant IA",
+          "desc": "Gagnez des heures de travail en générant vos descriptions de produits automatiquement grâce à notre IA intégrée."
+        }
+      },
+      "step3": {
+        "title": "3. Encaissez vos gains",
+        "desc": "Sur Kiiako, le Mobile Money est natif. Vos clients paient avec leurs comptes habituels, et vous retirez vos gains en un clic.",
+        "features": [
+          { "title": "Déjà Intégré", "desc": "Rien à configurer" },
+          { "title": "Sécurisé", "desc": "Protection bancaire" },
+          { "title": "Local", "desc": "Orange, MTN, Wave..." }
+        ]
+      }
+    }
+  },
+  "ressourcesVideos": {
+    "hero": {
+      "title": "Démos & <1>Vidéos</1>",
+      "subtitle": "Apprenez à utiliser Kiiako visuellement avec nos tutoriels rapides et démonstrations en direct."
+    },
+    "videos": [
+      {
+        "title": "Créer sa boutique en 5 minutes",
+        "tag": "Démarrage",
+        "category": "Tutoriel"
+      },
+      {
+        "title": "Configurer Mobile Money au Bénin",
+        "tag": "Paiement",
+        "category": "Démonstration"
+      },
+      {
+        "title": "Utiliser l'IA pour ses produits",
+        "tag": "Outils",
+        "category": "Tutoriel"
+      },
+      {
+        "title": "Gérer ses premières commandes",
+        "tag": "Gestion",
+        "category": "Tutoriel"
+      }
+    ],
+    "videoCard": {
+      "watchNow": "Regarder maintenant"
+    },
+    "youtubeCTA": {
+      "badge": "Communauté YouTube",
+      "title": "Plus de contenu sur <br />\n<1>YouTube</1>",
+      "subtitle": "Abonnez-vous à notre chaîne pour ne rien rater des nouvelles fonctionnalités, des tutoriels exclusifs et des conseils de nos marchands.",
+      "button": "S'abonner"
+    }
+  },
+  "ressourcesHistoires": {
+    "hero": {
+      "badge": "Histoires de Réussite",
+      "title": "Bâtir le futur du commerce <br /> <1>une boutique à la fois.</1>",
+      "subtitle": "\"Le passage au numérique n'est plus un luxe, c'est devenu le moteur de ma croissance. Kiiako m'a apporté la structure qui me manquait.\"",
+      "readPortrait": "Lire le Portrait de Fatou",
+      "atmosphereOverlay": "\"Découvrez le quotidien de nos marchands à Cotonou, Dakar et Abidjan.\""
+    },
+    "voices": {
+      "quote": "\"Plus qu'une plateforme technique, nous avons trouvé chez Kiiako un <1>véritable allié</1> pour structurer notre vision du e-commerce en Afrique.\""
+    },
+    "filters": {
+      "title": "Parcourir les succès",
+      "subtitle": "Filtrer par industrie",
+      "categories": {
+        "Tous": "Tous",
+        "Mode": "Mode",
+        "Tech": "Tech",
+        "Beauté": "Beauté",
+        "Artisanat": "Artisanat"
+      }
+    },
+    "stories": {
+      "readStory": "Lire l'histoire",
+      "emptyText": "L'aventure continue, de nouveaux récits arrivent bientôt.",
+      "resetFilter": "Réinitialiser les filtres"
+    },
+    "cta": {
+      "title": "Prêt à écrire votre <1>propre succès ?</1>",
+      "subtitle": "Rejoignez les milliers d'innovateurs qui transforment le paysage du commerce africain avec Kiiako.",
+      "button": "Commencer l'aventure"
+    }
+  },
+  "produitsPhysiques": {
+    "hero": {
+      "badge": "Catalogue e-commerce",
+      "title": "Vendez vos produits physiques avec <1>simplicité</1>",
+      "subtitle": "Créez votre catalogue, gérez vos stocks en temps réel et expédiez vos commandes en quelques clics sans aucune compétence technique.",
+      "button": "Créer mon catalogue",
+      "visual": {
+        "stock": "En stock",
+        "productName": "Montre Élégante Minimaliste",
+        "price": "120 000 FCFA",
+        "add": "Ajouter",
+        "payment": {
+          "title": "Paiement reçu",
+          "amount": "+ 45 000 FCFA"
+        },
+        "lowStock": {
+          "title": "Stock faible",
+          "desc": "Il ne reste que 2 articles"
+        }
+      }
+    },
+    "showcase": {
+      "title": "Un design <1>immersif</1> pour vos produits",
+      "subtitle": "Offrez à vos clients une expérience de navigation fluide et luxueuse, mettant en valeur chaque détail de votre catalogue.",
+      "products": [
+        { "name": "Sac à dos Premium", "badge": "Rare" },
+        { "name": "Montre Élégante", "badge": "Luxe" },
+        { "name": "Basket Confort", "badge": "Élite" },
+        { "name": "Lunettes de Soleil", "badge": "Iconic" }
+      ]
+    },
+    "features": {
+      "badge": "Fonctionnalités",
+      "title": "Tout pour gérer vos produits",
+      "subtitle": "Des outils professionnels pensés pour les e-commerçants exigeants.",
+      "items": [
+        { "title": "Catalogue illimité", "desc": "Créez autant de produits que vous le souhaitez sans limites." },
+        { "title": "Photos multiples", "desc": "Ajoutez plusieurs photos HD pour sublimer vos produits." },
+        { "title": "Variations", "desc": "Gérez les tailles, couleurs et options de chaque article." },
+        { "title": "Suivi stocks", "desc": "Gestion en temps réel avec des alertes automatiques." },
+        { "title": "Alertes rupture", "desc": "Ne soyez jamais pris au dépourvu grâce aux notifications." },
+        { "title": "Codes-barres", "desc": "Prise en charge des SKU et scan de codes-barres." },
+        { "title": "Import / Export", "desc": "Mettez à jour tout votre catalogue via fichiers CSV." },
+        { "title": "Facile à utiliser", "desc": "Une interface intuitive, parfaite même sur mobile." }
+      ]
+    },
+    "dashboard": {
+      "window": {
+        "title": "Mes Commandes",
+        "orders": [
+          { "num": "CMD-8291", "time": "à l'instant", "status": "Nouveau" },
+          { "num": "CMD-8290", "time": "Il y a 12 min", "status": "En cours" },
+          { "num": "CMD-8289", "time": "Il y a 1h", "status": "Livré" }
+        ]
+      },
+      "content": {
+        "badge": "Gestion temps réel",
+        "title": "Un tableau de bord qui respire",
+        "desc": "Oubliez les grilles Excel compliquées. L'interface Kiiako vous offre une vue globale, instantanée et incroyablement intuitive sur toutes vos ventes.",
+        "features": [
+          "Statuts de commandes mis à jour automatiquement",
+          "Recherche instantanée et filtres avancés",
+          "Historique complet des transactions et litiges"
+        ]
+      }
+    },
+    "logistics": {
+      "content": {
+        "badge": "Logistique intégrée",
+        "title": "Le cauchemar des livraisons, c'est terminé.",
+        "desc": "Gérez vos expéditions locales et nationales directement depuis Kiiako. Fini les appels interminables pour savoir où est le colis.",
+        "features": [
+          { "title": "Livreurs assignés", "desc": "Trouvez un livreur en 1 clic" },
+          { "title": "Suivi GPS", "desc": "Vos clients savent où est leur colis" }
+        ]
+      },
+      "visual": {
+        "statusLabel": "Statut livraison",
+        "statusValue": "En route vers le client",
+        "steps": [
+          { "title": "Colis récupéré", "time": "14:30 - Boutique Prima" },
+          { "title": "Livraison estimée", "time": "15:45 - Marcory Zone 4" }
+        ]
+      }
+    },
+    "payment": {
+      "visual": {
+        "desc": "Paiement reçu via Wave",
+        "amount": "15 000 FCFA",
+        "secure": "Transaction sécurisée"
+      },
+      "content": {
+        "badge": "Paiements unifiés",
+        "title": "Encaissez vos clients sans friction.",
+        "desc": "Mobile Money, Cartes Bancaires ou Paiement à la livraison. Laissez vos clients choisir et gérez tous vos revenus au même endroit.",
+        "features": [
+          "Reversement rapide sur votre compte",
+          "Protection contre la fraude",
+          "Zéro prise de tête comptable"
+        ]
+      }
+    },
+    "process": {
+      "badge": "Processus parfait",
+      "title": "Vendez en 4 étapes simples",
+      "subtitle": "L'expérience marchande la plus rapide du marché, conçue pour vous faire gagner du temps.",
+      "steps": [
+        { "title": "Création du Catalogue", "desc": "Ajoutez vos produits avec textes et visuels depuis le tableau de bord gratuit." },
+        { "title": "Variations & Prix", "desc": "Définissez les stocks par tailles et gérez vos promotions automatiquement." },
+        { "title": "Réception des Commandes", "desc": "Recevez les achats clients instantanément sur votre interface et WhatsApp." },
+        { "title": "Expédition Suivie", "desc": "Affectez la livraison au livreur Kiiako le plus proche en 1 clic." }
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        { "q": "Puis-je vendre sans avoir de stock physique ?", "a": "Oui, Kiiako supporte parfaitement les bases du dropshipping, tout en étant optimisé pour ceux qui ont des entrepôts." },
+        { "q": "Comment se passe la gestion des retours clients ?", "a": "Un statut 'Retourné' est disponible dans vos commandes. Vous pouvez facilement rembourser ou échanger l'article." },
+        { "q": "Dois-je configurer moi-même les frais de livraison ?", "a": "Non, vous n'avez rien à faire ! Les tarifs de livraison sont gérés et configurés globalement par Kiiako pour vous offrir les meilleurs prix du marché." }
+      ]
+    },
+    "cta": {
+      "title": "Commencez à vendre vos produits dès maintenant",
+      "subtitle": "Créez votre boutique gratuitement et ajoutez vos premiers produits en quelques minutes.",
+      "button": "Créer ma boutique gratuitement",
+      "perks": [
+        "Produits illimités",
+        "Gestion de stock incluse",
+        "Support 24/7"
+      ]
+    }
+  },
+  "livraisons": {
+    "hero": {
+      "badge": "Livraison intégrée",
+      "title": "Des livreurs vérifiés, <1>directement dans votre boutique</1>",
+      "subtitle": "Kiiako connecte vos commandes à un réseau de livreurs indépendants et de compagnies de livraison locales. Suivi en temps réel, paiement Mobile Money, notifications automatiques.",
+      "cta": {
+        "free": "Essayer gratuitement",
+        "delivery": "Devenir livreur"
+      }
+    },
+    "steps": {
+      "title": "Une livraison, 5 étapes claires",
+      "subtitle": "Du clic de commande à la confirmation — tout automatisé, tout tracé.",
+      "items": [
+        {
+          "label": "En attente",
+          "desc": "Commande prête à être assignée"
+        },
+        {
+          "label": "Assignée",
+          "desc": "Livreur ou compagnie sélectionné"
+        },
+        {
+          "label": "En cours",
+          "desc": "Livraison partie, client notifié"
+        },
+        {
+          "label": "Livrée",
+          "desc": "Colis remis au client"
+        },
+        {
+          "label": "Confirmée",
+          "desc": "Mission clôturée, avis collecté"
+        }
+      ]
+    },
+    "types": {
+      "title": "Livreurs indépendants ou compagnies",
+      "subtitle": "Choisissez selon votre zone, vos préférences et la disponibilité en temps réel.",
+      "independant": {
+        "title": "Livreur indépendant",
+        "list": [
+          "Profil vérifié avec document d'identité",
+          "Note et historique de livraisons visible",
+          "Disponibilité toggleable en temps réel",
+          "Zones de couverture par quartier",
+          "Retrait Mobile Money automatisé"
+        ]
+      },
+      "compagnie": {
+        "title": "Compagnie de livraison",
+        "list": [
+          "Entreprise vérifiée (NIF, documents légaux)",
+          "Flotte de livreurs sous un même compte",
+          "Invitation et gestion des membres",
+          "Zones étendues multi-villes",
+          "Wallet entreprise avec retraits groupés"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Tarification au kilomètre, transparente",
+      "subtitle": "Le coût de livraison est calculé automatiquement selon la distance, un prix de base et un prix au km. Vos clients voient le montant exact avant de confirmer.",
+      "items": [
+        {
+          "label": "Prix de base",
+          "value": "dès 400 FCFA"
+        },
+        {
+          "label": "Prix / km",
+          "value": "200 FCFA/km"
+        },
+        {
+          "label": "Distance max",
+          "value": "jusqu'à 15 km"
+        },
+        {
+          "label": "Calcul",
+          "value": "Auto & temps réel"
+        }
+      ]
+    },
+    "coverage": {
+      "title": "Zones de couverture par quartier",
+      "subtitle": "Chaque livreur ou compagnie définit ses zones d'intervention par ville et quartier. Seuls les livreurs couvrant votre secteur sont proposés pour chaque commande.",
+      "cities": [
+        {
+          "city": "Cotonou, Bénin",
+          "zones": "Akpakpa, Cadjèhoun, Fidjrossè..."
+        },
+        {
+          "city": "Porto-Novo, Bénin",
+          "zones": "Ouando, Gbégamey, Haie Vive..."
+        },
+        {
+          "city": "Lomé, Togo",
+          "zones": "Bê, Adakpamé, Tokoin..."
+        }
+      ]
+    },
+    "features": {
+      "title": "Tout ce qu'il faut pour livrer vite et bien",
+      "items": {
+        "whatsapp": {
+          "title": "Notifications WhatsApp",
+          "desc": "Client et livreur avertis automatiquement à chaque étape — assignation, départ, livraison."
+        },
+        "wallet": {
+          "title": "Paiement Mobile Money",
+          "desc": "Les livreurs retirent leurs gains via MTN, Moov, Wave. Zero papier, zéro délai."
+        },
+        "avis": {
+          "title": "Avis après livraison",
+          "desc": "Chaque mission se clôture par une note. Construisez un réseau de livreurs fiables."
+        },
+        "shield": {
+          "title": "Livreurs vérifiés",
+          "desc": "Chaque livreur soumet ses pièces d'identité. Validation manuelle par nos équipes."
+        },
+        "date": {
+          "title": "Date planifiée",
+          "desc": "Planifiez une date et heure de livraison précise directement depuis la commande."
+        },
+        "assign": {
+          "title": "Assignation en 1 clic",
+          "desc": "Choisissez un livreur disponible dans votre zone et assignez la mission instantanément."
+        }
+      }
+    },
+    "cta": {
+      "marchand": {
+        "badge": "Marchands",
+        "title": "Vous êtes marchand ?",
+        "desc": "Activez la livraison sur votre boutique et connectez-vous au réseau de livreurs Kiiako.",
+        "button": "Ouvrir ma boutique"
+      },
+      "livreur": {
+        "badge": "Livreurs",
+        "title": "Vous livrez des colis ?",
+        "desc": "Inscrivez-vous en tant que livreur indépendant ou enregistrez votre compagnie de livraison.",
+        "independant": "Livreur indépendant",
+        "compagnie": "Compagnie"
+      }
+    }
+  },
+  "botWhatsApp": {
+    "hero": {
+      "badge": "Bot WhatsApp Kiiako",
+      "title": "Kiiako dans",
+      "subtitle": "Le bot Kiiako permet aux livreurs, marchands et clients d'interagir avec l'écosystème directement depuis WhatsApp — sans application à installer.",
+      "available": "Disponible sur WhatsApp au",
+      "try": "Essayer le bot WhatsApp"
+    },
+    "usage": {
+      "title": "Un bot, trois usages",
+      "subtitle": "Le bot détecte automatiquement qui vous êtes et vous donne les bons outils.",
+      "items": {
+        "livreurs": {
+          "title": "Livreurs",
+          "desc": "Gérez vos missions, consultez votre solde, déclarez une livraison et retirez vos gains — tout en WhatsApp, avec de simples mots-clés."
+        },
+        "marchands": {
+          "title": "Marchands e-commerce",
+          "desc": "Consultez vos produits, vos commandes récentes, votre wallet et accédez à votre site directement par message."
+        },
+        "nouveaux": {
+          "title": "Nouveaux utilisateurs",
+          "desc": "Jamais inscrit ? Le bot vous guide pas à pas pour créer votre compte livreur ou votre boutique en ligne via une simple conversation."
+        }
+      }
+    },
+    "livreurs": {
+      "badge": "Pour les livreurs",
+      "title": "Gérez vos livraisons avec des mots simples",
+      "desc": "Pas d'application, pas de connexion. Envoyez simplement un message WhatsApp au numéro Kiiako. Le bot reconnaît votre commande et répond instantanément.",
+      "counter": "12 commandes disponibles. Plusieurs variantes acceptées (livré / delivered / terminé / fini)."
+    },
+    "flux": {
+      "title": "Le flux d'une livraison sur WhatsApp",
+      "subtitle": "Du pickup à la confirmation client, tout passe par le bot.",
+      "steps": [
+        {
+          "who": "🚚 Livreur",
+          "msg": "livraison CMD-2024",
+          "response": "Mission prise en charge ✅\n👤 Client : Ama Koné\n📞 +229 97 00 00 00\n📍 Adresse : Akpakpa, Bâtiment Bleu\n📏 Distance : 3.2 km\n💰 Frais : 1 040 FCFA\n\n📍 [Localisation GPS envoyée]"
+        },
+        {
+          "who": "🚚 Livreur",
+          "msg": "livré CMD-2024",
+          "response": "Livraison enregistrée.\nLe client va recevoir une demande de confirmation."
+        },
+        {
+          "who": "👤 Client (Ama)",
+          "msg": "[Bouton] ✅ Oui, bien reçu",
+          "response": "Merci. Votre confirmation a été enregistrée."
+        },
+        {
+          "who": "🚚 Livreur (en retour)",
+          "msg": "",
+          "response": "Mission CMD-2024 confirmée ✅\nVotre gain a été crédité.\n\nTapez solde pour consulter votre solde."
+        }
+      ]
+    },
+    "inscription": {
+      "badge": "Inscription guidée",
+      "title": "Rejoindre Kiiako depuis WhatsApp",
+      "desc": "Aucun formulaire en ligne requis. Le bot guide chaque utilisateur inconnu pas à pas dans la création de son compte — livreur ou boutique.",
+      "items": [
+        {
+          "label": "Inscription livreur",
+          "detail": "Prénom, nom, email, photo de profil, pièce d'identité — tout par WhatsApp."
+        },
+        {
+          "label": "Inscription boutique",
+          "detail": "Nom de boutique, propriétaire, catégorie, email. Le bot vérifie la disponibilité du nom en temps réel."
+        }
+      ]
+    },
+    "marchands": {
+      "badge": "Pour les marchands",
+      "title": "Gérer sa boutique par WhatsApp",
+      "subtitle": "Un menu interactif affiche les options. Choisissez en un tap.",
+      "items": [
+        {
+          "label": "Mes Produits",
+          "detail": "Liste de vos produits actifs avec prix et stock"
+        },
+        {
+          "label": "Mes Commandes",
+          "detail": "Vos 10 commandes récentes avec statuts et montants"
+        },
+        {
+          "label": "Mon Solde",
+          "detail": "Solde disponible et montants bloqués de votre wallet"
+        },
+        {
+          "label": "Mon Site",
+          "detail": "Lien direct vers votre boutique e-commerce en ligne"
+        }
+      ]
+    },
+    "security": {
+      "title": "Sécurisé et robuste",
+      "desc": "Le bot utilise l'API officielle WhatsApp Business (Meta). Chaque message est vérifié avant traitement.",
+      "items": [
+        {
+          "title": "Signature HMAC-SHA256",
+          "desc": "Chaque webhook WhatsApp est vérifié cryptographiquement avant d'être traité."
+        },
+        {
+          "title": "Rate limiting",
+          "desc": "10 messages/min par utilisateur, 300 webhooks/min. Aucun abus possible."
+        },
+        {
+          "title": "Retry automatique",
+          "desc": "En cas d'erreur temporaire, le bot réessaie automatiquement avec backoff exponentiel."
+        },
+        {
+          "title": "Localisation GPS",
+          "desc": "Le bot envoie la localisation exacte du client au livreur via message WhatsApp natif."
+        }
+      ]
+    },
+    "litiges": {
+      "title": "Gestion des litiges",
+      "desc": "Quand un client signale un problème, le bot lui demande automatiquement une explication. La raison est transmise au backend et au livreur. L'équipe Kiiako est alertée pour arbitrer.",
+      "steps": [
+        "Client clique ❌ 'Non, problème'",
+        "Bot demande : 'Quel est le problème ?'",
+        "Réponse transmise au backend",
+        "Livreur notifié du litige",
+        "Équipe Kiiako contacte les parties"
+      ]
+    },
+    "simulator": {
+      "badge": "Vivez l'expérience iOS",
+      "title": "Essayez le bot vous-même",
+      "desc": "Découvrez la puissance de l'assistant interactif Kiiako directement depuis cette page. Tapez vos requêtes, cliquez sur les boutons, et voyez comment le bot vous répond instantanément.",
+      "keyword": {
+        "title": "Saisissez un mot clé",
+        "desc": "Commencez la discussion en tapant <1>missions</1> ou <2>solde</2> pour déclencher les réponses intelligentes."
+      },
+      "interactions": {
+        "title": "Interactions par clics",
+        "desc": "L'interface génère automatiquement des boutons d'actions rapides (exactement comme sur le vrai WhatsApp iOS) pour une navigation fluide sans clavier."
+      }
+    },
+    "cta": {
+      "livreur": {
+        "title": "Vous livrez ?",
+        "description": "Inscrivez-vous et utilisez le bot pour toutes vos missions.",
+        "button": "Devenir livreur"
+      },
+      "marchand": {
+        "title": "Vous vendez ?",
+        "description": "Créez votre boutique et gérez-la aussi via WhatsApp.",
+        "button": "Créer ma boutique"
+      },
+      "test": {
+        "title": "Tester le bot",
+        "description": "Envoyez \"<1>cc</1>\" sur WhatsApp et le bot vous guide."
+      }
+    },
+    "phrases": [
+      "votre WhatsApp",
+      "vos missions, partout",
+      "votre portefeuille"
+    ],
+    "commands": [
+      {
+        "cmd": "bonjour",
+        "desc": "Menu de bienvenue et liste de toutes les commandes disponibles"
+      },
+      {
+        "cmd": "missions",
+        "desc": "Voir toutes vos missions assignées en attente"
+      },
+      {
+        "cmd": "mission CODE",
+        "desc": "Voir les détails complets d'une mission spécifique"
+      },
+      {
+        "cmd": "livraison CODE",
+        "desc": "Signaler la prise en charge du colis — reçoit l'adresse GPS du client"
+      },
+      {
+        "cmd": "livré CODE",
+        "desc": "Confirmer la livraison — déclenche la demande de confirmation au client"
+      },
+      {
+        "cmd": "historique",
+        "desc": "Voir vos 10 dernières missions terminées"
+      },
+      {
+        "cmd": "solde",
+        "desc": "Consulter votre solde wallet en temps réel"
+      },
+      {
+        "cmd": "retrait MONTANT",
+        "desc": "Initier un retrait Mobile Money avec sélection de l'opérateur"
+      },
+      {
+        "cmd": "info",
+        "desc": "Voir votre profil, votre note, vos statistiques et votre solde"
+      },
+      {
+        "cmd": "disponible",
+        "desc": "Activer votre disponibilité pour recevoir des missions"
+      },
+      {
+        "cmd": "indisponible",
+        "desc": "Mettre en pause — vous ne recevez plus de missions"
+      },
+      {
+        "cmd": "boutiques",
+        "desc": "Voir les boutiques associées à vos zones de livraison"
+      }
+    ],
+    "registrationFlow": [
+      {
+        "who": "Bot",
+        "msg": "Bienvenue chez Kiiako 🚀\nQue souhaitez-vous faire ?",
+        "btns": [
+          "Devenir Livreur",
+          "Inscrire ma Boutique"
+        ]
+      },
+      {
+        "who": "Vous",
+        "msg": "Devenir Livreur"
+      },
+      {
+        "who": "Bot",
+        "msg": "Quel est votre prénom ?"
+      },
+      {
+        "who": "Vous",
+        "msg": "Jean-Marc"
+      },
+      {
+        "who": "Bot",
+        "msg": "Envoyez une photo de vous (portrait)"
+      },
+      {
+        "who": "Vous",
+        "msg": "📷 Photo envoyée"
+      },
+      {
+        "who": "Bot",
+        "msg": "Envoyez votre pièce d'identité"
+      },
+      {
+        "who": "Bot",
+        "msg": "✅ Compte créé ! Votre dossier est en cours de vérification."
+      }
+    ],
+    "appUi": {
+      "edit": "Modifier",
+      "chats": "Discussions",
+      "tabs": [
+        "Statut",
+        "Appels",
+        "Communauté",
+        "Discussions",
+        "Réglages"
+      ],
+      "time_1": "10:42",
+      "time_2": "Hier",
+      "time_3": "Lundi"
+    }
+  },
+  "ressourcesVideoDetail": {
+    "back": "Retour aux vidéos",
+    "about": "À propos",
+    "similar": "Vidéos similaires",
+    "viewAll": "Voir tout",
+    "tags": "Tags & Catégories",
+    "youtube": {
+      "title": "Plus de contenu sur YouTube",
+      "desc": "Abonnez-vous pour ne rien rater des nouvelles fonctionnalités et des conseils de nos marchands.",
+      "button": "S'abonner"
+    },
+    "mockup": {
+      "title": "Créer sa boutique en 5 minutes",
+      "description": "Découvrez pas à pas comment lancer votre première boutique e-commerce sur Kiiako. Du choix de votre nom de domaine à l'ajout de votre premier produit, nous vous accompagnons pour une mise en ligne ultra-rapide.",
+      "duration": "05:24",
+      "category": "Tutoriel",
+      "views": "1.2k",
+      "date": "Il y a 2 semaines",
+      "tagsList": [
+        "#Tutoriel",
+        "#Démarrage",
+        "#KiiakoTips",
+        "#Dashboard",
+        "#Boutique",
+        "#MobileMoney"
+      ],
+      "similarVideos": [
+        {
+          "title": "Configurer Mobile Money au Bénin",
+          "duration": "03:15",
+          "tag": "Paiement"
+        },
+        {
+          "title": "Gérer ses premières commandes",
+          "duration": "06:45",
+          "tag": "Gestion"
+        },
+        {
+          "title": "Utiliser l'IA pour ses produits",
+          "duration": "04:10",
+          "tag": "Outils"
+        }
+      ]
+    }
+  },
+  "ressourcesAideDetail": {
+    "breadcrumb": "Aide",
+    "print": "Imprimer",
+    "share": "Partager",
+    "stepsTitle": "Étapes à suivre :",
+    "importantNote": "Note Importante",
+    "feedback": {
+      "title": "Cet article vous a-t-il été utile ?",
+      "yes": "Oui, merci !",
+      "no": "Pas vraiment"
+    },
+    "sidebar": {
+      "stuck": "Toujours coincé ?",
+      "desc": "Nos conseillers sont là pour vous aider personnellement.",
+      "button": "Discuter avec nous",
+      "related": "Articles Connexes",
+      "relatedLinks": [
+        "Gérer son inventaire",
+        "Comprendre les commissions",
+        "Paiement Mobile Money"
+      ]
+    },
+    "mockup": {
+      "title": "Comment changer mon nom de domaine ?",
+      "category": "Configuration Boutique",
+      "lastUpdated": "Mis à jour il y a 2 jours",
+      "content": "Par défaut, votre boutique Kiiako est accessible sur une adresse de type 'ma-boutique.kiiako.com'. Cependant, pour renforcer votre image de marque, vous pouvez connecter votre propre nom de domaine.",
+      "steps": [
+        "Allez dans votre Tableau de bord > Paramètres > Domaines.",
+        "Cliquez sur 'Ajouter un domaine personnalisé'.",
+        "Entrez votre domaine (ex: www.maville.com).",
+        "Suivez les instructions de configuration DNS fournies."
+      ],
+      "note": "La propagation DNS peut prendre jusqu'à 48 heures. Si votre domaine ne s'affiche pas immédiatement, pas de panique !"
+    }
+  },
+  "ressourcesGuideDetail": {
+    "back": "Tous les guides",
+    "badge": "Guide Expert",
+    "sidebar": {
+      "summary": "Sommaire",
+      "summaryLinks": [
+        "Contexte",
+        "Étapes",
+        "Conseils",
+        "Conclusion"
+      ],
+      "needHelp": "Besoin d'aide ?",
+      "desc": "Nos conseillers sont disponibles 24/7 sur WhatsApp.",
+      "button": "WhatsApp Support"
+    },
+    "expertTip": "Conseil d'Expert Kiiako",
+    "share": "Partager",
+    "feedback": "Ce guide vous a-t-il aidé ?",
+    "mockup": {
+      "title": "Comment configurer Mobile Money au Bénin",
+      "date": "10 Mars 2024",
+      "author": "Léonce K.",
+      "category": "Paiements",
+      "readTime": "8 min",
+      "content": [
+        "Le Mobile Money est devenu le pilier de l'économie numérique en Afrique de l'Ouest. Pour un marchand Kiiako au Bénin, configurer ce moyen de paiement est la première étape pour gagner la confiance de ses clients locaux.",
+        "Pourquoi le Mobile Money ?",
+        "Près de 70% des transactions e-commerce au Bénin se font via MTN Mobile Money ou Moov Money. Ne pas proposer ces options, c'est se couper de la majorité du marché potentiel.",
+        "Assurez-vous que votre numéro de téléphone de retrait est bien celui lié à votre compte marchand Kiiako pour éviter tout délai de traitement."
+      ]
+    }
+  },
+  "ressourcesHistoireDetail": {
+    "back": "Retour aux récits",
+    "indicators": "Indicateurs de Succès",
+    "cta": "Lancer mon aventure",
+    "journey": "Continuer le voyage",
+    "discover": "Découvrir sa vision",
+    "mockup": {
+      "title": "Comment Fatou a <1>révolutionné sa marque</1> à Dakar.",
+      "business": "Fatou Fashion Dakar",
+      "location": "Dakar, Sénégal",
+      "category": "Portrait de Marchand",
+      "challenge": "Avant Kiiako, Fatou gérait l'intégralité de son flux client manuellement via WhatsApp. Entre la gestion des stocks, les prises de commande répétitives et les questions sur les prix, 80% de son temps était consacré à des tâches administratives plutôt qu'à la création.",
+      "solution": "La mise en place de sa boutique Kiiako a permis d'automatiser tout le parcours d'achat. En centralisant son catalogue avec un lien de boutique unique, elle a transformé ses réseaux sociaux en de véritables canaux de vente passifs.",
+      "quote": "Kiiako a insufflé une nouvelle dynamique à ma vision. Je ne suis plus seulement une créatrice, je suis désormais une <1>véritable cheffe de marque</1> en pleine expansion.",
+      "quoteAuthor": "Fatou B.",
+      "quoteRole": "Fondatrice de Fatou Fashion",
+      "results": [
+        { "label": "Indicateurs de Succès", "value": "+300%" },
+        { "label": "Ressources", "value": "850+" },
+        { "label": "Rayonnement", "value": "Régional" }
+      ],
+      "storyTitles": {
+        "challenge": "L'aventure de la création",
+        "solution": "L'essor numérique"
+      },
+      "nextStory": "De Dakar à l'exportation internationale : <1>l'histoire de Mamadou.</1>",
+      "features": [
+        "Automatisation des règlements",
+        "Gestion d'inventaire en temps réel",
+        "Canal de vente unifié"
+      ]
+    }
+  },
+  "legalPages": {
+    "legal": {
+      "badge": "Législatif",
+      "title": "Mention <1>légale</1>",
+      "subtitle": "Informations obligatoires concernant l'éditeur et l'hébergeur du site.",
+      "sections": [
+        {
+          "title": "Édition du site",
+          "content": "Le site Kiiako est édité par la société Tech N Ctrl, SARL U (Société à Responsabilité Limité Unipersonnel), au capital de 1 000 000 Francs CFA. Siège social : Adidogomé Sagbado à 400m du marché de Logoté. RCCM : TG-LFW-01-2024-B13-00605. NIF : 1001936284."
+        },
+        {
+          "title": "Contact et Responsabilité",
+          "content": "Email : piouhassan@gmail.com | Téléphone : + (228) 92 36 35 33. Le responsable de la publication est Tech N Ctrl Sarl U."
+        },
+        {
+          "title": "Hébergement",
+          "content": "Le site est hébergé par Hostinger."
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "content": "Le site est la propriété exclusive de Tech N Ctrl Sarl U. Toute reproduction ou représentation, intégrale ou partielle, faite sans le consentement de l'auteur est illicite."
+        }
+      ],
+      "note": "Kiiako s'engage à respecter scrupuleusement les cadres réglementaires en vigueur pour garantir une sécurité maximale à ses utilisateurs et marchands."
+    },
+    "privacy": {
+      "badge": "Sécurité & Loi",
+      "title": "Politique de <1>confidentialité</1>",
+      "subtitle": "Conformité à la loi n°2019-014 du 29 octobre 2019 de la République Togolaise.",
+      "note": "Votre vie privée est notre priorité. Kiiako utilise des protocoles de chiffrement de pointe pour garantir que vos données personnelles restent strictement confidentielles et sécurisées.",
+      "sections": [
+        {
+          "title": "1. Cadre légal",
+          "content": "Afin d’encadrer l’utilisation des données et de garantir la protection de la vie privée, Kiiako respecte la loi n°2019-014 du 29 octobre 2019 de la République Togolaise. Cette loi encadre la collecte, le traitement, la transmission, le stockage et l’utilisation des données à caractère personnel, garantissant le respect des libertés fondamentales."
+        },
+        {
+          "title": "2. Responsable du traitement",
+          "content": "Le site kiiako.io et ses services sont exploités par Tech N Ctrl. En sa qualité d’exploitant, Tech N Ctrl agit en tant que responsable du traitement des données personnelles collectées via la plateforme et s’engage à les traiter dans le respect des réglementations en vigueur."
+        },
+        {
+          "title": "3. Champ d’application",
+          "content": "Cette politique s’applique à l’ensemble des données collectées via le site kiiako.io, la solution Kiiako et les services numériques de Tech N Ctrl. En utilisant nos services, vous reconnaissez avoir pris connaissance de la présente politique."
+        },
+        {
+          "title": "4. Données personnelles collectées",
+          "content": "• Données automatiques : adresse IP, type de navigateur, localisation, cookies.\n• Données volontaires : nom, e-mail, téléphone, adresse, informations de paiement.\n• Données livreurs : permis de conduire, informations véhicule, géolocalisation en temps réel (uniquement pendant les missions).\n• Accès appareil : microphone, caméra, géolocalisation (uniquement si nécessaire)."
+        },
+        {
+          "title": "5. Finalité du traitement",
+          "content": "• Fournir et maintenir les services (boutiques et livraisons)\n• Gérer les comptes, contrats et missions de livraison\n• Améliorer l’expérience utilisateur\n• Prévenir les fraudes et assurer la sécurité\n• Respecter les obligations légales"
+        },
+        {
+          "title": "6. Base légale du traitement",
+          "content": "Les traitements reposent sur le consentement, l’exécution d’un contrat, l’obligation légale ou l’intérêt légitime de Tech N Ctrl."
+        },
+        {
+          "title": "7. Conservation des données",
+          "content": "Les données sont conservées uniquement pendant la durée nécessaire aux finalités prévues, puis supprimées ou anonymisées."
+        },
+        {
+          "title": "8. Sécurité des données",
+          "content": "Tech N Ctrl met en œuvre des mesures techniques pour protéger les données contre :\n• L’accès non autorisé\n• La perte ou destruction\n• La divulgation non autorisée"
+        },
+        {
+          "title": "9. Partage des données",
+          "content": "Les données ne sont ni vendues, ni louées. Partage possible uniquement avec des prestataires techniques ou si la loi l’exige."
+        },
+        {
+          "title": "10. Données des clients des vendeurs",
+          "content": "Le vendeur est responsable du traitement des données de ses clients. Tech N Ctrl agit en tant qu'hébergeur technique et fournisseur de service."
+        },
+        {
+          "title": "11. Cookies",
+          "content": "• Cookies essentiels : nécessaires au fonctionnement.\n• Cookies analytiques : statistiques anonymes d'utilisation."
+        },
+        {
+          "title": "12. Transfert international",
+          "content": "Transferts effectués dans le respect des exigences légales de protection des données."
+        },
+        {
+          "title": "13. Droits des utilisateurs",
+          "content": "Vous disposez des droits suivants :\n• Accès et rectification\n• Effacement et limitation\n• Portabilité et opposition"
+        },
+        {
+          "title": "14. Liens tiers",
+          "content": "Tech N Ctrl n’est pas responsable des politiques de confidentialité des sites tiers accessibles via des liens sur notre plateforme."
+        },
+        {
+          "title": "15. Modifications",
+          "content": "Nous nous réservons le droit de modifier cette politique à tout moment. Toute modification sera publiée sur cette page."
+        },
+        {
+          "title": "16. Contact",
+          "content": "Pour toute question ou exercice de vos droits, contactez-nous à : contact@technctrl.com"
+        }
+      ]
+    },
+    "terms": {
+      "badge": "Contrat",
+      "title": "Conditions générales <1>d'utilisation</1>",
+      "subtitle": "En vigueur à compter du 01/06/2024. Règlement de l'utilisation de Kiiako.",
+      "sections": [
+        {
+          "title": "Article 1 : Éditeur du service",
+          "content": "La solution Kiiako est éditée par Tech N Ctrl. Email : contact@technctrl.com. Tech N Ctrl est propriétaire et exploitant exclusif de la plateforme."
+        },
+        {
+          "title": "Article 2 : Définitions",
+          "content": "• Solution / Plateforme : kiiako.io\n• Utilisateur : toute personne utilisant le site.\n• Vendeur : utilisateur ayant créé une boutique.\n• Livreur / Partenaire : prestataire assurant les livraisons.\n• Client final : acheteur sur une boutique Kiiako."
+        },
+        {
+          "title": "Article 3 : Objet de la solution",
+          "content": "Kiiako permet de créer des boutiques e-commerce et de gérer les missions de livraison. Kiiako est un fournisseur technique et n'est pas partie aux contrats de vente ou de transport entre vendeurs, livreurs et clients."
+        },
+        {
+          "title": "Article 4 : Inscription",
+          "content": "La création de compte requiert des informations exactes. L'utilisateur est seul responsable de la confidentialité de ses identifiants et des actions effectuées avec son compte."
+        },
+        {
+          "title": "Article 5 : Abonnement et accès",
+          "content": "L'accès peut être soumis à abonnement (mensuel/annuel). En cas de non-paiement, Kiiako se réserve le droit de suspendre, limiter ou supprimer l'accès aux services."
+        },
+        {
+          "title": "Article 6 : Responsabilités",
+          "content": "• Vendeurs : responsables de leurs produits et stocks.\n• Livreurs : responsables du transport, de la sécurité des colis et des délais.\n• Kiiako : décline toute responsabilité en cas de litige, perte ou dommage durant le transport."
+        },
+        {
+          "title": "Article 7 : Paiements",
+          "content": "Kiiako fournit l'infrastructure technique. Les paiements sont traités par les services tiers choisis par le vendeur. Kiiako n'est pas responsable des échecs ou fraudes liés aux transactions."
+        },
+        {
+          "title": "Article 8 : Contenu utilisateur",
+          "content": "L'utilisateur garantit disposer des droits sur ses contenus. Sont interdits les contenus illégaux, frauduleux ou diffamatoires. Kiiako peut supprimer tout contenu non conforme."
+        },
+        {
+          "title": "Article 9 : Suspension du compte",
+          "content": "Kiiako peut suspendre ou supprimer un compte en cas de violation des CGU, fraude ou activité abusive, éventuellement sans préavis en cas de faute grave."
+        },
+        {
+          "title": "Article 10 : Disponibilité",
+          "content": "Kiiako s'efforce d'assurer la disponibilité du service mais ne peut être tenu responsable des interruptions (maintenance, mises à jour, pannes ou force majeure)."
+        },
+        {
+          "title": "Article 11 : Propriété intellectuelle",
+          "content": "La plateforme Kiiako (logiciel, interface, graphismes) est protégée. Les vendeurs conservent la propriété des contenus publiés sur leur propre boutique."
+        },
+        {
+          "title": "Article 12 : Protection des données",
+          "content": "Les données sont traitées selon la loi togolaise n° 2019-014. Droits d'accès et rectification via contact@technctrl.com."
+        },
+        {
+          "title": "Article 13 : Cookies",
+          "content": "Utilisés pour l'expérience utilisateur et les statistiques. Désactivation possible via les paramètres du navigateur."
+        },
+        {
+          "title": "Article 14 : Limitation de responsabilité",
+          "content": "Tech N Ctrl n'est pas responsable des pertes de revenus, de données ou des dommages indirects liés à l'utilisation de la plateforme."
+        },
+        {
+          "title": "Article 15 : Modification des CGU",
+          "content": "Tech N Ctrl peut modifier les CGU à tout moment. Les nouvelles conditions s'appliquent dès leur publication."
+        },
+        {
+          "title": "Article 16 : Droit applicable",
+          "content": "Les présentes CGU sont régies par le droit togolais. Les tribunaux togolais sont seuls compétents en cas de litige."
+        }
+      ],
+      "note": "L'utilisation de Kiiako implique l'acceptation pleine et entière de ces conditions. Ces règles visent à protéger à la fois les marchands, les livreurs et les consommateurs finaux pour un commerce sain et transparent."
+    }
+  },
+  "status": {
+    "hero": {
+      "badge": "État du système",
+      "title": "Tous les systèmes sont opérationnels",
+      "description": "Surveillez en temps réel l'état de nos serveurs, de nos services de paiement et des infrastructures Kiiako.",
+      "lastUpdate": "Dernière mise à jour :"
+    },
+    "metrics": {
+      "uptime": "Disponibilité",
+      "uptimeValue": "99.99%",
+      "responseTime": "Temps de réponse",
+      "responseTimeValue": "45ms",
+      "incidents": "Incidents (30j)",
+      "incidentsValue": "0"
+    },
+    "services": {
+      "title": "État par composant",
+      "api": {
+        "name": "APIPrincipale",
+        "description": "Le cœur du système Kiiako"
+      },
+      "dashboard": {
+        "name": "Tableau de bord Vendeur",
+        "description": "L'interface d'administration des boutiques"
+      },
+      "storefront": {
+        "name": "Boutiques Clients (Storefront)",
+        "description": "Les pages accessibles par les acheteurs"
+      },
+      "payments": {
+        "name": "Passerelles de paiement (Mobile Money)",
+        "description": "Traitement des transactions MTN, Moov, Wave, etc."
+      },
+      "cdn": {
+        "name": "Hébergement des images (CDN)",
+        "description": "Distribution des médias"
+      }
+    },
+    "history": {
+      "title": "Historique des incidents (7 derniers jours)",
+      "noIncident": "Aucun incident signalé au cours des 7 derniers jours.",
+      "dayFormat": "DD MMM"
+    },
+    "labels": {
+      "operational": "Opérationnel",
+      "degraded": "Performances dégradées",
+      "outage": "Interruption de service",
+      "maintenance": "En maintenance"
     }
   }
 }

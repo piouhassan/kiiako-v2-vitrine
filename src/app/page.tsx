@@ -7,16 +7,16 @@ import Testimonials from '@/components/sections/Testimonials';
 import Blog from '@/components/sections/Blog';
 import CTA from '@/components/sections/CTA';
 import Footer from '@/components/sections/Footer';
-import HeaderShopify from "@/components/sections/HeaderShopify";
-import HeroShopify from "@/components/sections/HeroShopify";
+import HeaderHome from "@/components/sections/HeaderHome";
+import HeroHome from "@/components/sections/HeroHome";
 
 export default function Home() {
   return (
     <div className="bg-background-2 dark:bg-background-5 overflow-x-hidden">
 
-      <HeaderShopify />
+      <HeaderHome />
       <main>
-        <HeroShopify />
+        <HeroHome />
         <About />
         <ImageGallery />
         <Work />

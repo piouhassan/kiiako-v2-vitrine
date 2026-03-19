@@ -36,7 +36,7 @@ export function constructMetadata({
   keywords?: string[];
   noIndex?: boolean;
 } = {}): Metadata {
-  const fullTitle = title === SITE_CONFIG.name ? title : `${title} | ${SITE_CONFIG.name}`;
+  const fullTitle = title === SITE_CONFIG.name ? title : `${title}`;
 
   return {
     title: fullTitle,

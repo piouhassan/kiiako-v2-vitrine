@@ -3,7 +3,7 @@
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
-import { Check, Store, Globe, Palette, ShoppingBag, Users, Zap, TrendingUp, Package } from 'lucide-react';
+import { Check, Store, Globe, Palette, ShoppingBag, Users, Zap, TrendingUp, Package, ArrowRight, Star } from 'lucide-react';
 import {REGISTER_URL_FREE} from "@/lib/utls";
 import { useTranslation, Trans } from 'react-i18next';
 
@@ -15,256 +15,231 @@ export default function CreerBoutiquePage() {
         <Header />
         <main>
           {/* Hero Section */}
-          <section className="pt-46 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-            <div className="min-h-120 w-full relative ">
-              {/* Floating Images - Version Décorative Éparpillée */}
+          <section className="pt-32 pb-20 md:pt-48 md:pb-32 lg:pt-56 lg:pb-40 relative overflow-hidden bg-background-1 dark:bg-background-6">
+            {/* Background elements */}
+            <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+              <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-500/10 blur-[120px] rounded-full"></div>
+              <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-blue-500/10 blur-[100px] rounded-full"></div>
+            </div>
+
+            <div className="min-h-120 w-full relative">
+              {/* Floating Images - Version Décorative Éparpillée (Refined) */}
               <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
                 {/* --- IMAGES ÉPARPILLÉES GAUCHE --- */}
                 <FadeIn delay={0.6} className="scatter-img pos-1 animate-float">
-                  <img src="/builder/product-timer.png" style={{width : "350px", height : "200px"}}
-                       className="transform transition-transform hover:scale-110 duration-500" alt="Deco" />
+                  <div className="glass-card p-2 rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl">
+                    <img src="/builder/product-timer.png" style={{width : "300px", height : "180px"}}
+                         className="rounded-xl object-cover" alt="Deco" />
+                  </div>
                 </FadeIn>
 
                 <FadeIn delay={0.9} className="scatter-img pos-5 animate-float-delayed-1">
-                  <img src="/builder/product-magazine.png" style={{width : "320px", height : "180px", paddingLeft : "4px"}}
-                       className="transition-transform hover:scale-110 duration-500" alt="Deco" />
+                   <div className="glass-card p-2 rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl">
+                    <img src="/builder/product-magazine.png" style={{width : "280px", height : "160px"}}
+                         className="rounded-xl object-cover" alt="Deco" />
+                   </div>
                 </FadeIn>
 
                 <FadeIn delay={1.3} className="scatter-img pos-7 animate-float-delayed-2">
-                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=220&auto=format&fit=crop"
-                       className="w-36 h-36 transform transition-transform hover:scale-110 duration-500" alt="Deco" />
+                   <div className="glass-card p-1.5 rounded-2xl border border-white/20 dark:border-white/5 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=220&auto=format&fit=crop"
+                         className="w-28 h-28 rounded-xl object-cover" alt="Deco" />
+                   </div>
                 </FadeIn>
 
                 {/* --- IMAGES ÉPARPILLÉES DROITE --- */}
                 <FadeIn delay={0.7} className="scatter-img pos-2 animate-float-delayed-3">
-                  <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=200&auto=format&fit=crop"
-                       className="w-30 h-44 transform transition-transform hover:scale-110 duration-500" alt="Deco" />
-                </FadeIn>
-
-                <FadeIn delay={0.8} className="scatter-img pos-11 animate-float-delayed-1">
-                  <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=180&auto=format&fit=crop"
-                       className="w-32 h-32 transform transition-transform hover:scale-110 duration-500" alt="Deco" />
+                   <div className="glass-card p-1.5 rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=200&auto=format&fit=crop"
+                         className="w-24 h-36 rounded-xl object-cover" alt="Deco" />
+                   </div>
                 </FadeIn>
 
                 <FadeIn delay={1.1} className="scatter-img pos-8 animate-float">
-                  <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=190&auto=format&fit=crop"
-                       className="w-40 h-40 transform transition-transform hover:scale-110 duration-500" alt="Deco" />
+                  <div className="glass-card p-2 rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=190&auto=format&fit=crop"
+                         className="w-32 h-32 rounded-xl object-cover" alt="Deco" />
+                  </div>
                 </FadeIn>
-
 
                 <FadeIn delay={1.2} className="scatter-img pos-10 animate-float-delayed-1">
-                  <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=200&auto=format&fit=crop"
-                       className="w-32 h-40 transform transition-transform hover:scale-110 duration-500" alt="Deco" />
+                  <div className="glass-card p-2 rounded-2xl border border-white/20 dark:border-white/5 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=200&auto=format&fit=crop"
+                         className="w-28 h-36 rounded-xl object-cover" alt="Deco" />
+                  </div>
                 </FadeIn>
-
               </div>
 
+              <div className="main-container relative z-10 px-4">
+                <div className="max-w-7xl mx-auto text-center space-y-12">
+                  <div className="space-y-10">
+                    <FadeIn delay={0.1}>
+                      <span className="cb-badge">
+                        {t('creerBoutique.hero.badge')}
+                      </span>
+                    </FadeIn>
 
-              <div className="main-container relative z-10">
-                <div className="max-w-7xl mx-auto text-center space-y-6">
+                    <FadeIn delay={0.2}>
+                      <h2 className="text-heading-2 tracking-tight text-secondary dark:text-white leading-[1.1] max-w-5xl mx-auto">
+                        <Trans i18nKey="creerBoutique.hero.title" components={{ 1: <span className="text-primary-500" /> }} />
+                      </h2>
+                    </FadeIn>
 
+                    <FadeIn delay={0.3}>
+                      <p className="text-secondary/60 dark:text-accent/60 max-w-2xl mx-auto leading-relaxed">
+                        {t('creerBoutique.hero.description')}
+                      </p>
+                    </FadeIn>
+                  </div>
 
-                  <FadeIn delay={0.1}>
-                    <h1 className=" pt-16 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight w-[900px] mx-auto">
-                      <Trans i18nKey="creerBoutique.hero.title" components={{ 1: <span className="text-primary-500" /> }} />
-                    </h1>
-                  </FadeIn>
+                  <FadeIn delay={0.4}>
+                    <div className="flex flex-col items-center gap-8">
+                      <a
+                        href={REGISTER_URL_FREE}
+                        className="cb-btn px-10 py-5 group gap-3"
+                      >
+                        <span className="relative z-10">{t('creerBoutique.hero.button')}</span>
+                        <ArrowRight className="size-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                      </a>
 
-                  <FadeIn delay={0.2}>
-                    <p className="text-lg md:text-xl text-secondary/70 dark:text-accent/70 max-w-2xl mx-auto">
-                      {t('creerBoutique.hero.description')}
-                    </p>
-                  </FadeIn>
-
-
-
-                  {/* Stats simples */}
-                  <FadeIn delay={0.3}>
-                    <div className="sp-wrapper">
-                      <div className="sp-avatars">
-                        <img className="sp-avatar"
-                             src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=100&h=100&fit=crop"
-                             alt=""/>
-                        <img className="sp-avatar"
-                             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
-                             alt=""/>
-                        <img className="sp-avatar"
-                             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop"
-                             alt=""/>
-                        <img className="sp-avatar"
-                             src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop"
-                             alt=""/>
-                        <img className="sp-avatar"
-                             src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop"
-                             alt=""/>
-                      </div>
-
-                      <div className="sp-rating">
-                        <div className="sp-stars">★★★★★</div>
-                        <div className="sp-text">{t('creerBoutique.hero.usersLoveIt')}</div>
+                      <div className="flex flex-col md:flex-row items-center gap-6">
+                        <div className="flex -space-x-4">
+                          {[
+                            "photo-1502685104226-ee32379fefbe",
+                            "photo-1500648767791-00dcc994a43e",
+                            "photo-1544005313-94ddf0286df2",
+                            "photo-1527980965255-d3b416303d12",
+                            "photo-1535713875002-d1d0cf377fde"
+                          ].map((img, i) => (
+                            <img 
+                              key={i}
+                              className="size-10 rounded-full border-2 border-white dark:border-background-6 object-cover"
+                              src={`https://images.unsplash.com/${img}?w=100&h=100&fit=crop`}
+                              alt="User"
+                            />
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex gap-0.5">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="size-4 fill-amber-400 text-amber-400" />
+                            ))}
+                          </div>
+                          <span className="text-sm font-medium text-secondary/70 dark:text-accent/70">
+                            {t('creerBoutique.hero.usersLoveIt')}
+                          </span>
+                        </div>
                       </div>
                     </div>
-
-
                   </FadeIn>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Fonctionnalités principales */}
-          <section id="fonctionnalites" className="py-20 bg-background-3 dark:bg-background-7">
-            <div className="main-container">
-              <div className="text-center max-w-3xl mx-auto mb-16">
+          {/* Fonctionnalités principales - Matched produits-digitaux */}
+          <section id="fonctionnalites" className="py-24 lg:py-32 bg-background-3 dark:bg-background-7 relative">
+             <div className="main-container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20">
                 <FadeIn delay={0.1}>
-                  <h2 className="text-3xl  md:text-4xl font-bold mb-4">
-                    {t('creerBoutique.features.title')}
+                  <h2 className="text-heading-3 mb-6 text-secondary dark:text-white">
+                    <Trans i18nKey="creerBoutique.features.title">
+                      Tout ce dont vous avez besoin pour <span className="text-primary-500">réussir</span>
+                    </Trans>
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                  <p className="text-lg  dark:text-accent/70">
+                  <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
                     {t('creerBoutique.features.subtitle')}
                   </p>
                 </FadeIn>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <FadeIn delay={0.2}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Zap className="w-6 h-6 text-primary-500" />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  { key: 'start', icon: Zap },
+                  { key: 'domain', icon: Globe },
+                  { key: 'builder', icon: Palette },
+                  { key: 'templates', icon: Store },
+                  { key: 'unlimited', icon: ShoppingBag },
+                  { key: 'centralized', icon: Users }
+                ].map((feature, idx) => (
+                  <FadeIn key={feature.key} delay={0.1 + (idx * 0.05)}>
+                    <div className="p-8 bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl rounded-[32px] border border-white/20 dark:border-white/5 transition-all duration-500 hover:shadow-2xl hover:bg-white/60 dark:hover:bg-white/[0.04] group hover:-translate-y-2">
+                      <div className="w-14 h-14 rounded-2xl bg-primary-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <feature.icon className="w-7 h-7 text-primary-500" />
+                      </div>
+                      <h3 className="text-xl mb-3 text-secondary dark:text-white font-bold tracking-tight">
+                        {t(`creerBoutique.features.items.${feature.key}.title`)}
+                      </h3>
+                      <p className="text-secondary/60 dark:text-accent/60 leading-relaxed font-medium">
+                        {t(`creerBoutique.features.items.${feature.key}.description`)}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.start.title')}</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      {t('creerBoutique.features.items.start.description')}
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.25}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Globe className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.domain.title')}</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      {t('creerBoutique.features.items.domain.description')}
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.3}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Palette className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.builder.title')}</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      {t('creerBoutique.features.items.builder.description')}
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.35}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Store className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.templates.title')}</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      {t('creerBoutique.features.items.templates.description')}
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.4}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <ShoppingBag className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.unlimited.title')}</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      {t('creerBoutique.features.items.unlimited.description')}
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.45}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Users className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{t('creerBoutique.features.items.centralized.title')}</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      {t('creerBoutique.features.items.centralized.description')}
-                    </p>
-                  </div>
-                </FadeIn>
+                  </FadeIn>
+                ))}
               </div>
             </div>
           </section>
 
-          {/* Section Thèmes */}
-          <section className="cb-section relative overflow-hidden">
-            {/* Background decorative elements for glass effect */}
+          {/* Section Thèmes / Templates Stack Redesign */}
+          <section className="py-24 lg:py-32 bg-background-1 dark:bg-background-6 relative overflow-hidden">
             <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div className="cb-container">
-              <div className="cb-text-center cb-max-w-3xl mb-16">
+            <div className="main-container px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
                 <FadeIn delay={0.1}>
-                  <h2 className="cb-h2">
+                  <span className="cb-badge">
+                    {t('creerBoutique.themes.badge')}
+                  </span>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <h2 className="text-heading-3 text-secondary dark:text-white leading-tight">
                     {t('creerBoutique.themes.title')}
                   </h2>
                 </FadeIn>
-                <FadeIn delay={0.2}>
-                  <p className="cb-lead">
+                <FadeIn delay={0.3}>
+                  <p className="text-xl text-secondary/60 dark:text-accent/60 leading-relaxed">
                     {t('creerBoutique.themes.subtitle')}
                   </p>
                 </FadeIn>
               </div>
 
-              <div className="flex justify-center items-center py-20">
+              <div className="flex justify-center items-center py-24 relative lg:h-[600px]">
                 <div className="theme-stack-container">
                   {[
                     {
-                      title: "Minimalist Blog",
+                      title: "Tech Store",
                       image: "/builder/theme1.png",
-                      type: "Creative",
+                      type: "E-commerce",
                       className: "theme-card-left"
                     },
                     {
-                      title: "Tech Store",
-                      image: "/builder/theme1.png",
-                      type: "Video/Demo",
+                      title: "Fashion Pulse",
+                      image: "/builder/theme2.png",
+                      type: "Lifestyle",
                       className: "theme-card-right"
                     },
                     {
-                      title: "Modern Fashion",
+                      title: "Modern Minimalist",
                       image: "/builder/theme1.png",
-                      type: "Portrait",
+                      type: "Corporate",
                       className: "theme-card-main"
                     }
                   ].map((theme, idx) => (
                     <div key={idx} className={`transition-all duration-700 ${theme.className}`}>
-                      <div className="theme-card-glass">
-                        <div className="theme-card-img-wrapper">
+                      <div className="theme-card-glass bg-white/40 dark:bg-white/[0.02] backdrop-blur-2xl border border-white/30 dark:border-white/5 rounded-[40px] shadow-2xl p-3">
+                        <div className="theme-card-img-wrapper rounded-[30px] overflow-hidden aspect-[4/3]">
                           <img
                               src={theme.image}
                               alt={theme.title}
-                              className="theme-card-img"
+                              className="theme-card-img object-cover w-full h-full"
                           />
-                          {theme.type === "Video/Demo" && (
-                            <div className="theme-card-play-btn">
-                              <div className="theme-card-play-icon">
-                                <div className="theme-card-play-arrow"></div>
-                              </div>
-                            </div>
-                          )}
                         </div>
-                        <div className="theme-card-footer">
-                          <h3 className="theme-card-title">{theme.title}</h3>
-                          <span className="theme-card-type-badge">
+                        <div className="theme-card-footer pt-6 pb-4 px-4 flex justify-between items-center">
+                          <h3 className="theme-card-title text-xl font-bold text-secondary dark:text-white">{theme.title}</h3>
+                          <span className="theme-card-type-badge px-4 py-1.5 rounded-full bg-primary-500/10 text-primary-500 text-[10px] font-bold uppercase tracking-widest">
                             {theme.type}
                           </span>
                         </div>
@@ -276,29 +251,32 @@ export default function CreerBoutiquePage() {
             </div>
           </section>
 
-          {/* Comment ça marche */}
-          <section className="cb-section">
-            <div className="cb-container">
-              <div className="cb-text-center cb-max-w-3xl mb-16">
+          {/* Comment ça marche - Premium list items */}
+          <section className="py-24 lg:py-32 bg-background-3 dark:bg-background-7">
+            <div className="main-container px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
                 <FadeIn delay={0.1}>
                   <span className="cb-badge">
                     {t('creerBoutique.steps.badge')}
                   </span>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                  <h2 className="cb-h2">
+                  <h2 className="text-heading-3 text-secondary dark:text-white leading-tight">
                     {t('creerBoutique.steps.title')}
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.3}>
-                  <p className="cb-lead">
+                  <p className=" text-secondary/60 dark:text-accent/60 leading-relaxed">
                     {t('creerBoutique.steps.subtitle')}
                   </p>
                 </FadeIn>
               </div>
 
-              <div className="cb-max-w-4xl">
-                <div className="cb-step-list">
+              <div className="max-w-4xl mx-auto">
+                <div className="space-y-8 relative">
+                  {/* Connector Line */}
+                  <div className="absolute left-[27px] top-8 bottom-8 w-[2px] bg-gradient-to-b from-primary-500/20 via-primary-500/50 to-primary-500/20 hidden md:block"></div>
+
                   {[
                     {
                       number: "1",
@@ -332,14 +310,18 @@ export default function CreerBoutiquePage() {
                     }
                   ].map((step, index) => (
                       <FadeIn key={index} delay={0.1 + index * 0.05}>
-                        <div className="cb-step-card">
-                          <div className="cb-step-icon-box">
-                            <step.icon className="w-7 h-7 text-white" />
+                        <div className="cb-step-card group bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl border border-white/20 dark:border-white/5 p-8 rounded-[32px] hover:bg-white/60 dark:hover:bg-white/[0.04] transition-all duration-500 hover:shadow-2xl flex flex-col md:flex-row gap-8 relative z-10">
+                          <div className="cb-step-icon-box size-14 rounded-2xl bg-primary-500 flex items-center justify-center shrink-0 shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                            <step.icon className="size-7 text-white" />
                           </div>
-                          <div className="flex-1 pt-1">
-                            <span className="cb-step-number">{t('creerBoutique.steps.items.step1.title').startsWith('Etape') ? `Étape ${step.number}` : `Step ${step.number}`}</span>
-                            <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                            <p className="text-secondary/70 dark:text-accent/70">{step.description}</p>
+                          <div className="flex-1 space-y-2">
+                            <span className="text-xs  text-primary-500 uppercase tracking-[0.2em]">
+                              {t('creerBoutique.steps.stepLabel')} {step.number}
+                            </span>
+                            <h3 className="text-xl font-medium text-secondary dark:text-white leading-tight">{step.title}</h3>
+                            <p className="text-secondary/60 dark:text-accent/60 leading-relaxed font-medium">
+                              {step.description}
+                            </p>
                           </div>
                         </div>
                       </FadeIn>
@@ -349,39 +331,39 @@ export default function CreerBoutiquePage() {
             </div>
           </section>
 
-          {/* Pourquoi Kiiako - Split Screen Redesign */}
-          <section className="relative w-full bg-background-3 dark:bg-background-7 overflow-hidden">
+          {/* Pourquoi Kiiako - Split Screen Redesign (Refined) */}
+          <section className="relative w-full bg-background-1 dark:bg-background-6 overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              
-              <div className="w-full md:w-1/2 p-8 md:px-12 md:py-20 flex flex-col justify-center">
-                <div className="max-w-xl mx-auto space-y-8">
+              <div className="w-full md:w-1/2 p-12 md:px-20 md:py-32 flex flex-col justify-center bg-background-2 dark:bg-background-8">
+                <div className="max-w-xl mx-auto space-y-10">
                   <FadeIn delay={0.1}>
                     <span className="cb-badge">
                       {t('creerBoutique.why.badge')}
                     </span>
                   </FadeIn>
 
-                  <FadeIn delay={0.2}>
-                    <h2 className="cb-h2 text-left">
-                      {t('creerBoutique.why.title')}
-                    </h2>
-                  </FadeIn>
+                  <div className="space-y-6">
+                    <FadeIn delay={0.2}>
+                      <h2 className="text-heading-3 text-secondary dark:text-white leading-tight">
+                        {t('creerBoutique.why.title')}
+                      </h2>
+                    </FadeIn>
 
-                  <FadeIn delay={0.3}>
-                    <p className="cb-lead text-left">
-                      {t('creerBoutique.why.description')}
-                    </p>
-                  </FadeIn>
+                    <FadeIn delay={0.3}>
+                      <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                        {t('creerBoutique.why.description')}
+                      </p>
+                    </FadeIn>
+                  </div>
 
-                  {/* Note: t('key', { returnObjects: true }) to get array has TS issues sometimes, simpler to map keys if fixed length or just hardcode for MVP */}
-                  <div className="cb-check-list pt-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
                     {(t('creerBoutique.why.list', { returnObjects: true }) as string[]).map((item, index) => (
                         <FadeIn key={index} delay={0.4 + index * 0.05}>
-                          <div className="cb-check-item justify-start">
-                            <div className="cb-check-icon-box shrink-0">
-                              <Check className="w-4 h-4 text-primary-500" />
+                          <div className="flex items-start gap-4">
+                            <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center shrink-0 mt-1">
+                              <Check className="size-3.5 text-primary-500" />
                             </div>
-                            <span className="text-secondary/80 dark:text-accent/80">{item}</span>
+                            <span className="text-secondary dark:text-white  leading-snug">{item}</span>
                           </div>
                         </FadeIn>
                     ))}
@@ -389,69 +371,105 @@ export default function CreerBoutiquePage() {
                 </div>
               </div>
 
-              {/* Right Column: Video (50%) - Full Height */}
-              <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-auto">
-                 {/* Video */}
+              {/* Right Column: Video (50%) - Full Height with Premium Overlays */}
+              <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-[800px]">
                  <FadeIn delay={0.3} className="h-full w-full">
                     <video
                         className="absolute inset-0 w-full h-full object-cover"
-                        src="/hero/emballage_colis.mp4"
+                        src="/hero/femme_couture.mp4"
                         preload="none"
                         loop
                         autoPlay
                         poster="/hero/2150171831.jpg"
                         muted
                         playsInline
-                        data-uc-cover
-                        data-uc-video="autoplay: true;"
                     />
                  </FadeIn>
 
-                 {/* Gradient Overlay for Seamless Blend (Left Edge) */}
-                 <div className="absolute inset-y-0 left-0 w-32 md:w-48 bg-gradient-to-r from-background-3 dark:from-background-7 to-transparent z-10 pointer-events-none"></div>
+                 {/* Premium Overlays */}
+                 <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-background-2 dark:from-background-8 to-transparent z-10 hidden md:block"></div>
+                 <div className="absolute inset-0 bg-secondary/10 dark:bg-background-9/10 mix-blend-multiply pointer-events-none"></div>
+                 
+                 {/* Floating Card Decorative */}
+                 <div className="absolute bottom-12 left-12 right-12 md:right-auto md:w-80 group z-20">
+                    <div className="glass-card p-6 rounded-[32px] border border-white/20 dark:border-white/5 shadow-2xl backdrop-blur-3xl bg-white/40 dark:bg-background-9/40">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="size-12 rounded-2xl bg-primary-500 flex items-center justify-center shadow-lg">
+                          <Package className="size-6 text-white" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold text-primary-500 uppercase tracking-widest">{t('creerBoutique.why.visual.status')}</p>
+                          <p className="text-sm font-bold text-secondary dark:text-white leading-tight">{t('creerBoutique.why.visual.processing')}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="h-1 w-full bg-secondary/10 dark:bg-white/10 rounded-full">
+                          <div className="h-full w-2/3 bg-primary-500 rounded-full"></div>
+                        </div>
+                        <p className="text-[10px] text-secondary/60 dark:text-accent/60 font-medium">{t('creerBoutique.why.visual.scheduled')}</p>
+                      </div>
+                    </div>
+                 </div>
               </div>
-
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="cb-cta-section">
-            <div className="cb-container">
-              <div className="cb-max-w-4xl cb-text-center space-y-8">
-                <FadeIn delay={0.2}>
-                  <h2 className="text-heading-2">
-                    {t('creerBoutique.cta.title')}
-                  </h2>
-                </FadeIn>
-                <FadeIn delay={0.3}>
-                  <p className="cb-lead">
-                    {t('creerBoutique.cta.description')}
-                  </p>
-                </FadeIn>
+          {/* CTA Section - Uniformized */}
+          <section className="cb-cta-section relative overflow-hidden py-24 lg:py-32">
+            <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30">
+              <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary-500/20 blur-[120px] rounded-full"></div>
+            </div>
+            
+            <div className="cb-container px-4">
+              <div className="cb-max-w-4xl cb-text-center space-y-12 relative z-10">
+                <div className="space-y-6">
+                  <FadeIn delay={0.2}>
+                    <h2 className="text-heading-3 text-secondary dark:text-white leading-tight">
+                      {t('creerBoutique.cta.title')}
+                    </h2>
+                  </FadeIn>
+                  <FadeIn delay={0.3}>
+                    <p className="text-xl text-secondary/60 dark:text-accent/60 max-w-2xl mx-auto leading-relaxed">
+                      {t('creerBoutique.cta.description')}
+                    </p>
+                  </FadeIn>
+                </div>
+
                 <FadeIn delay={0.4}>
-                  <div className="cb-text-center">
-                    <a href={REGISTER_URL_FREE} className="cb-btn">
-                      <span className="inline-block first-letter:uppercase">
+                  <div className="flex flex-col items-center gap-10">
+                    <a href={REGISTER_URL_FREE} className="cb-btn px-12 py-6 text-lg group shadow-2xl shadow-primary-500/20">
+                      <span className="relative z-10">
                         {t('creerBoutique.cta.button')}
                       </span>
                     </a>
+                    
+                    <ul className="flex flex-wrap justify-center gap-x-12 gap-y-6">
+                      <li className="flex items-center gap-3">
+                        <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                          <Check className="size-3.5 text-primary-500" />
+                        </div>
+                        <span className="text-secondary/80 dark:text-accent/80   text-[10px]">
+                          {t('creerBoutique.cta.benefits.free')}
+                        </span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                          <Check className="size-3.5 text-primary-500" />
+                        </div>
+                        <span className="text-secondary/80 dark:text-accent/80 text-[10px]">
+                          {t('creerBoutique.cta.benefits.noCard')}
+                        </span>
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                          <Check className="size-3.5 text-primary-500" />
+                        </div>
+                        <span className="text-secondary/80 dark:text-accent/80 text-[10px]">
+                          {t('creerBoutique.cta.benefits.support')}
+                        </span>
+                      </li>
+                    </ul>
                   </div>
-                </FadeIn>
-                <FadeIn delay={0.5}>
-                  <ul className="cb-footer-list">
-                    <li className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary-500" />
-                      <span>{t('creerBoutique.cta.benefits.free')}</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary-500" />
-                      <span>{t('creerBoutique.cta.benefits.noCard')}</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary-500" />
-                      <span>{t('creerBoutique.cta.benefits.support')}</span>
-                    </li>
-                  </ul>
                 </FadeIn>
               </div>
             </div>

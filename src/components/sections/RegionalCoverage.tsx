@@ -84,7 +84,7 @@ export default function RegionalCoverage() {
                 </h3>
               </div>
               <div className="flex gap-2">
-                 <span className="px-2.5 py-1 bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 text-[10px] font-medium uppercase tracking-wider rounded-md">
+                <span className="px-2.5 py-1 bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-accent/60 text-[10px] font-medium uppercase tracking-wider rounded-md">
                   Active
                 </span>
               </div>
@@ -116,7 +116,7 @@ export default function RegionalCoverage() {
       </div>
       
       {/* Footer: Technical Micro-copy */}
-       <div className="mt-12 flex items-center justify-center gap-2 text-gray-400">
+       <div className="mt-12 flex items-center justify-center gap-2 text-gray-400 dark:text-accent/40">
          <Globe className="w-4 h-4" />
          <span className="text-sm font-medium">Infrastructure de paiement régionale unifiée.</span>
        </div>

@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
-import { Check, Globe, Shield, TrendingUp, Zap, Lock, ArrowRight, X, Clock, Circle, ChevronLeft, ChevronRight, RotateCcw, Home, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Check, Globe, Shield, TrendingUp, Zap, Lock, ArrowRight, X, Clock, Circle, ChevronLeft, ChevronRight, RotateCcw, Home, Star, Wrench, Settings } from 'lucide-react';
 import {REGISTER_URL_FREE} from "@/lib/utls";
 
 export default function NomDeDomainePage() {
+  const { t } = useTranslation();
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -42,245 +44,100 @@ export default function NomDeDomainePage() {
         <main>
           {/* Hero Section modernisé avec démo interactive */}
 
-          <section className="pb-20 pt-24 md:pb-24 md:pt-32 lg:pb-32 lg:pt-40">
-            <div className="main-container">
-              <div className="max-w-4xl mx-auto">
-                <FadeIn delay={0.1}>
-                  <div className="text-center mb-8">
-                    <span className="badge bg-primary-500 text-white">Nom de domaine automatique</span>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.2}>
-                  <h1 className="text-center text-heading-2 lg:text-heading-1 mb-6">
-                    Votre identité professionnelle en ligne
-                  </h1>
-                </FadeIn>
-
-                <FadeIn delay={0.3}>
-                  <p className="text-center text-lg mb-12 max-w-2xl mx-auto dark:text-white" >
-                    Chaque vendeur obtient automatiquement un nom de domaine personnalisé.
-                    Aucune configuration requise.
-                  </p>
-                </FadeIn>
-
-                {/* Domain Display with Safari Browser */}
-                <FadeIn delay={0.4}>
-                  <div className="domain-display-wrapper mb-6">
-                    <div className="safari-browser">
-                      {/* Safari Title Bar */}
-                      <div className="safari-titlebar">
-                        <div className="safari-window-controls">
-                          <button className="safari-control close"></button>
-                          <button className="safari-control minimize"></button>
-                          <button className="safari-control maximize"></button>
-                        </div>
-                        <div className="safari-title">Safari</div>
-                        <div style={{ width: '60px' }}></div>
-                      </div>
-
-                      {/* Safari Navigation Bar */}
-                      <div className="safari-navbar">
-                        <button className="safari-nav-button" disabled>
-                          <ChevronLeft className="w-3 h-3" />
-                        </button>
-                        <button className="safari-nav-button">
-                          <ChevronRight className="w-3 h-3" />
-                        </button>
-                        <button className="safari-nav-button">
-                          <RotateCcw className="w-3 h-3" />
-                        </button>
-                        <button className="safari-nav-button">
-                          <Home className="w-3 h-3" />
-                        </button>
-                        <button className="safari-nav-button">
-                          <Star className="w-3 h-3" />
-                        </button>
-                        
-                        {/* Address Bar */}
-                        <div className="domain-display">
-                          <Lock className="w-3 h-3 text-blue-500 opacity-70" style={{ position: 'absolute', left: '0.75rem', top: '50%', transform: 'translateY(-50%)', zIndex: 2 }} />
-                          <span className="domain-protocol">https://</span>
-                          <span className="domain-subdomain">
-                            {currentText}
-                            <span className="domain-cursor"></span>
-                          </span>
-                          <span className="domain-extension">.kiiako.shop</span>
-                        </div>
-                      </div>
-
-                      {/* Safari Content Area */}
-                      <div className="safari-content">
-                        <div className="safari-content-placeholder">
-                          <div className="safari-content-icon">
-                            <Globe className="w-full h-full" />
-                          </div>
-                          <div className="safari-content-text">
-                            Votre boutique en ligne est prête
-                          </div>
-                          <div className="safari-content-subtext">
-                            {currentText ? `${currentText}.kiiako.shop` : 'Votre domaine personnalisé'}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </FadeIn>
-              </div>
+          <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            {/* Background Decorations */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+              <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-500/10 blur-[120px] rounded-full"></div>
+              <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full"></div>
             </div>
-          </section>
 
-          {/* Fonctionnalités principales */}
-          <section className="py-20 bg-background-3 dark:bg-background-7">
-            <div className="main-container">
-              <div className="text-center max-w-3xl mx-auto mb-16">
-                <FadeIn delay={0.1}>
-                  <h2 className="text-heading-3 lg:text-heading-2 mb-4">
-                    Tout est automatique et sécurisé
-                  </h2>
-                </FadeIn>
+            <div className="main-container relative z-10 px-4">
+              <div className="max-w-4xl mx-auto text-center">
                 <FadeIn delay={0.2}>
-                  <p className="text-lg text-secondary/70 dark:text-accent/70">
-                    Votre nom de domaine professionnel configuré instantanément, sans aucune compétence technique requise
-                  </p>
+                  <span className="cb-badge mb-8">
+                    {t('nomDeDomaine.hero.badge')}
+                  </span>
                 </FadeIn>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <FadeIn delay={0.2}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Zap className="w-6 h-6 text-primary-500 icon-bounce" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Domaine automatique</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      Obtenez votre nom de domaine personnalisé dès l'inscription, sans configuration manuelle.
+                <div className="space-y-8 mb-16">
+                  <FadeIn delay={0.3}>
+                    <h1 className="text-heading-2 text-secondary dark:text-white leading-tight">
+                      {t('nomDeDomaine.hero.title')}
+                    </h1>
+                  </FadeIn>
+
+                  <FadeIn delay={0.4}>
+                    <p className="text-secondary/60 dark:text-accent/60 max-w-2xl mx-auto leading-relaxed">
+                      {t('nomDeDomaine.hero.subtitle')}
                     </p>
-                  </div>
-                </FadeIn>
+                  </FadeIn>
+                </div>
 
-                <FadeIn delay={0.25}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Globe className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Format professionnel</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      Votre adresse personnalisée au format votreboutique.kiiako.shop pour une image professionnelle.
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.3}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Lock className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">SSL inclus</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      Certificat SSL gratuit inclus pour garantir la sécurité de vos clients et leur confiance.
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.35}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Clock className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Configuration auto</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      Configuration technique automatique, DNS et paramètres gérés par nos équipes.
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.4}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <Check className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">Zéro technique</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      Aucune connaissance technique requise, tout est géré automatiquement pour vous.
-                    </p>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.45}>
-                  <div className="feature-card p-6 bg-background-1 dark:bg-background-6 rounded-2xl border border-stroke-1 dark:border-stroke-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-4">
-                      <TrendingUp className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">SEO optimisé</h3>
-                    <p className="text-secondary/70 dark:text-accent/70">
-                      Nom de domaine optimisé pour le référencement naturel et meilleure visibilité en ligne.
-                    </p>
-                  </div>
-                </FadeIn>
-              </div>
-            </div>
-          </section>
-
-          {/* Process - Numbered Steps */}
-          <section className="py-24 lg:py-32">
-            <div className="main-container">
-              <div className="text-center mb-16">
-                <FadeIn delay={0.1}>
-                  <span className="badge-minimal mb-6">Processus</span>
-                </FadeIn>
-                <FadeIn delay={0.2}>
-                  <h2 className="text-heading-3 lg:text-heading-2 mb-4">
-                    Comment ça fonctionne
-                  </h2>
-                </FadeIn>
-              </div>
-
-              <div className="max-w-3xl mx-auto grid grid-cols-1 gap-4">
-                <FadeIn delay={0.3}>
-                  <div className="process-step">
-                    <div className="process-number">1</div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Créez votre compte</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Inscrivez-vous gratuitement et choisissez le nom de votre boutique
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.4}>
-                  <div className="process-step">
-                    <div className="process-number">2</div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Génération automatique</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Votre domaine personnalisé est créé instantanément au format votreboutique.kiiako.shop
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-
+                {/* Safari Browser Mockup - Premium Refinement */}
                 <FadeIn delay={0.5}>
-                  <div className="process-step">
-                    <div className="process-number">3</div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Configuration SSL</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Certificat SSL automatiquement installé pour sécuriser votre boutique
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
+                  <div className="relative group">
+                    {/* Decorative glow behind browser */}
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-blue-500/20 blur-2xl rounded-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    
+                    <div className="relative bg-white dark:bg-background-8 rounded-3xl border border-stroke-1 dark:border-white/5 shadow-2xl overflow-hidden backdrop-blur-xl">
+                      {/* Safari Title Bar */}
+                      <div className="flex items-center justify-between px-6 py-4 border-b border-stroke-1 dark:border-white/5 bg-background-3/50 dark:bg-white/[0.02]">
+                        <div className="flex gap-2">
+                          <div className="size-3 rounded-full bg-[#FF5F56]"></div>
+                          <div className="size-3 rounded-full bg-[#FFBD2E]"></div>
+                          <div className="size-3 rounded-full bg-[#27C93F]"></div>
+                        </div>
+                        <div className="text-[11px] font-medium text-secondary/40 dark:text-accent/40 tracking-widest uppercase">Safari</div>
+                        <div className="w-12"></div>
+                      </div>
 
-                <FadeIn delay={0.6}>
-                  <div className="process-step">
-                    <div className="process-number">4</div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">C'est prêt</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Votre boutique est en ligne avec votre domaine professionnel, prête à recevoir des clients
-                      </p>
+                      {/* Safari Toolbar */}
+                      <div className="flex items-center gap-4 px-6 py-3 bg-background-2/50 dark:bg-white/[0.01] border-b border-stroke-1 dark:border-white/5">
+                        <div className="flex gap-3 text-secondary/40 dark:text-accent/40">
+                          <ChevronLeft className="size-4" />
+                          <ChevronRight className="size-4" />
+                        </div>
+                        
+                        {/* Premium Address Bar */}
+                        <div className="flex-1 relative flex items-center justify-center h-10 bg-white dark:bg-background-7 rounded-xl border border-stroke-1 dark:border-white/5 px-4">
+                          <Lock className="absolute left-4 size-3.5 text-primary-500" />
+                          <div className="flex items-center gap-0.5 text-sm font-medium tracking-tight">
+                            <span className="text-secondary/30 dark:text-accent/30">https://</span>
+                            <span className="text-secondary dark:text-white lowercase">
+                              {currentText}
+                              <span className="inline-block w-0.5 h-4 bg-primary-500 ml-0.5 animate-pulse align-middle"></span>
+                            </span>
+                            <span className="text-primary-500 font-bold">.kiiako.shop</span>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3 text-secondary/40 dark:text-accent/40">
+                          <RotateCcw className="size-4" />
+                          <Star className="size-4" />
+                        </div>
+                      </div>
+
+                      {/* Browser Content */}
+                      <div className="aspect-[16/9] flex items-center justify-center bg-background-1 dark:bg-background-6 relative">
+                        {/* Content Placeholder with Glassmorphism */}
+                        <div className="text-center space-y-6">
+                          <div className="size-20 lg:size-24 rounded-3xl bg-primary-500/10 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-700">
+                            <Globe className="size-10 lg:size-12 text-primary-500" />
+                          </div>
+                          <div className="space-y-2">
+                            <h3 className="text-xl lg:text-2xl text-secondary dark:text-white tracking-tight">
+                              {t('nomDeDomaine.hero.browser_title')}
+                            </h3>
+                            <p className="text-primary-500 font-bold">
+                              {currentText ? `${currentText}.kiiako.shop` : 'votre-domaine.kiiako.shop'}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Floating elements for depth */}
+                        <div className="absolute top-10 left-10 size-12 rounded-2xl bg-white/50 dark:bg-white/[0.05] border border-white/20 backdrop-blur-md animate-float"></div>
+                        <div className="absolute bottom-10 right-10 size-16 rounded-3xl bg-white/50 dark:bg-white/[0.05] border border-white/20 backdrop-blur-md animate-float" style={{ animationDelay: '1s' }}></div>
+                      </div>
                     </div>
                   </div>
                 </FadeIn>
@@ -288,21 +145,68 @@ export default function NomDeDomainePage() {
             </div>
           </section>
 
-          {/* Galaxie de noms de domaine */}
-          <section className="py-20 bg-background-3 dark:bg-background-5">
-            <div className="main-container">
-              <div className="text-center mb-16">
+          <section className="py-24 lg:py-32 bg-background-3 dark:bg-background-7 relative overflow-hidden">
+             {/* Decorative background glows */}
+             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-primary-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+             
+            <div className="main-container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
                 <FadeIn delay={0.1}>
-                  <span className="badge bg-primary-500 text-white mb-6">Exemples</span>
+                  <h2 className="text-heading-3 text-secondary dark:text-white">
+                    {t('nomDeDomaine.features.title')}
+                  </h2>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                  <h2 className="text-heading-3 lg:text-heading-2 mb-4" style={{width : "70%", margin: "auto"}}>
-                    Des domaines professionnels
+                  <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                    {t('nomDeDomaine.features.subtitle')}
+                  </p>
+                </FadeIn>
+              </div>
+ 
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  { key: 'automatic', icon: Zap },
+                  { key: 'professional', icon: Globe },
+                  { key: 'ssl', icon: Lock },
+                  { key: 'config', icon: Clock },
+                  { key: 'zero', icon: Check },
+                  { key: 'seo', icon: TrendingUp }
+                ].map((feature, idx) => (
+                  <FadeIn key={feature.key} delay={0.2 + (idx * 0.1)}>
+                    <div className="group p-8 bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl rounded-[32px] border border-white/20 dark:border-white/5 hover:border-primary-500/50 transition-all duration-500 hover:shadow-2xl">
+                      <div className="w-14 h-14 rounded-2xl bg-primary-500/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-sm">
+                        <feature.icon className="size-7 text-primary-500" />
+                      </div>
+                      <h3 className="text-xl text-secondary dark:text-white mb-4 tracking-tight">
+                        {t(`nomDeDomaine.features.items.${feature.key}.title`)}
+                      </h3>
+                      <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                        {t(`nomDeDomaine.features.items.${feature.key}.description`)}
+                      </p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Galaxie de noms de domaine - Premium Solar System */}
+          <section className="py-24 lg:py-32 bg-background-2 dark:bg-background-8 relative overflow-hidden">
+            <div className="main-container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <FadeIn delay={0.1}>
+                  <span className="cb-badge">
+                    {t('nomDeDomaine.galaxy.badge')}
+                  </span>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <h2 className="text-heading-3 text-secondary dark:text-white">
+                    {t('nomDeDomaine.galaxy.title')}
                   </h2>
                 </FadeIn>
                 <FadeIn delay={0.3}>
-                  <p className="text-lg max-w-2xl mx-auto dark:text-white text-secondary">
-                    Votre boutique est en ligne avec votre domaine professionnel, prête à recevoir des clients
+                  <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                    {t('nomDeDomaine.galaxy.subtitle')}
                   </p>
                 </FadeIn>
               </div>
@@ -311,212 +215,54 @@ export default function NomDeDomainePage() {
                 <div className="domain-galaxy-modern">
                   <div className="domain-solar-system">
                     <div className="galaxy-hub">
-                      <div className="hub-domain">🤖</div>
+                      <div className="hub-domain text-3xl">🤖</div>
                     </div>
 
                     {/* Connection lines */}
-                    <div className="connection-lines">
-                      <div className="connection-line" style={{ transform: 'rotate(0deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(45deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(90deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(135deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(180deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(225deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(270deg)' }}></div>
-                      <div className="connection-line" style={{ transform: 'rotate(315deg)' }}></div>
+                    <div className="connection-lines opacity-20">
+                      {[0, 45, 90, 135, 180, 225, 270, 315].map(deg => (
+                        <div key={deg} className="connection-line" style={{ transform: `rotate(${deg}deg)` }}></div>
+                      ))}
                     </div>
 
-                    {/* Store cards positioned in a circle - better spacing */}
-                    <div className="domain-node" style={{ '--delay': '0.2s', top: '10%', left: '43%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card fashion">
-                        <div className="store-card-image">
-                          <div className="store-card-badge">NEW</div>
-                        </div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://fashion.kiiako.shop</div>
-                          <div className="store-card-category">Mode</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star empty"></span>
+                    {/* Store cards - Refined styling */}
+                    {[
+                      { delay: '0.2s', top: '10%', left: '43%', name: 'fashion.kiiako.shop', cat: 'Mode', badge: 'NEW', type: 'fashion' },
+                      { delay: '0.4s', top: '18%', left: '65%', name: 'maboutique.kiiako.shop', cat: 'Tech', badge: 'TOP', type: 'tech' },
+                      { delay: '0.6s', top: '30%', left: '75%', name: 'tech.kiiako.shop', cat: 'Beauté', type: 'beauty' },
+                      { delay: '0.8s', top: '45%', left: '75%', name: 'beauty.kiiako.shop', cat: 'Artisanat', badge: 'HOT', type: 'artisan' },
+                      { delay: '1s', top: '60%', left: '65%', name: 'store.kiiako.shop', cat: 'Sport', type: 'sport' },
+                      { delay: '1.2s', top: '72%', left: '43%', name: 'boutique.kiiako.shop', cat: 'Maison', badge: 'SALE', type: 'home' },
+                      { delay: '1.4s', top: '60%', left: '15%', name: 'artisan.kiiako.shop', cat: 'Mode', type: 'fashion' },
+                      { delay: '1.6s', top: '45%', left: '5%', name: 'sport.kiiako.shop', cat: 'Tech', badge: 'PRO', type: 'tech' },
+                      { delay: '1.8s', top: '30%', left: '5%', name: 'afiwashop.kiiako.shop', cat: 'Beauté', type: 'beauty' },
+                      { delay: '2s', top: '18%', left: '15%', name: 'lolitastore.kiiako.shop', cat: 'Artisanat', badge: 'VIP', type: 'artisan' }
+                    ].map((node, i) => (
+                      <div key={i} className="domain-node" style={{ '--delay': node.delay, top: node.top, left: node.left, transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
+                        <div className={`store-card ${node.type} bg-white/80 dark:bg-background-8/80 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-xl`}>
+                          <div className="store-card-image bg-background-3 dark:bg-background-7">
+                            {node.badge && <div className="store-card-badge bg-primary-500 text-white font-bold">{node.badge}</div>}
+                          </div>
+                          <div className="store-card-content">
+                            <div className="store-card-name text-xs font-bold text-secondary dark:text-white truncate">https://{node.name}</div>
+                            <div className="store-card-category text-[10px] text-primary-500 uppercase font-black">{node.cat}</div>
+                            <div className="store-card-rating">
+                              {[1, 2, 3, 4, 5].map(s => <span key={s} className={`star ${s > 4 ? 'empty' : ''}`}></span>)}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '0.4s', top: '18%', left: '65%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card tech">
-                        <div className="store-card-image">
-                          <div className="store-card-badge">TOP</div>
-                        </div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://maboutique.kiiako.shop</div>
-                          <div className="store-card-category">Technologie</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '0.6s', top: '30%', left: '75%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card beauty">
-                        <div className="store-card-image"></div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://tech.kiiako.shop</div>
-                          <div className="store-card-category">Beauté</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star empty"></span>
-                            <span className="star empty"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '0.8s', top: '45%', left: '75%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card artisan">
-                        <div className="store-card-image">
-                          <div className="store-card-badge">HOT</div>
-                        </div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://beauty.kiiako.shop</div>
-                          <div className="store-card-category">Artisanat</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star empty"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '1s', top: '60%', left: '65%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card sport">
-                        <div className="store-card-image"></div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://store.kiiako.shop</div>
-                          <div className="store-card-category">Sport</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '1.2s', top: '72%', left: '43%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card home">
-                        <div className="store-card-image">
-                          <div className="store-card-badge">SALE</div>
-                        </div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://boutique.kiiako.shop</div>
-                          <div className="store-card-category">Maison</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star empty"></span>
-                            <span className="star empty"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '1.4s', top: '60%', left: '15%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card fashion">
-                        <div className="store-card-image"></div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://artisan.kiiako.shop</div>
-                          <div className="store-card-category">Mode</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star empty"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '1.6s', top: '45%', left: '5%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card tech">
-                        <div className="store-card-image">
-                          <div className="store-card-badge">PRO</div>
-                        </div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://sport.kiiako.shop</div>
-                          <div className="store-card-category">Technologie</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '1.8s', top: '30%', left: '5%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card beauty">
-                        <div className="store-card-image"></div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">https://afiwashop.kiiako.shop</div>
-                          <div className="store-card-category">Beauté</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star empty"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="domain-node" style={{ '--delay': '2s', top: '18%', left: '15%', transform: 'translate(-50%, -50%)' } as React.CSSProperties}>
-                      <div className="store-card artisan">
-                        <div className="store-card-image">
-                          <div className="store-card-badge">VIP</div>
-                        </div>
-                        <div className="store-card-content">
-                          <div className="store-card-name">lolitastore.kiiako.shop</div>
-                          <div className="store-card-category">Artisanat</div>
-                          <div className="store-card-rating">
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                            <span className="star"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
 
                     {/* Floating particles */}
                     <div className="particles">
-                      <div className="particle" style={{ top: '10%', left: '15%', animationDelay: '0s' }}></div>
-                      <div className="particle" style={{ top: '20%', left: '85%', animationDelay: '1s' }}></div>
-                      <div className="particle" style={{ top: '70%', left: '10%', animationDelay: '2s' }}></div>
-                      <div className="particle" style={{ top: '80%', left: '90%', animationDelay: '3s' }}></div>
-                      <div className="particle" style={{ top: '45%', left: '5%', animationDelay: '4s' }}></div>
-                      <div className="particle" style={{ top: '55%', left: '95%', animationDelay: '5s' }}></div>
+                      {[...Array(6)].map((_, i) => (
+                        <div key={i} className="particle" style={{ 
+                          top: `${Math.random() * 80 + 10}%`, 
+                          left: `${Math.random() * 80 + 10}%`, 
+                          animationDelay: `${i}s` 
+                        }}></div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -524,94 +270,159 @@ export default function NomDeDomainePage() {
             </div>
           </section>
 
-          {/* Comparaison - Clean Table */}
-          <section className="py-24 lg:py-32">
-            <div className="main-container">
-              <div className="text-center mb-16">
+          {/* Section Domaine Externe - New */}
+          <section className="py-24 lg:py-32 bg-background-3 dark:bg-background-7 relative overflow-hidden">
+            <div className="main-container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
                 <FadeIn delay={0.1}>
-                  <span className="badge bg-primary-500 text-white mb-6">Comparaison</span>
+                  <span className="cb-badge">
+                    {t('nomDeDomaine.external.badge')}
+                  </span>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                  <h2 className="text-heading-3 lg:text-heading-2 mb-4">
-                    La différence est claire
+                  <h2 className="text-heading-3 text-secondary dark:text-white">
+                    {t('nomDeDomaine.external.title')}
+                  </h2>
+                </FadeIn>
+                <FadeIn delay={0.3}>
+                  <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                    {t('nomDeDomaine.external.subtitle')}
+                  </p>
+                </FadeIn>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Option 1: Self Config */}
+                <FadeIn delay={0.4}>
+                  <div className="group p-8 lg:p-10 bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl rounded-[40px] border border-white/20 dark:border-white/5 hover:border-primary-500/50 transition-all duration-500">
+                    <div className="w-16 h-16 rounded-2xl bg-primary-500/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                      <Settings className="size-8 text-primary-500" />
+                    </div>
+                    <h3 className="text-2xl text-secondary dark:text-white mb-4 tracking-tight">
+                      {t('nomDeDomaine.external.cards.self.title')}
+                    </h3>
+                    <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                      {t('nomDeDomaine.external.cards.self.description')}
+                    </p>
+                  </div>
+                </FadeIn>
+
+                {/* Option 2: Assisted Config */}
+                <FadeIn delay={0.5}>
+                  <div className="group p-8 lg:p-10 bg-background-2 dark:bg-white/[0.02] backdrop-blur-xl rounded-[40px] border border-stroke-1 dark:border-white/5 hover:border-primary-500/50 transition-all duration-500  relative overflow-hidden">
+                    {/* Badge for paid option */}
+                    <div className="absolute top-0 right-0 p-4">
+                      <div className="px-3 py-1 bg-primary-500 dark:bg-primary-500 text-white dark:text-white text-[10px] font-semibold rounded-full">
+                        {t('nomDeDomaine.external.cards.assisted.badge')}
+                      </div>
+                    </div>
+                    
+                    <div className="w-16 h-16 rounded-2xl bg-primary-500/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                      <Wrench className="size-8 text-primary-500" />
+                    </div>
+                    <h3 className="text-2xl text-secondary dark:text-white mb-4 tracking-tight">
+                      {t('nomDeDomaine.external.cards.assisted.title')}
+                    </h3>
+                    <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                      {t('nomDeDomaine.external.cards.assisted.description')}
+                    </p>
+                  </div>
+                </FadeIn>
+              </div>
+            </div>
+          </section>
+
+          {/* Comparaison - Premium Table */}
+          <section className="py-24 lg:py-32 bg-background-1 dark:bg-background-6 relative">
+            <div className="main-container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <FadeIn delay={0.1}>
+                  <span className="cb-badge">
+                    {t('nomDeDomaine.comparison.badge')}
+                  </span>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <h2 className="text-heading-3 text-secondary dark:text-white">
+                    {t('nomDeDomaine.comparison.title')}
                   </h2>
                 </FadeIn>
               </div>
 
               <FadeIn delay={0.3}>
-                <div className="max-w-5xl mx-auto">
-                  <div className="comparison-table">
-                    <div className="comparison-column">
-                      <div className="comparison-header">
-                        <X className="w-5 h-5" style={{color: 'var(--color-secondary)', opacity: 0.4}} />
-                        <h3 className="comparison-title">Sans domaine personnalisé</h3>
+                <div className="max-w-7xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Without custom domain */}
+                    <div className="group p-8 lg:p-12 bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl rounded-[40px] border border-white/20 dark:border-white/5 hover:border-secondary/20 transition-all duration-500">
+                      <div className="flex items-center gap-4 mb-10">
+                        <div className="size-12 rounded-2xl bg-secondary/5 dark:bg-white/5 flex items-center justify-center">
+                          <X className="size-6 text-secondary/40 dark:text-accent/40" />
+                        </div>
+                        <h3 className="text-lg text-secondary dark:text-white font-bold tracking-tight">
+                          {t('nomDeDomaine.comparison.without.title')}
+                        </h3>
                       </div>
 
-                      <div className="comparison-list">
-                        <div className="comparison-item">
-                          <X className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)', opacity: 0.3}} />
-                          <span className="comparison-item-text">
-                            URL longue et complexe difficile à retenir
-                          </span>
-                        </div>
-                        <div className="comparison-item">
-                          <X className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)', opacity: 0.3}} />
-                          <span className="comparison-item-text">
-                            Apparence non professionnelle
-                          </span>
-                        </div>
-                        <div className="comparison-item">
-                          <X className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)', opacity: 0.3}} />
-                          <span className="comparison-item-text">
-                            Moins de confiance des clients
-                          </span>
-                        </div>
-                        <div className="comparison-item">
-                          <X className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)', opacity: 0.3}} />
-                          <span className="comparison-item-text">
-                            Référencement limité
-                          </span>
-                        </div>
+                      <div className="space-y-6">
+                        {(t('nomDeDomaine.comparison.without.items', { returnObjects: true }) as string[]).map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <X className="size-5 text-secondary/20 dark:text-accent/20 mt-1 flex-shrink-0" />
+                            <span className="text-secondary/60 dark:text-accent/60 leading-relaxed font-medium">
+                              {item}
+                            </span>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    <div className="comparison-column">
-                      <div className="comparison-header">
-                        <Check className="w-5 h-5" style={{color: 'var(--color-secondary)'}} />
-                        <h3 className="comparison-title">Avec votre domaine Kiiako</h3>
+                    {/* Marketplaces */}
+                    <div className="group p-8 lg:p-12 bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl rounded-[40px] border border-white/20 dark:border-white/5 hover:border-secondary/20 transition-all duration-500">
+                      <div className="flex items-center gap-4 mb-10">
+                        <div className="size-12 rounded-2xl bg-secondary/5 dark:bg-white/5 flex items-center justify-center">
+                          <X className="size-6 text-secondary/40 dark:text-accent/40" />
+                        </div>
+                        <h3 className="text-lg text-secondary dark:text-white font-bold tracking-tight">
+                          {t('nomDeDomaine.comparison.marketplaces.title')}
+                        </h3>
                       </div>
 
-                      <div className="comparison-list">
-                        <div className="comparison-item">
-                          <Check className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)'}} />
-                          <span className="comparison-item-text">
-                            URL courte et mémorable
-                          </span>
+                      <div className="space-y-6">
+                        {(t('nomDeDomaine.comparison.marketplaces.items', { returnObjects: true }) as string[]).map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <X className="size-5 text-secondary/20 dark:text-accent/20 mt-1 flex-shrink-0" />
+                            <span className="text-secondary/60 dark:text-accent/60 leading-relaxed font-medium">
+                              {item}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* With custom domain */}
+                    <div className="group p-8 lg:p-12 bg-primary-500/5 backdrop-blur-xl rounded-[40px] border border-blue-500/30 hover:border-blue-500 transition-all duration-500 relative overflow-hidden">
+                      <div className="flex justify-center items-center  text-center mb-4 z-50">
+                        <div className="p-2 text-primary-500 border-primary-500  w-fit border rounded-full  text-xs">RECOMMANDÉ</div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4 mb-10">
+                        <div className="size-12 rounded-2xl bg-primary-500/10 flex items-center justify-center">
+                          <Check className="size-6 text-primary-500" />
                         </div>
-                        <div className="comparison-item">
-                          <Check className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)'}} />
-                          <span className="comparison-item-text">
-                            Image professionnelle et crédible
-                          </span>
-                        </div>
-                        <div className="comparison-item">
-                          <Check className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)'}} />
-                          <span className="comparison-item-text">
-                            Confiance accrue des clients
-                          </span>
-                        </div>
-                        <div className="comparison-item">
-                          <Check className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)'}} />
-                          <span className="comparison-item-text">
-                            Optimisé pour le SEO
-                          </span>
-                        </div>
-                        <div className="comparison-item">
-                          <Check className="w-5 h-5 comparison-item-icon" style={{color: 'var(--color-secondary)'}} />
-                          <span className="comparison-item-text">
-                            SSL gratuit inclus
-                          </span>
-                        </div>
+                        <h3 className="text-lg text-secondary dark:text-white font-bold tracking-tight">
+                          {t('nomDeDomaine.comparison.with.title')}
+                        </h3>
+                      </div>
+
+                      <div className="space-y-6">
+                        {(t('nomDeDomaine.comparison.with.items', { returnObjects: true }) as string[]).map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-4">
+                            <div className="size-5 rounded-full bg-primary-500/10 flex items-center justify-center mt-1 flex-shrink-0">
+                              <Check className="size-3.5 text-primary-500" />
+                            </div>
+                            <span className="text-secondary dark:text-white leading-relaxed font-bold">
+                              {item}
+                            </span>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -620,118 +431,91 @@ export default function NomDeDomainePage() {
             </div>
           </section>
 
-          {/* Avantages - Simplified */}
-          <section className="py-20 bg-background-3 dark:bg-background-5">
-            <div className="main-container">
-              <div className="text-center mb-16">
+          {/* Avantages - Simplified & Clean */}
+          <section className="py-24 lg:py-32 bg-background-3 dark:bg-background-7 relative">
+            <div className="main-container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
                 <FadeIn delay={0.1}>
-                  <span className="badge bg-primary-500 text-white mb-6">Avantages</span>
+                  <span className="cb-badge">
+                    {t('nomDeDomaine.advantages.badge')}
+                  </span>
                 </FadeIn>
                 <FadeIn delay={0.2}>
-                  <h2 className="text-heading-3 lg:text-heading-2 mb-4">
-                    Pourquoi un domaine personnalisé
+                  <h2 className="text-heading-3  text-secondary dark:text-white">
+                    {t('nomDeDomaine.advantages.title')}
                   </h2>
                 </FadeIn>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                <FadeIn delay={0.3}>
-                  <div className="flex gap-4">
-                    <div className="icon-wrapper flex-shrink-0">
-                      <Shield className="w-6 h-6" style={{color: 'var(--color-secondary)'}} />
+                {[
+                  { key: 'credibility', icon: Shield },
+                  { key: 'memorable', icon: Globe },
+                  { key: 'trust', icon: Lock },
+                  { key: 'seo', icon: TrendingUp }
+                ].map((adv, idx) => (
+                  <FadeIn key={adv.key} delay={0.3 + (idx * 0.1)}>
+                    <div className="flex gap-6 group">
+                      <div className="size-14 rounded-2xl bg-white dark:bg-background-8 border border-stroke-1 dark:border-white/5 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:bg-primary-500 group-hover:border-primary-500 transition-all duration-500">
+                        <adv.icon className="size-7 text-secondary dark:text-white group-hover:text-white transition-colors" />
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-lg text-secondary dark:text-white tracking-tight font-bold">
+                          {t(`nomDeDomaine.advantages.items.${adv.key}.title`)}
+                        </h3>
+                        <p className="text-secondary/60 dark:text-accent/60 leading-relaxed">
+                          {t(`nomDeDomaine.advantages.items.${adv.key}.description`)}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Crédibilité instantanée</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Un domaine personnalisé donne immédiatement une apparence professionnelle à votre boutique
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.4}>
-                  <div className="flex gap-4">
-                    <div className="icon-wrapper flex-shrink-0">
-                      <Globe className="w-6 h-6" style={{color: 'var(--color-secondary)'}} />
-                    </div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Facile à retenir</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Un nom court et personnalisé que vos clients peuvent mémoriser et partager facilement
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.5}>
-                  <div className="flex gap-4">
-                    <div className="icon-wrapper flex-shrink-0">
-                      <Lock className="w-6 h-6" style={{color: 'var(--color-secondary)'}} />
-                    </div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Confiance renforcée</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Les clients font davantage confiance aux boutiques avec leur propre domaine sécurisé
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.6}>
-                  <div className="flex gap-4">
-                    <div className="icon-wrapper flex-shrink-0">
-                      <TrendingUp className="w-6 h-6" style={{color: 'var(--color-secondary)'}} />
-                    </div>
-                    <div>
-                      <h3 className="text-heading-6 mb-2">Meilleur référencement</h3>
-                      <p style={{color: 'var(--color-secondary)', opacity: 0.6, fontSize: '0.9375rem', lineHeight: '1.6'}}>
-                        Un domaine personnalisé améliore votre visibilité sur Google et les moteurs de recherche
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
+                  </FadeIn>
+                ))}
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
-          <section className="cb-cta-section">
+          <section className="cb-cta-section relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30">
+              <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary-500/20 blur-[120px] rounded-full"></div>
+            </div>
+            
             <div className="cb-container">
-              <div className="cb-max-w-4xl cb-text-center space-y-8">
-                <FadeIn delay={0.2}>
-                  <h2 className="text-heading-2">
-                    Commencez dès maintenant
-                  </h2>
-                </FadeIn>
-                <FadeIn delay={0.3}>
-                  <p className="cb-lead">
-                    Votre domaine personnalisé est configuré automatiquement à la création de votre boutique
-                  </p>
-                </FadeIn>
+              <div className="cb-max-w-4xl cb-text-center space-y-12 relative z-10">
+                <div className="space-y-6">
+                  <FadeIn delay={0.2}>
+                    <h2 className="text-heading-3 text-secondary dark:text-white">
+                      {t('nomDeDomaine.cta.title')}
+                    </h2>
+                  </FadeIn>
+                  <FadeIn delay={0.3}>
+                    <p className="text-xl text-secondary/60 dark:text-accent/60 max-w-2xl mx-auto leading-relaxed">
+                      {t('nomDeDomaine.cta.subtitle')}
+                    </p>
+                  </FadeIn>
+                </div>
+
                 <FadeIn delay={0.4}>
-                  <div className="cb-text-center">
-                    <a href={REGISTER_URL_FREE} className="cb-btn">
-                      <span className="inline-block first-letter:uppercase">
-                        Créer ma boutique gratuite
+                  <div className="flex flex-col items-center gap-8">
+                    <a href={REGISTER_URL_FREE} className="cb-btn px-10 py-5 text-lg group">
+                      <span className="inline-block first-letter:uppercase relative z-10">
+                        {t('nomDeDomaine.cta.button')}
                       </span>
                     </a>
+                    
+                    <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4">
+                      {(t('nomDeDomaine.cta.benefits', { returnObjects: true }) as string[]).map((benefit, idx) => (
+                        <li key={idx} className="flex items-center gap-3">
+                          <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                            <Check className="size-3.5 text-primary-500" />
+                          </div>
+                          <span className="text-secondary/80 dark:text-accent/80 font-bold uppercase tracking-widest text-[10px]">
+                            {benefit}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </FadeIn>
-                <FadeIn delay={0.5}>
-                  <ul className="cb-footer-list">
-                    <li className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary-500" />
-                      <span>Gratuit</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary-500" />
-                      <span>SSL inclus</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary-500" />
-                      <span>Configuration automatique</span>
-                    </li>
-                  </ul>
                 </FadeIn>
               </div>
             </div>

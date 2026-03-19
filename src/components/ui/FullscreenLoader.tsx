@@ -83,7 +83,7 @@ export default function FullscreenLoader({
 
         {/* LOGO - Fixed Top Left Anchor - Colored Logo */}
         <div className="absolute top-8 left-8 md:top-12 md:left-12 z-20">
-           <div className="relative w-30 h-30 md:w-30 md:h-30">
+           <div className="relative w-40 h-40 md:w-40 md:h-40">
               <Image
                 src="/logo.png"
                 alt="Kiiako"

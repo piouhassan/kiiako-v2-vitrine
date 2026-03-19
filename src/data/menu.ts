@@ -3,155 +3,124 @@ export const features = [
     {
         id: 1,
         iconClass: "unicon-store",
-        title: "Créer votre boutique",
-        description: "Lancez votre activité en ligne avec Kiiako",
+        title: "header.menu.features.1.title",
+        description: "header.menu.features.1.description",
         link: "/solutions/creer-boutique"
     },
     {
         id: 2,
         iconClass: "unicon-magic-wand-filled",
-        title: "Personnaliser l’apparence",
-        description: "Choisissez un thème qui reflète votre marque",
+        title: "header.menu.features.2.title",
+        description: "header.menu.features.2.description",
         link: "/solutions/personnalisation"
     },
     {
         id: 3,
         iconClass: "unicon-blog",
-        title: "Domaine personnalisé",
-        description: "Rendez votre boutique unique avec un domaine à votre nom",
+        title: "header.menu.features.3.title",
+        description: "header.menu.features.3.description",
         link: "/solutions/nom-de-domaine"
     },
 
     {
         id: 5,
         iconClass: "unicon-locked",
-        title: "Sécurisation des paiements",
-        description: "Assurez la sécurité des données et transactions",
+        title: "header.menu.features.5.title",
+        description: "header.menu.features.5.description",
         link: "/solutions/securite-paiements"
     },
     {
         id: 6,
         iconClass: "unicon-box",
-        title: "Produits physiques",
-        description: "Créez un catalogue et gégez vos stocks facilement",
+        title: "header.menu.features.6.title",
+        description: "header.menu.features.6.description",
         link: "/solutions/produits-physiques"
     },
     {
         id: 7,
         iconClass: "unicon-cloud-upload",
-        title: "Produits digitaux",
-        description: "Vendez vos fichiers et livrez-les automatiquement",
+        title: "header.menu.features.7.title",
+        description: "header.menu.features.7.description",
         link: "/solutions/produits-digitaux"
     },
     {
         id: 8,
         iconClass: "unicon-wallet",
-        title: "Paiement Mobile Money",
-        description: "Encaissez via des moyens de paiement adaptés à l’Afrique",
+        title: "header.menu.features.8.title",
+        description: "header.menu.features.8.description",
         link: "/solutions/mobile-money"
     },
 
     {
         id: 10,
         iconClass: "unicon-star",
-        title: "Avis clients",
-        description: "Mettez en valeur la confiance de vos acheteurs",
+        title: "header.menu.features.10.title",
+        description: "header.menu.features.10.description",
         link: "/solutions/avis-clients"
     },
     {
         id: 11,
         iconClass: "unicon-user",
-        title: "Gestion des collaborateurs",
-        description: "Invitez des membres de votre équipe avec des rôles",
+        title: "header.menu.features.11.title",
+        description: "header.menu.features.11.description",
         link: "/solutions/equipe"
     },
 ];
 
 export const links = [
-    {
-        id: 1,
-        href: "/solutions/career",
-        label: "Hire an Expert",
-        isInternal: true,
-    },
-
+    
     {
         id: 4,
         href: "/solutions/blog",
-        label: "Blog",
+        label: "header.menu.links.4",
         isInternal: true,
     },
-    {
-        id: 5,
-        href: "/solutions/career",
-        label: "Career",
-        isInternal: true,
-    },
+    
     {
         id: 6,
         href: "/solutions/team",
-        label: "Team",
+        label: "header.menu.links.6",
         isInternal: true,
     },
     {
         id: 7,
         href: "/solutions/contact",
-        label: "Get in touch",
+        label: "header.menu.links.7",
         isInternal: true,
     },
 ];
 
 export const pagesDataRessources = [
     {
-        section: "Guides",
-        icon: "/assets/icons/guides.svg",
+        section: "header.menu.ressources.success.title",
+        icon: "academy",
         items: [
             {
-                label: "Guide de démarrage",
-                description: "Tout ce qu’il faut savoir pour lancer votre boutique",
-                href: "/ressources/guides/demarrage",
+                label: "header.menu.ressources.success.items.stories.label",
+                icon: "unicon-star",
+                description: "header.menu.ressources.success.items.stories.description",
+                href: "/ressources/histoires"
             },
             {
-                label: "Marketing et ventes",
-                description: "Optimisez vos campagnes et fidélisez vos clients",
-                href: "/ressources/guides/marketing",
+                label: "header.menu.ressources.success.items.guides.label",
+                description: "header.menu.ressources.success.items.guides.description",
+                href: "/ressources/guides",
             },
         ],
     },
     {
-        section: "Tutoriels vidéo",
-        icon: "/assets/icons/videos.svg",
+        section: "header.menu.ressources.help.title",
+        icon: "help",
         items: [
             {
-                label: "Créer une boutique pas à pas",
-                description: "Vidéo explicative pour débutants",
-                href: "/ressources/videos/creation-boutique",
+                label: "header.menu.ressources.help.items.helpCenter.label",
+                description: "header.menu.ressources.help.items.helpCenter.description",
+                href: "/ressources/aide",
             },
             {
-                label: "Utiliser les outils Kiiako",
-                description: "Démonstration des fonctionnalités clés",
-                href: "/ressources/videos/outils",
-            },
-            {
-                label: "Gérer les commandes efficacement",
-                description: "Tutoriel sur la gestion des ventes",
-                href: "/ressources/videos/commandes",
-            },
-        ],
-    },
-    {
-        section: "FAQ",
-        icon: "/assets/icons/faq.svg",
-        items: [
-            {
-                label: "Questions fréquentes",
-                description: "Réponses aux questions les plus courantes",
-                href: "/ressources/faq",
-            },
-            {
-                label: "Support technique",
-                description: "Contactez notre équipe pour toute aide",
-                href: "/ressources/support",
+                label: "header.menu.ressources.help.items.videos.label",
+                description: "header.menu.ressources.help.items.videos.description",
+                href: "/ressources/videos",
             },
         ],
     },
@@ -162,13 +131,13 @@ export const services = [
     {
         id: 1,
         href: "/solutions/livreur-inscription",
-        label: "Devenir livreur",
+        label: "header.menu.services.1",
         isInternal: true,
     },
     {
         id: 2,
         href: "/solutions/entreprise-livraison",
-        label: "Entreprise de livraison",
+        label: "header.menu.services.2",
         isInternal: true,
     },
 ];

@@ -1,91 +1,79 @@
 'use client';
 
 import { FadeIn } from '@/components/animations/FadeIn';
-import { SlideIn } from '@/components/animations/SlideIn';
 import { useTranslation } from 'react-i18next';
+import { Check } from 'lucide-react';
+import { REGISTER_URL_FREE } from '@/lib/utls';
 
 export default function CTA() {
   const { t } = useTranslation();
 
   return (
-    <section className="xl:py-[100px] lg:py-[90px] md:py-20 py-16 bg-white dark:bg-black relative overflow-hidden z-10">
-      <div className="main-container">
-        <div className="text-center space-y-5 mb-8">
-          <FadeIn delay={0.1}>
-            <span className="badge bg-primary-500 text-white">{t('home.cta.badge')}</span>
-          </FadeIn>
-          <div className="space-y-3">
-            <SlideIn direction="down" delay={0.2}>
-              <h2>{t('home.cta.title')}</h2>
-            </SlideIn>
-            <SlideIn direction="down" delay={0.3}>
-              <p className="max-w-[568px] mx-auto">
-                {t('home.cta.description')}
-              </p>
-            </SlideIn>
-          </div>
-        </div>
-        <div className="space-y-8 mb-[38px] mx-6 sm:mx-0">
-          <FadeIn delay={0.4}>
-            <form className="flex sm:flex-row flex-col sm:items-center sm:justify-center gap-3">
-            <fieldset>
-              <input
-                type="email"
-                name="email"
-                id="userEmail"
-                placeholder={t('home.cta.placeholder')}
-                required
-                className="px-[18px] h-12 outline-none py-3 shadow-1 placeholder:text-secondary/50 rounded-full border border-stroke-1 sm:min-w-[340px] sm:max-w-[340px] w-full bg-accent dark:bg-background-6 dark:border-stroke-7 dark:placeholder:text-accent/60 block focus:ring-[0.7px] focus-within:ring-primary-500 font-normal placeholder:font-normal"
-              />
-            </fieldset>
-            <button type="submit" className="btn btn-md btn-primary h-12">
-              <span>{t('home.cta.button')}</span>
-            </button>
-            </form>
-          </FadeIn>
-          <FadeIn delay={0.5}>
-            <ul className="flex sm:items-center sm:justify-center md:gap-[42px] sm:gap-6 gap-y-3 sm:flex-row flex-col">
-            <li className="flex items-center justify-center gap-2">
-              <span className="size-5 bg-secondary rounded-full flex items-center justify-center dark:bg-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="7"
-                  viewBox="0 0 10 7"
-                  fill="none"
-                  aria-hidden="true"
-                  className="shrink-0"
-                >
-                  <path
-                    d="M4.31661 6.75605L9.74905 1.42144C10.0836 1.0959 10.0836 0.569702 9.74905 0.244158C9.41446 -0.081386 8.87363 -0.081386 8.53904 0.244158L3.7116 4.99012L1.46096 2.78807C1.12636 2.46253 0.585538 2.46253 0.250945 2.78807C-0.0836483 3.11362 -0.0836483 3.63982 0.250945 3.96536L3.1066 6.75605C3.27347 6.91841 3.49253 7 3.7116 7C3.93067 7 4.14974 6.91841 4.31661 6.75605Z"
-                    className="fill-white dark:fill-black"
-                  />
-                </svg>
-              </span>
-              <p className="text-tagline-2">{t('home.cta.features.free')}</p>
-            </li>
+    <section className="cb-cta-section relative overflow-hidden py-24 lg:py-32">
+      {/* Glow background */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30 pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary-500/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-primary-500/15 blur-[100px] rounded-full" />
+      </div>
 
-            <li className="flex items-center justify-center gap-2">
-              <span className="size-5 bg-secondary rounded-full flex items-center justify-center dark:bg-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="7"
-                  viewBox="0 0 10 7"
-                  fill="none"
-                  aria-hidden="true"
-                  className="shrink-0"
-                >
-                  <path
-                    d="M4.31661 6.75605L9.74905 1.42144C10.0836 1.0959 10.0836 0.569702 9.74905 0.244158C9.41446 -0.081386 8.87363 -0.081386 8.53904 0.244158L3.7116 4.99012L1.46096 2.78807C1.12636 2.46253 0.585538 2.46253 0.250945 2.78807C-0.0836483 3.11362 -0.0836483 3.63982 0.250945 3.96536L3.1066 6.75605C3.27347 6.91841 3.49253 7 3.7116 7C3.93067 7 4.14974 6.91841 4.31661 6.75605Z"
-                    className="fill-white dark:fill-black"
-                  />
-                </svg>
-              </span>
-              <p className="text-tagline-2">{t('home.cta.features.support')}</p>
-            </li>
-            </ul>
+      <div className="main-container px-4">
+        <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
+
+          {/* Title + Description */}
+          <div className="space-y-6">
+            <FadeIn delay={0.2}>
+              <h2 className="text-heading-3 text-secondary dark:text-white leading-tight">
+                {t('creerBoutique.cta.title')}
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <p className="text-xl text-secondary/60 dark:text-accent/60 max-w-2xl mx-auto leading-relaxed">
+                {t('creerBoutique.cta.description')}
+              </p>
+            </FadeIn>
+          </div>
+
+          {/* CTA Button + Benefits */}
+          <FadeIn delay={0.4}>
+            <div className="flex flex-col items-center gap-10">
+              <a
+                href={REGISTER_URL_FREE}
+                className="cb-btn px-12 py-6 text-lg group shadow-2xl shadow-primary-500/20"
+              >
+                <span className="relative z-10">
+                  {t('creerBoutique.cta.button')}
+                </span>
+              </a>
+
+              <ul className="flex flex-wrap justify-center gap-x-12 gap-y-6">
+                <li className="flex items-center gap-3">
+                  <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                    <Check className="size-3.5 text-primary-500" />
+                  </div>
+                  <span className="text-secondary/80 dark:text-accent/80 text-[10px]">
+                    {t('creerBoutique.cta.benefits.free')}
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                    <Check className="size-3.5 text-primary-500" />
+                  </div>
+                  <span className="text-secondary/80 dark:text-accent/80 text-[10px]">
+                    {t('creerBoutique.cta.benefits.noCard')}
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="size-6 rounded-full bg-primary-500/10 flex items-center justify-center">
+                    <Check className="size-3.5 text-primary-500" />
+                  </div>
+                  <span className="text-secondary/80 dark:text-accent/80 text-[10px]">
+                    {t('creerBoutique.cta.benefits.support')}
+                  </span>
+                </li>
+              </ul>
+            </div>
           </FadeIn>
+
         </div>
       </div>
     </section>
