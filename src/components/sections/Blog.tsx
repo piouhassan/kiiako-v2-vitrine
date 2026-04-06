@@ -221,7 +221,7 @@ export default function Blog() {
             <div className="flex justify-center mt-10 md:mt-14">
               <a
                 href="/solutions/blog"
-                className="btn btn-secondary btn-md inline-block dark:btn-transparent dark:border-stroke-7 hover:btn-primary dark:hover:btn-white w-[90%] md:w-auto"
+                className="btn btn-primary btn-md inline-block dark:btn-transparent dark:border-stroke-7 hover:btn-primary dark:hover:btn-white w-[90%] md:w-auto"
               >
                 <span>{t('home.blog.visitBlog')}</span>
               </a>

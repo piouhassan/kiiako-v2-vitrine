@@ -210,19 +210,19 @@ export default function CreerBoutiquePage() {
                 <div className="theme-stack-container">
                   {[
                     {
-                      title: "Tech Store",
-                      image: "/builder/theme1.png",
+                      title: "Sportage",
+                      image: "/builder/theme3.png",
                       type: "E-commerce",
                       className: "theme-card-left"
                     },
                     {
-                      title: "Fashion Pulse",
+                      title: "Stylished",
                       image: "/builder/theme2.png",
                       type: "Lifestyle",
                       className: "theme-card-right"
                     },
                     {
-                      title: "Modern Minimalist",
+                      title: "Elegancia",
                       image: "/builder/theme1.png",
                       type: "Corporate",
                       className: "theme-card-main"

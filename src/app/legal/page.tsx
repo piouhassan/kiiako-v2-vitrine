@@ -16,7 +16,7 @@ export default function LegalPage() {
       <Header />
       <main>
         {/* --- Simple Editorial Hero --- */}
-        <section className="xl:pt-[180px] md:pt-42 sm:pt-36 pt-32 pb-20 border-b border-stroke-1/50 dark:border-white/5">
+        <section className="xl:pt-[180px] md:pt-42 sm:pt-36 pt-32">
           <div className="main-container max-w-4xl mx-auto text-center space-y-8">
             <FadeIn>
               <span className="cb-badge">
@@ -51,7 +51,7 @@ export default function LegalPage() {
                         {section.title}
                       </h2>
                     </div>
-                    <p className="text-lg leading-relaxed text-secondary/60 dark:text-accent/60 font-light pl-5 border-l border-stroke-1 dark:border-white/5 whitespace-pre-wrap">
+                    <p className="text-lg leading-relaxed text-black dark:text-white font-light pl-5 border-l border-stroke-1 dark:border-white/5 whitespace-pre-wrap">
                       {highlightText(section.content)}
                     </p>
                   </div>
@@ -65,11 +65,11 @@ export default function LegalPage() {
         <section className="pb-32">
           <div className="main-container max-w-4xl mx-auto">
             <FadeIn delay={0.5}>
-              <div className="p-10 rounded-[40px] bg-background-2 dark:bg-background-7/30 border border-stroke-1 dark:border-white/5 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+              <div className="p-10 rounded-[40px] bg-background-2 dark:bg-background-8 border border-stroke-1 dark:border-gray-100 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
                 <div className="size-16 rounded-2xl bg-primary-500/10 flex items-center justify-center shrink-0">
                   <ShieldCheck className="size-8 text-primary-500" />
                 </div>
-                <p className="text-sm font-medium leading-relaxed italic opacity-60">
+                <p className="text-sm font-medium leading-relaxed italic">
                   {t('legalPages.legal.note')}
                 </p>
               </div>

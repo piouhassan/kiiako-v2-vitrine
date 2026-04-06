@@ -108,14 +108,14 @@ export default function VideosPage() {
 
                 <div className="relative">
                   <a 
-                    href="https://youtube.com/@kiiako" 
+                    href="https://www.youtube.com/channel/UCRsygBj0p9zGRxIIBGX_J4w" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="group/btn relative inline-flex items-center gap-4 bg-red-600 hover:bg-red-700 text-white px-10 h-20 rounded-[32px] font-bold text-xl shadow-xl shadow-red-600/20 transition-all duration-300 hover:-translate-y-1"
+                    className="group/btn relative inline-flex items-center gap-4 bg-red-600 hover:bg-red-700 text-white px-10 h-20 rounded-full font-bold text-xl shadow-xl shadow-red-600/20 transition-all duration-300 hover:-translate-y-1"
                   >
                     <Youtube className="w-8 h-8" />
                     {t('ressourcesVideos.youtubeCTA.button')}
-                    <div className="absolute inset-0 rounded-[32px] bg-white/20 scale-x-0 group-hover/btn:scale-x-100 origin-left transition-transform duration-500"></div>
+                    <div className="absolute inset-0 rounded-full bg-white/20 scale-x-0 group-hover/btn:scale-x-100 origin-left transition-transform duration-500"></div>
                   </a>
                 </div>
               </div>

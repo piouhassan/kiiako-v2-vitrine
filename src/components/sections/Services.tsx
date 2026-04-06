@@ -2,6 +2,7 @@
 
 import { FadeIn } from '@/components/animations/FadeIn';
 import { SlideIn } from '@/components/animations/SlideIn';
+import { REGISTER_URL_FREE } from '@/lib/utls';
 import { useTranslation } from 'react-i18next';
 
 export default function Services() {
@@ -129,7 +130,7 @@ export default function Services() {
         <FadeIn delay={0.8}>
           <div className="flex flex-col md:flex-row items-center gap-y-5 md:gap-x-3 justify-center">
             <a
-              href="/signup"
+              href={REGISTER_URL_FREE}
               className="btn btn-primary dark:btn-accent btn-md hover:btn-white dark:hover:btn-white-dark w-[90%] md:w-auto"
             >
               <span>{t('home.services.cta.create')}</span>

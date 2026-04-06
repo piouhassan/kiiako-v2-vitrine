@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary dark:text-accent mb-4">
              {t('home.imageGallery.title')}
            </h2>
-           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+           <p className="max-w-2xl mx-auto">
              {t('home.imageGallery.subtitle')}
            </p>
         </div>
@@ -20,26 +20,32 @@ import { useTranslation } from 'react-i18next';
         <div className="image-gallery-tilted-container w-full">
           <div className="image-gallery-row image-gallery-row-left w-full">
             <div className="image-gallery-track">
-              {[...Array(20)].map((_, i) => (
-                <div key={`left-${i}`} className="image-gallery-item">
+              {[...Array(48)].map((_, i) => (
+                <div key={`left-${i}`} className="image-gallery-item bg-white dark:bg-black">
                   <img 
-                    src={`/hero/${(i % 8) + 1}.jpg`}
-                    alt={`Gallery image ${i + 1}`}
-                    className="w-full h-full object-cover rounded-lg"
+                    src={`/builder/theme${(i % 8) + 1}.png`}
+                    alt={`Gallery image ${(i % 8) + 1}`}
+                    className="w-full h-full object-cover object-top "
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.opacity = '0';
+                    }}
                   />
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="image-gallery-row image-gallery-row-right mt-20 w-full">
+          <div className="image-gallery-row image-gallery-row-right w-full">
             <div className="image-gallery-track">
-              {[...Array(20)].map((_, i) => (
-                <div key={`right-${i}`} className="image-gallery-item">
+              {[...Array(48)].map((_, i) => (
+                <div key={`right-${i}`} className="image-gallery-item bg-white dark:bg-black">
                   <img
                     src={`/builder/theme${(i % 8) + 1}.png`}
-                    alt={`Gallery image ${i + 9}`}
-                    className="w-full h-full object-cover rounded-lg"
+                    alt=""
+                    className="w-full h-full object-cover object-top"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.opacity = '0';
+                    }}
                   />
                 </div>
               ))}

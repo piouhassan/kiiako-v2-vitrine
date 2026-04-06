@@ -18,18 +18,7 @@ export default function Testimonials() {
     text: string;
   }>;
 
-  // Manually adding avatars since they are not in the translation file
-  const avatars = [
-    "/images/ns-avatar-2.png",
-    "/images/ns-avatar-3.png",
-    "/images/ns-avatar-4.png",
-    "/images/ns-avatar-4.png" // The 4th item in original file was a duplicate of 3rd
-  ];
-
-  const testimonialItems = testimonials.map((item, index) => ({
-    ...item,
-    avatar: avatars[index % avatars.length]
-  }));
+  const testimonialItems = testimonials;
 
   useEffect(() => {
     const scrollSpeed = -0.5; // Vitesse de défilement vers la gauche
@@ -39,7 +28,7 @@ export default function Testimonials() {
         offset.current += scrollSpeed;
 
         // Boucle infinie
-        const trackWidth = trackRef.current.scrollWidth / 2;
+        const trackWidth = trackRef.current.scrollWidth / 6;
         if (Math.abs(offset.current) >= trackWidth) {
           offset.current = 0;
         }
@@ -74,46 +63,38 @@ export default function Testimonials() {
             className="flex items-center gap-6"
             style={{ willChange: 'transform' }}
           >
-            {[...testimonialItems, ...testimonialItems].map((item, index) => (
+            {[...testimonialItems, ...testimonialItems, ...testimonialItems, ...testimonialItems, ...testimonialItems, ...testimonialItems].map((item, index) => (
               <div
                 key={index}
-                className="min-w-sm sm:min-w-[360px] md:min-w-[360px] lg:min-w-[360px] p-8 md:p-14 rounded-[20px] backdrop-blur-[22px] space-y-6 sm:space-y-8 md:space-y-10 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-300 ease-linear flex-shrink-0"
+                className="w-[320px] max-w-[85vw] min-h-[240px] p-8 md:p-10 rounded-[20px] backdrop-blur-[22px] flex flex-col justify-between bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-300 ease-linear flex-shrink-0"
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <figure className="size-12 md:size-[84px] rounded-full overflow-hidden bg-gradient-to-r from-primary-500 to-primary-600">
-                      <img src={item.avatar} alt="avatar" className="w-full h-full object-cover" />
-                    </figure>
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
                     <div className="space-y-1">
                       <h3 className="text-tagline-2 font-medium lg:text-tagline-1 text-white">{item.name}</h3>
                       <p className="text-tagline-3 text-accent/60">{item.company}</p>
                     </div>
+                    <div>
+                      <div className="px-2.5 py-1 rounded-full md:w-[74px] md:h-11 h-8 w-14 flex items-center justify-center bg-white/5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <g clipPath="url(#clip0_1182_25010)">
+                            <path
+                              d="M9.45202 0H11.2924L7.27177 5.08308L12.0017 12H8.29819L5.3975 7.80492L2.07844 12H0.236996L4.53741 6.56308L0 0H3.7975L6.41947 3.83446L9.45202 0ZM8.80612 10.7815H9.82587L3.24339 1.15446H2.1491L8.80612 10.7815Z"
+                              className="fill-white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1182_25010">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <a
-                      href="#"
-                      className="px-2.5 py-1 rounded-full md:w-[74px] md:h-11 h-8 w-14 flex items-center justify-center bg-white/5"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <g clipPath="url(#clip0_1182_25010)">
-                          <path
-                            d="M9.45202 0H11.2924L7.27177 5.08308L12.0017 12H8.29819L5.3975 7.80492L2.07844 12H0.236996L4.53741 6.56308L0 0H3.7975L6.41947 3.83446L9.45202 0ZM8.80612 10.7815H9.82587L3.24339 1.15446H2.1491L8.80612 10.7815Z"
-                            className="fill-white"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_1182_25010">
-                            <rect width="12" height="12" fill="white" />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <p className="max-w-[610px] md:text-heading-6 sm:text-tagline-1 text-tagline-2 text-wrap text-accent/60">
+                  <p className="text-tagline-1 sm:text-tagline-1 text-accent/60 line-clamp-4">
                     {item.text}
                   </p>
                 </div>

@@ -170,8 +170,7 @@ export default function Process() {
                 <div>
                   <div className="size-[34px] flex items-center justify-center mx-auto rounded-full bg-white drop-shadow-2xl dark:bg-black">
                     <figure className="size-7">
-                      <img src="/images/ns-img-149.png" alt="step" className="w-full h-full object-cover dark:hidden" />
-                      <img src="/images/ns-img-dark-103.png" alt="step" className="w-full h-full object-cover hidden dark:block" />
+                      <img src="/images/ns-img-149.png" alt="step" className="w-full h-full object-cover" />
                     </figure>
                   </div>
                 </div>
